@@ -59,3 +59,16 @@ The browser explorer is a *read-only viewer* of results; it performs no scientif
 - [Phonopy: formulation of the dynamical matrix](https://phonopy.github.io/phonopy/formulation.html)
 - [Phonopy: harmonic and quasi-harmonic calculations](https://phonopy.github.io/phonopy/)
 - [Quantum ESPRESSO PHonon user guide](https://www.quantum-espresso.org/Doc/ph_user_guide/)
+
+## Phonopy full/compact force-constant interchange (Phase 2)
+
+`python -m geoform_phonons.phonopy_bridge --help` converts Phonopy text
+`FORCE_CONSTANTS` to GeoForm input **only with an explicit primitive-crystal
+record and atom-by-atom supercell-image map**. See
+[Phonopy interoperability](docs/PHONOPY_INTEROPERABILITY.md) for exact
+formats, CLI examples and limitations. `FORCE_CONSTANTS` alone does not encode
+image translations; uninformed conversions are refused.
+
+The separately runnable `scripts/check_phonopy_reference.py` uses installed
+Phonopy as an independent harmonic-dispersion baseline, and is verified in CI.
+
