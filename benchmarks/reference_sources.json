@@ -1,0 +1,23 @@
+{
+  "schema_version": "geoform.phonons.reference_sources/1",
+  "upstream_repo": "phonopy/phonopy",
+  "upstream_commit": "bd260e234de32b3b6c558c60a7c6254b9bdfef71",
+  "upstream_license": "BSD-3-Clause",
+  "description": "Official Phonopy VASP finite-displacement examples; force sets are numerical DFT-derived computational inputs, NOT experimental measurements.",
+  "materials": {
+    "halite": {
+      "name": "Halite", "formula": "NaCl", "origin": "Phonopy official example/NaCl", "evidence_status": "calculated", "lo_to_correction": "excluded",
+      "files": {
+        "phonopy_disp.yaml": {"path": "example/NaCl/phonopy_disp.yaml", "git_blob_sha1": "2f7d82ecf8f2894d7469c8426a2c92f1512dbc75"},
+        "FORCE_SETS": {"path": "example/NaCl/FORCE_SETS", "git_blob_sha1": "eb9f19a467f8bf8bde709bafc07795fd4d8aedda"}
+      }
+    },
+    "periclase": {
+      "name": "Periclase", "formula": "MgO", "origin": "Phonopy official example/MgO; VASP 500 eV cutoff, 4x4x4 k-points conventional cell", "evidence_status": "calculated", "lo_to_correction": "excluded",
+      "files": {
+        "phonopy_disp.yaml": {"path": "example/MgO/phonopy_disp.yaml", "git_blob_sha1": "c92754317dec23afe4538299e3e07889c61a8018"},
+        "FORCE_SETS": {"path": "example/MgO/FORCE_SETS", "git_blob_sha1": "15472f86128544c182bb0cffd4966b6c9b8953c9"}
+      }
+    }
+  }
+}

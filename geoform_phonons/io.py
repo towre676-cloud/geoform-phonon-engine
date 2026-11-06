@@ -66,7 +66,7 @@ def model_to_record(model, provenance):
 
 def export_result(model, provenance, path_vertices, *, points_per_segment=40,
                   mesh=(6,6,6), sigma_thz=0.1, temperature_k=300):
-    from .core import frequency_grid, density_of_states, thermal_properties
+    from .core import frequency_grid, density_of_states, thermal_properties, projected_density_of_states, thermodynamic_curve
     if model.acoustic_sum_rule_error() > 1e-6:
         raise PhononInputError("ASR violation > 1e-6 eV/A^2; repair or justify before export")
     bands = model.band_path(path_vertices,points_per_segment)
@@ -86,10 +86,15 @@ def export_result(model, provenance, path_vertices, *, points_per_segment=40,
                    "unstable_modes_on_shifted_mesh":unstable,
                    "q_mesh":list(mesh)},"dispersion":bands}
     if unstable==0 and np.all(mesh_freqs>0):
-        x,y=density_of_states(mesh_freqs,sigma_thz)
+        x,y,by_atom=projected_density_of_states(model,mesh,sigma_thz,points=400)
         result["density_of_states"]={"frequency_thz":x.tolist(),"states_per_thz_cell":y.tolist(),
+                                     "atom_projected_states_per_thz_cell":by_atom.tolist(),
+                                     "projection_labels":list(model.crystal.symbols),
+                                     "projection_basis":"mass-weighted eigenvector norm; 3 states/atom",
                                      "gaussian_sigma_thz":sigma_thz}
         result["thermodynamics"]=thermal_properties(mesh_freqs,temperature_k)
+        result["thermodynamic_curve"]=thermodynamic_curve(mesh_freqs,
+            sorted(set([0.0,50.0,100.0,200.0,float(temperature_k),500.0,800.0,1200.0])))
     else:
         result["density_of_states"]={"status":"withheld: unstable or zero mode"}
         result["thermodynamics"]={"status":"withheld: unstable or zero mode"}

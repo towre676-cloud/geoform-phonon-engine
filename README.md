@@ -6,6 +6,36 @@
 
 The original `phonon_chain.py` remains a standard-library-only **exact diatomic-chain benchmark**. The new `geoform_phonons` package generalizes it to periodic 3-D crystals with an arbitrary number of atoms in the primitive cell **when an explicit real-space interatomic force-constant (IFC) model is supplied**. No force constants are inferred from a formula or CIF.
 
+
+## Phase 3: real mineral computational benchmarks
+
+**Halite (NaCl) and periclase (MgO)** now have a source-pinned validation
+pipeline using Phonopy's upstream VASP displacement-force examples, not
+hand-tuned spring constants. The new
+[`phonopy_native`](geoform_phonons/phonopy_native.py) adapter correctly handles
+**multiple shortest periodic images at finite-supercell boundaries** before
+GeoForm diagonalizes its own dynamical matrix. The benchmark compares complex
+matrices and independently obtained frequencies at 16 reciprocal points per
+material, with strict tolerances and downloadable CI receipts. LO–TO
+nonanalytic corrections are explicitly omitted on both sides.
+
+```sh
+python -m pip install -e . 'phonopy==4.9.0'
+python scripts/fetch_reference_sources.py --destination benchmarks/upstream
+python scripts/benchmark_minerals.py --data-dir benchmarks/upstream --output-dir benchmarks/generated
+```
+
+View generated `halite_phonons.json` or `periclase_phonons.json` in the
+standalone explorer. When deployed over HTTP(S) alongside a `data/catalog.json`
+containing the calculated results, the explorer also offers a verified-case
+dropdown. Every synthetic vs external-calculated evidence label remains clear.
+
+The optional new **atom-projected density of states** sums exactly to the
+total DOS, and a **harmonic heat-capacity/thermodynamics curve** is returned
+with stable models. Neither is an experimental intensity or heat-flow model.
+
+See [real-mineral reproducibility and scientific limitations](docs/REAL_MINERAL_BENCHMARKS.md).
+
 ## Run now
 
 ```bash
