@@ -219,6 +219,63 @@ def density_of_states(frequencies_thz, sigma_thz=0.1, points=400, *, upper_thz=N
     return grid, dos
 
 
+
+def projected_density_of_states(model: ForceConstants, mesh=(8,8,8),
+                                sigma_thz=0.1, points=400):
+    """Return (frequency, total DOS, atom-PDOS) from actual eigenvectors.
+
+    Atom contributions use the mass-weighted, orthonormal eigenvectors and
+    sum to the total DOS at each frequency. Array shape is (n_atoms, points).
+    Each atom integrates to approximately three states over a broad axis.
+    Do not confuse these with measured element-specific neutron intensities:
+    no scattering lengths, Debye-Waller factors, or instrument resolution
+    are used. A mesh with unstable or zero modes is rejected.
+    """
+    if not isinstance(model, ForceConstants):
+        raise PhononInputError("model must be a ForceConstants instance")
+    modes = [model.modes(q) for q in shifted_q_mesh(mesh)]
+    frequencies = np.asarray([f for f, _ in modes])
+    if np.any(frequencies <= 0):
+        raise PhononInputError("unstable or zero frequency on q mesh: PDOS withheld")
+    axis, total = density_of_states(frequencies, sigma_thz, points)
+    atom_dos = np.zeros((model.crystal.n_atoms, len(axis)))
+    norm = frequencies.shape[0] * sigma_thz * math.sqrt(2*math.pi)
+    for f, eigvec in modes:
+        atom_weights = np.sum(np.abs(eigvec.reshape(
+            (model.crystal.n_atoms, 3, 3*model.crystal.n_atoms)))**2,
+            axis=1)  # n_atoms x n_modes
+        kernels = np.exp(-0.5 * ((axis[:,None] - f[None,:])/sigma_thz)**2)
+        atom_dos += atom_weights @ kernels.T / norm
+    if not np.allclose(atom_dos.sum(axis=0),total,atol=2e-10,rtol=1e-8):
+        raise PhononInputError("projected DOS failed completeness check")
+    return axis, total, atom_dos
+
+
+def mode_participation_ratios(eigenvectors, n_atoms):
+    """Return per-mode atomic participation ratios between 1/N and 1.
+
+    Eigenvector columns are mass-weighted normal modes; project over each
+    atom's three Cartesian components. A participation ratio is not a
+    localization length or experimental observable without further modeling.
+    """
+    e = np.asarray(eigenvectors, dtype=complex)
+    if (type(n_atoms) is not int or n_atoms < 1 or e.shape != (3*n_atoms,3*n_atoms)
+            or not np.isfinite(e).all()):
+        raise PhononInputError("eigenvectors must be finite 3N x 3N square matrix")
+    norms = np.sum(np.abs(e)**2,axis=0)
+    if not np.allclose(norms,1,atol=1e-7) or not np.allclose(e.conj().T@e,np.eye(3*n_atoms),atol=1e-7):
+        raise PhononInputError("normal modes must be orthonormal")
+    per_atom = np.sum(np.abs(e.reshape(n_atoms,3,3*n_atoms))**2,axis=1)
+    return 1.0 / (n_atoms * np.sum(per_atom**2,axis=0))
+
+
+def thermodynamic_curve(frequencies_thz, temperatures_k):
+    """Harmonic constant-volume thermodynamics at user-supplied K values."""
+    ts=np.asarray(temperatures_k,dtype=float)
+    if ts.ndim!=1 or not ts.size or not np.isfinite(ts).all() or np.any(ts<0) or np.any(np.diff(ts)<=0):
+        raise PhononInputError("temperatures must be strictly increasing, finite, and nonnegative")
+    return [thermal_properties(frequencies_thz,float(t)) for t in ts]
+
 def thermal_properties(frequencies_thz, temperature_k):
     """Harmonic per-cell thermodynamics from uniform positive-frequency q mesh.
 
