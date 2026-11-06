@@ -1,0 +1,27 @@
+{
+  "schema_version": "geoform.phonons.catalog/1",
+  "catalog_kind": "validated_calculated_benchmarks",
+  "upstream_repository": "phonopy/phonopy",
+  "upstream_commit": "bd260e234de32b3b6c558c60a7c6254b9bdfef71",
+  "benchmark_scope": "non-NAC harmonic finite-displacement DFT; computational comparison only",
+  "entries": [
+    {
+      "slug": "halite",
+      "mineral": "Halite",
+      "formula": "NaCl",
+      "evidence_status": "calculated",
+      "result_file": "halite_phonons.json",
+      "comparison_points": 16,
+      "max_frequency_error_thz": 7.744035919188264e-07
+    },
+    {
+      "slug": "periclase",
+      "mineral": "Periclase",
+      "formula": "MgO",
+      "evidence_status": "calculated",
+      "result_file": "periclase_phonons.json",
+      "comparison_points": 16,
+      "max_frequency_error_thz": 2.1755864274553005e-06
+    }
+  ]
+}
