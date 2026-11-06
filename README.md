@@ -1,41 +1,61 @@
 # GeoForm Phonon Engine
 
-A research-grade *development target* beginning with a verified, minimal
-one-dimensional harmonic diatomic-chain reference model. The repository is
-**not yet** a mineral-specific phonon prediction system.
+**A traceable crystal-phonon postprocessor, not a mineral-frequency guessing service.**
 
-## Reproduce
+[![Tests](https://github.com/towre676-cloud/geoform-phonon-engine/actions/workflows/tests.yml/badge.svg)](https://github.com/towre676-cloud/geoform-phonon-engine/actions/workflows/tests.yml)
 
-Run with Python 3.11+ (standard library only):
+The original `phonon_chain.py` remains a standard-library-only **exact diatomic-chain benchmark**. The new `geoform_phonons` package generalizes it to periodic 3-D crystals with an arbitrary number of atoms in the primitive cell **when an explicit real-space interatomic force-constant (IFC) model is supplied**. No force constants are inferred from a formula or CIF.
 
-```sh
+## Run now
+
+```bash
+python -m pip install -e .
 python -m unittest discover -s tests -v
-python phonon_chain.py --mass-a 1 --mass-b 2 --spring 3 --cell-length 1
+python -m geoform_phonons --demo-input examples/simple_cubic_ifc.json --output examples/simple_cubic_result.json --mesh 6
 ```
 
-The implementation produces acoustic and optical angular-frequency branches
-for alternating point masses with equal nearest-neighbour harmonic springs.
-It checks the zone-centre acoustic zero, the analytic zone-boundary limits,
-mass exchange, reciprocal wavevector symmetry, and long-wave sound speed.
+Open `web/phonon_explorer.html` and choose `examples/simple_cubic_result.json` to explore the **illustrative synthetic** bands, DOS and thermal values without web dependencies. `python phonon_chain.py` is unchanged and independently executable.
 
-## Evidence discipline
+To calculate a crystal for which you have proper IFCs:
 
-The calculated values are **ideal-model predictions**, not measured spectra,
-real CIF structures, Raman or infrared peak assignments, or electron–phonon
-coupling constants. Frequencies are angular frequencies in rad/s; conversion to
-Hz requires division by 2π. Input parameters must carry consistent SI units.
+```bash
+python -m geoform_phonons --input my_ifcs.json --output my_phonons.json --mesh 10 --temperature 300
+```
 
-## Roadmap
+Schema: `geoform.phonons/1`, implemented in `geoform_phonons/io.py`. Its JSON requires a nonsingular 3×3 lattice (Å, row vectors), fractional atomic positions, positive atomic masses (amu), complete paired IFC blocks in eV/Å², and declared source/evidence status. The returned `geoform.phonons.result/1` JSON includes provenance, periodic dispersion (signed THz), stable-branch Gaussian DOS, shifted-mesh zero-point energy, Helmholtz free energy, entropy and constant-volume heat capacity. See [scientific definitions and limitations](docs/SCIENCE.md).
 
-1. Generalize to N-atom unit cells and Hermitian dynamical matrices.
-2. Add 3-D lattice vectors, masses, force-constant tensor and acoustic sum rule.
-3. Cross-check independently against established phonopy reference fixtures.
-4. Parse CIF structures as identities, **not** as force constants; require
-   measured or calculated interatomic force constants separately.
-5. Add symmetry labels and separately sourced Raman/IR activities and spectra.
-6. Integrate only validated outputs into GeoForm with measured/calculated/
-   reconstructed/unresolved evidence labels.
+## Implemented physics
 
-Historical motivation: November 2023 electron–phonon, anharmonicity, and
-Bloch-symmetry conversations recovered in the research excavation. Their
-earlier physical and historical claims are not imported as authoritative.
+| Capability | Current state | Evidence / limitations |
+| --- | --- | --- |
+| Analytical diatomic chain | Tested reference | 1-D point masses only; output angular rad/s |
+| General 3-D harmonic bands | Implemented | Arbitrary primitive basis, supplied real IFCs, THz cycles/s |
+| Dynamical Hermiticity | Enforced | Reciprocal IFC pairs checked; complex q |
+| Translational acoustic sum rule | Diagnosed, optional onsite correction | No rotational ASR, correction changes the provided IFCs |
+| Imaginary modes | Explicitly negative signed frequencies | DOS and equilibrium thermodynamics withheld if unstable |
+| Gaussian DOS | Implemented | Not neutron or Raman scattering intensity |
+| Harmonic F, U, S, Cv, ZPE | Implemented | Uniform shifted q mesh; no thermal expansion or anharmonicity |
+| Relative Gamma IR activity | Implemented with supplied Born charges | Neutrality checked; not absolute absorption |
+| Relative polarized Raman | Implemented with supplied polarizability derivatives | Not a spectrum or calibrated intensity |
+| Eliashberg λ and ω-log | Integrate supplied α²F only | Does **not** calculate electron–phonon couplings |
+| Crystal structure/CIF | Metadata may be converted to JSON | CIF alone cannot produce IFCs; no built-in CIF parser |
+| Validated mineral predictions | **Not established** | No independent frozen measured-mineral holdout |
+
+The browser explorer is a *read-only viewer* of results; it performs no scientific inference. Export declares the input's evidence status **as supplied by the user**, never as independent verification. Calculated spring fixtures are explicitly `illustrative` and must not be attached to real mineral records as measured spectra.
+
+## Near-term research frontier
+
+1. Build a curated and licensed set of actual **CIF + DFPT or finite-displacement IFC + Raman/IR measured spectra**, with versioned provenance and matching crystallographic identities.
+2. Compare against an independently run **Phonopy** benchmark with 3-D reference force constants; document conversion and q-phase convention.
+3. Provide validated CIF/site-mapping, unit conversion and supercell-to-primitive IFC import. Disorder must not be silently resolved.
+4. Implement non-analytic LO–TO corrections only with explicit Born tensors, dielectric tensors and cell-volume factors.
+5. Freeze a held-out mineral benchmark, comparing composition-only, symmetry-only, and structure+IFC models with error bars, incorrect phase orderings and abstentions.
+6. Integrate `geoform.phonons.result/1` into the main GeoForm Mineral Lab as a separately sourced tool with *Measured / Calculated / Reconstructed / Illustrative / Unresolved* labels.
+
+**Research context:** This engine is intended to work alongside GeoForm's structure, diffraction, thermodynamic phase, and spectroscopy efforts. The current repository contains a functioning harmonic lattice calculation layer, not a completed mineral-property predictor.
+
+## Scientific references
+
+- [Phonopy: formulation of the dynamical matrix](https://phonopy.github.io/phonopy/formulation.html)
+- [Phonopy: harmonic and quasi-harmonic calculations](https://phonopy.github.io/phonopy/)
+- [Quantum ESPRESSO PHonon user guide](https://www.quantum-espresso.org/Doc/ph_user_guide/)

@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geoform-phonon-engine"
+version = "0.2.0"
+description = "Auditable harmonic phonon postprocessor for the GeoForm materials laboratory"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.0"]
+license = {text = "MIT"}
+
+[tool.setuptools.packages.find]
+include = ["geoform_phonons*"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+structure = ["ase>=3.23"]

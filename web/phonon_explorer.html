@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark"><title>GeoForm • Phonon Explorer</title>
+<style>
+:root{font:15px/1.55 system-ui,-apple-system,Segoe UI,sans-serif;color:#e8f2f0;background:#071715;--ink:#e8f2f0;--muted:#9bb7ae;--surface:#0d2422;--outline:#294b46;--mint:#64e7b5;--yellow:#f6c86d;--red:#ff9185}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% -5%,#164e45,transparent 50%),#071715}main{max-width:1180px;margin:auto;padding:36px 20px 64px}header{display:flex;align-items:center;gap:13px;justify-content:space-between;flex-wrap:wrap}.brand{font-size:.87rem;font-weight:800;letter-spacing:.19em;text-transform:uppercase;color:var(--mint)}.tag{color:var(--muted);font-size:.82rem;border:1px solid var(--outline);border-radius:100px;padding:6px 13px}h1{font-family:Georgia,serif;font-size:clamp(2.1rem,5vw,4rem);font-weight:500;line-height:1.06;letter-spacing:-.04em;margin:32px 0 10px}h1 span{color:var(--mint)}.lead{max-width:720px;color:#bdd5ce;font-size:1.05rem;margin:0 0 26px}.toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 18px;background:#102b27;border:1px solid var(--outline);border-radius:18px;margin-bottom:18px}input[type=file]{font:inherit;max-width:100%;color:var(--muted)}input[type=file]::file-selector-button,.btn{background:var(--mint);border:0;color:#09231d;font-weight:750;padding:11px 16px;border-radius:10px;cursor:pointer;margin-right:12px}.btn:focus-visible,input:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}#status{color:var(--muted);font-size:.9rem}.grid{display:grid;grid-template-columns:1.65fr 1fr;gap:18px}.panel{background:rgba(13,36,34,.9);border:1px solid var(--outline);border-radius:18px;padding:22px;min-width:0}.wide{grid-column:1/-1}.eyebrow{color:var(--mint);font-weight:700;text-transform:uppercase;font-size:.72rem;letter-spacing:.15em;margin-bottom:4px}.panel h2{font-size:1.22rem;margin:0 0 12px;font-weight:650}.hint{color:var(--muted);font-size:.86rem;margin:0 0 14px}canvas{width:100%;height:300px;display:block;border-radius:12px;background:linear-gradient(180deg,#0f332f,#091f1d)}#dos{height:300px}.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.fact{padding:17px;background:#0c2522;border:1px solid var(--outline);border-radius:13px}.fact small{color:var(--muted);display:block;font-size:.79rem;margin-bottom:6px}.fact strong{font-size:1.25rem;font-variant-numeric:tabular-nums}.evidence{border-left:4px solid var(--yellow);padding:12px 14px;background:#302b1d;border-radius:0 10px 10px 0;font-size:.88rem;color:#f8e0aa;line-height:1.5}.footnote{color:var(--muted);font-size:.84rem;margin-top:18px}.empty{color:var(--muted);border:1px dashed #476a61;border-radius:12px;padding:45px 20px;text-align:center}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}button.secondary{padding:9px 12px;border:1px solid #537f70;background:none;color:var(--ink);border-radius:9px;cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}.tip{color:#c7e5dc;font-variant-numeric:tabular-nums;min-height:1.4em}footer{color:var(--muted);margin-top:28px;font-size:.86rem}a{color:var(--mint)}@media(max-width:850px){.grid{grid-template-columns:1fr}.facts{grid-template-columns:repeat(2,minmax(0,1fr))}.panel{padding:17px}}@media(max-width:420px){.facts{grid-template-columns:1fr 1fr}.fact strong{font-size:1rem}}
+</style>
+</head>
+<body>
+<main>
+<header><div class="brand">◇ GeoForm / Materials Laboratory</div><span class="tag">Harmonic lattice calculations · Read-only</span></header>
+<h1>Hear the mathematics<br><span>inside a crystal.</span></h1>
+<p class="lead">Inspect phonon dispersion, vibrational density of states and thermal response from an explicit force-constant calculation. No guessed peaks, no substituted experimental data.</p>
+<div class="toolbar"><label for="file" class="brand">Load result</label><input id="file" type="file" accept=".json,application/json" aria-label="Select GeoForm phonon result JSON"><span id="status" role="status" aria-live="polite">Choose a <code>geoform.phonons.result/1</code> JSON file.</span></div>
+<div class="grid" id="results" hidden>
+<section class="panel wide" aria-label="Evidence and provenance"><div class="eyebrow">Evidence before interpretation</div><h2 id="source-heading">Model and source</h2><p class="evidence" id="provenance"></p><div class="facts" id="facts"></div></section>
+<section class="panel"><div class="eyebrow">01 / Reciprocal space</div><h2>Dispersion</h2><p class="hint">Signed cyclic frequency (THz); values below 0 indicate imaginary modes. Bands are sorted, not eigenvector-tracked.</p><canvas id="bands" role="img" aria-label="Phonon dispersion bands plotted against reciprocal-space distance"></canvas><p class="tip" id="bandtip" aria-live="polite">Move a pointer across the plot to inspect the nearest q-point.</p><div class="actions"><button class="secondary" id="bandscsv">Export band CSV</button></div></section>
+<section class="panel"><div class="eyebrow">02 / Vibrational states</div><h2>Phonon density of states</h2><p class="hint">Gaussian-broadened states per THz per primitive cell, calculated only for stable shifted-mesh modes.</p><canvas id="dos" role="img" aria-label="Vibrational density of states versus frequency"></canvas><p class="tip" id="dostip" aria-live="polite">Read-only model output.</p><div class="actions"><button class="secondary" id="doscsv">Export DOS CSV</button></div></section>
+<section class="panel wide"><div class="eyebrow">03 / Equilibrium response</div><h2>Harmonic thermodynamics</h2><p class="hint">Per primitive cell at the exported temperature, constant volume. Not a prediction of thermal expansion or conductivity.</p><div class="facts" id="thermal"></div></section>
+</div>
+<div class="empty" id="empty">Your phonon calculation will appear here. Generate a synthetic example with <code>python -m geoform_phonons --output simple_cubic_result.json</code>.</div>
+<p class="footnote">The source/evidence label is user-declared and is not independently certified by the viewer. IR, Raman, LO–TO splitting and electron–phonon matrix elements require additional separately sourced response data.</p>
+<footer>GeoForm open research tool · <a href="https://github.com/towre676-cloud/geoform-phonon-engine">Source, formulae and reproducibility tests</a></footer>
+</main>
+<script>
+(() => {
+'use strict';
+const $=id=>document.getElementById(id);let data=null;
+const number=(v,p=4)=>typeof v==='number'&&Number.isFinite(v)?v.toLocaleString(undefined,{maximumFractionDigits:p}):'—';
+function addFact(box,label,val){const d=document.createElement('div');d.className='fact';let a=document.createElement('small');a.textContent=label;let b=document.createElement('strong');b.textContent=val;d.append(a,b);box.append(d)}
+function bounds(arr){const valid=arr.filter(Number.isFinite);return [Math.min(...valid),Math.max(...valid)];}
+function plot(canvas, series, opts={}){
+  const r=canvas.getBoundingClientRect(),ratio=Math.max(1,window.devicePixelRatio||1);
+  const w=Math.max(320,r.width),h=Math.max(220,r.height);canvas.width=Math.round(w*ratio);canvas.height=Math.round(h*ratio);
+  const ctx=canvas.getContext('2d');ctx.setTransform(ratio,0,0,ratio,0,0);ctx.clearRect(0,0,w,h);
+  const L=55,R=14,T=17,B=40;let xx=series.flatMap(s=>s.x),yy=series.flatMap(s=>s.y);
+  if(!xx.length||!yy.length)return;
+  let [xmin,xmax]=bounds(xx),[ymin,ymax]=bounds(yy);if(xmax===xmin)xmax=xmin+1;if(ymax===ymin){ymin-=1;ymax+=1}
+  let py=y=>T+(ymax-y)/(ymax-ymin)*(h-T-B),px=x=>L+(x-xmin)/(xmax-xmin)*(w-L-R);
+  ctx.font='12px system-ui';ctx.lineWidth=1;ctx.textAlign='right';ctx.strokeStyle='#31564d';ctx.fillStyle='#a5c1b8';
+  for(let k=0;k<=4;k++){const y=ymin+(ymax-ymin)*k/4,Y=py(y);ctx.beginPath();ctx.moveTo(L,Y);ctx.lineTo(w-R,Y);ctx.stroke();ctx.fillText(number(y,2),L-8,Y+4)}
+  for(let k=0;k<=4;k++){const x=xmin+(xmax-xmin)*k/4,X=px(x);ctx.fillText(number(x,2),X+10,h-14)}
+  if(ymin<0&&ymax>0){ctx.strokeStyle='#faaf80';ctx.setLineDash([4,6]);ctx.beginPath();ctx.moveTo(L,py(0));ctx.lineTo(w-R,py(0));ctx.stroke();ctx.setLineDash([])}
+  const palette=['#76eabb','#f6c86d','#91bfff','#f099cf','#b8a1ff','#e3f8b4'];
+  series.forEach((s,i)=>{ctx.strokeStyle=palette[i%palette.length];ctx.lineWidth=i===0?2.2:1.6;ctx.beginPath();let n=0;for(let j=0;j<s.x.length;j++){if(!Number.isFinite(s.x[j])||!Number.isFinite(s.y[j]))continue;const X=px(s.x[j]),Y=py(s.y[j]);if(!n++)ctx.moveTo(X,Y);else ctx.lineTo(X,Y)}ctx.stroke()});
+  canvas._plot={L,R,T,B,w,h,xmin,xmax,ymin,ymax};
+}
+function downloadCSV(name,header,rows){const csv=[header,...rows.map(row=>row.map(x=>typeof x==='number'?x.toPrecision(12):JSON.stringify(x)).join(','))].join('\n')+'\n';const url=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function render(){if(!data)return;const source=data.evidence||{},physics=data.physics||{},c=data.crystal||{},thermo=data.thermodynamics||{},disp=data.dispersion||{},dos=data.density_of_states||{};
+ $('empty').hidden=true;$('results').hidden=false;$('source-heading').textContent=`${(c.symbols||[]).join(' · ')||'Structure'} · ${source.declared_status||'unresolved'}`;
+ $('provenance').textContent=`Declared status: ${source.declared_status||'unresolved'}. Source: ${source.source||'Not supplied'}. ${source.verification||'Source not independently verified'}`;
+ $('facts').replaceChildren();addFact($('facts'),'Atoms / primitive cell',String(c.n_atoms_primitive??'—'));addFact($('facts'),'Unit cell volume',number(c.volume_angstrom3,3)+' Å³');addFact($('facts'),'ASR max residual',number(physics.acoustic_sum_rule_max_abs_ev_a2,6)+' eV/Å²');addFact($('facts'),'Imaginary mesh modes',String(physics.unstable_modes_on_shifted_mesh??'—'));
+ const q=disp.distance_inverse_angstrom||[],m=disp.frequency_thz_signed||[];let b=[];if(m.length&&q.length===m.length){for(let j=0;j<m[0].length;j++)b.push({x:q,y:m.map(row=>row[j])})}plot($('bands'),b);$('bands')._series=b;
+ if(Array.isArray(dos.frequency_thz)&&Array.isArray(dos.states_per_thz_cell)){plot($('dos'),[{x:dos.frequency_thz,y:dos.states_per_thz_cell}]);$('dos')._series=[{x:dos.frequency_thz,y:dos.states_per_thz_cell}];$('dostip').textContent=`Gaussian σ = ${number(dos.gaussian_sigma_thz,3)} THz · DOS integral targets 3N.`;$('doscsv').disabled=false}else{$('dos')._series=[];const context=$('dos').getContext('2d');context.clearRect(0,0,$('dos').width,$('dos').height);$('dostip').textContent=dos.status||'No stable DOS available';$('doscsv').disabled=true}
+ $('thermal').replaceChildren();if(typeof thermo.temperature_k==='number'){addFact($('thermal'),'Temperature',number(thermo.temperature_k,2)+' K');addFact($('thermal'),'Helmholtz F',number(thermo.free_energy_ev_cell,5)+' eV');addFact($('thermal'),'Zero-point energy',number(thermo.zero_point_energy_ev_cell,5)+' eV');addFact($('thermal'),'Cv',number(thermo.cv_ev_k_cell,7)+' eV/K');addFact($('thermal'),'Entropy S',number(thermo.entropy_ev_k_cell,7)+' eV/K')}else addFact($('thermal'),'Unavailable',thermo.status||'Not supplied');
+}
+function validate(r){if(!r||r.schema_version!=='geoform.phonons.result/1'||!r.dispersion||!Array.isArray(r.dispersion.frequency_thz_signed)||!Array.isArray(r.dispersion.distance_inverse_angstrom))throw Error('Not a GeoForm phonon result/1 file');let a=r.dispersion.frequency_thz_signed,x=r.dispersion.distance_inverse_angstrom;if(a.length!==x.length||!a.length||!a.every(row=>Array.isArray(row)&&row.length===a[0].length&&row.every(Number.isFinite))||!x.every(Number.isFinite))throw Error('Invalid dispersion arrays');return r}
+$('file').addEventListener('change',async event=>{const f=event.target.files?.[0];if(!f)return;try{data=validate(JSON.parse(await f.text()));render();$('status').textContent='Loaded '+f.name+' · '+data.evidence?.declared_status+' evidence'}catch(e){data=null;$('results').hidden=true;$('empty').hidden=false;$('status').textContent='Cannot load file: '+e.message}});
+$('bandscsv').addEventListener('click',()=>{if(!data)return;const d=data.dispersion;downloadCSV('geoform_dispersion.csv',['distance_inverse_angstrom','q_x','q_y','q_z',...d.frequency_thz_signed[0].map((_,i)=>'mode_'+i+'_thz')].join(','),d.frequency_thz_signed.map((row,i)=>[d.distance_inverse_angstrom[i],...(d.q_fractional[i]||[null,null,null]),...row]))});
+$('doscsv').addEventListener('click',()=>{const d=data?.density_of_states;if(!Array.isArray(d?.frequency_thz))return;downloadCSV('geoform_dos.csv','frequency_thz,states_per_thz_cell',d.frequency_thz.map((x,i)=>[x,d.states_per_thz_cell[i]]))});
+for(const id of ['bands','dos']){$(id).addEventListener('pointermove',e=>{const p=e.currentTarget._plot,s=e.currentTarget._series;if(!p||!s?.length)return;let x=p.xmin+(Math.max(0,Math.min(1,(e.offsetX-p.L)/(p.w-p.L-p.R))))*(p.xmax-p.xmin);const xs=s[0].x;let idx=0,best=Infinity;for(let i=0;i<xs.length;i++){const d=Math.abs(xs[i]-x);if(d<best){idx=i;best=d}}const target=id==='bands'?'bandtip':'dostip';$(target).textContent=id==='bands'?`q-distance ${number(xs[idx],4)} Å⁻¹ · bands ${s.map(b=>number(b.y[idx],3)).join(', ')} THz`:`${number(xs[idx],3)} THz · DOS ${number(s[0].y[idx],3)} states/THz/cell`})}
+window.addEventListener('resize',()=>{if(data)render()});
+})();
+</script>
+</body>
+</html>
