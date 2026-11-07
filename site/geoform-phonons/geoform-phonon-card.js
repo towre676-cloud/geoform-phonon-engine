@@ -5,10 +5,15 @@
 (function (root) {
   'use strict';
   const cases = Object.freeze({
-    halite: Object.freeze({name: 'Halite', formula: 'NaCl', errorTHz: 7.744035919188264e-7}),
-    periclase: Object.freeze({name: 'Periclase', formula: 'MgO', errorTHz: 2.1755864274553005e-6})
+    anatase: {name: 'Anatase', formula: 'TiO₂'},
+    cassiterite: {name: 'Cassiterite', formula: 'SnO₂'},
+    corundum: {name: 'Corundum', formula: 'Al₂O₃'},
+    halite: {name: 'Halite', formula: 'NaCl'},
+    periclase: {name: 'Periclase', formula: 'MgO'},
+    stishovite: {name: 'Stishovite', formula: 'SiO₂', signedDispersionOnly: true},
+    zincite: {name: 'Zincite', formula: 'ZnO', signedDispersionOnly: true}
   });
-  function cleanSlug(s) { return String(s||'').trim().toLowerCase().replace(/[^a-z0-9-]/g,''); }
+  function cleanSlug(s) { return String(s||'').trim().toLowerCase(); }
   function hrefForMineral(slug, basePath) {
     const base = (typeof basePath === 'string' && /^\/[a-z0-9/_-]*\/$/.test(basePath)) ? basePath : '/phonons/';
     const s = cleanSlug(slug);
@@ -18,7 +23,7 @@
     if (!container || typeof container.replaceChildren !== 'function') throw new TypeError('DOM mount element is required');
     opts=opts||{};
     const slug=cleanSlug(opts.mineralSlug);
-    const match=cases[slug];
+    const match=Object.prototype.hasOwnProperty.call(cases,slug) ? cases[slug] : null;
     const section=document.createElement('section');
     section.setAttribute('aria-label','Phonon and lattice dynamics evidence');
     section.className='geoform-phonon-evidence';
@@ -27,15 +32,17 @@
     badge.textContent=match?'CALCULATED • BENCHMARKED':'UNRESOLVED • NO CALCULATED DATA';
     const description=document.createElement('p');
     description.textContent=match?
-      `${match.name} (${match.formula}): DFT-derived harmonic phonon result, independently compared to Phonopy at 16 q points. Not a measured Raman or IR spectrum.`:
+      `${match.name} (${match.formula}): DFT-derived harmonic phonon result, independently compared to Phonopy at 16 q points. Experimental spectrum unavailable in this dataset.`:
       'No source-backed phonon force constants are available for this mineral. Crystal identity alone cannot establish its phonon frequencies.';
     section.append(title,badge,description);
     if(match){
       const a=document.createElement('a');a.href=hrefForMineral(slug,opts.basePath);
-      a.textContent='Inspect phonon bands, vibrational DOS and heat capacity';
+      a.textContent=match.signedDispersionOnly ? 'Inspect signed phonon bands' : 'Inspect phonon bands, vibrational DOS and heat capacity';
       section.append(a);
       const note=document.createElement('p');
-      note.textContent='Long-range polar LO–TO corrections are excluded from this benchmark. Calculated ≠ experimentally measured.';
+      note.textContent=(match.signedDispersionOnly ?
+        'An imaginary mode near Γ prevents equilibrium DOS and thermal export. ' : '') +
+        'Long-range polar LO–TO corrections are excluded from this benchmark.';
       section.append(note);
     }
     container.replaceChildren(section);

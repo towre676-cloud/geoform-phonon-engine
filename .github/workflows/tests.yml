@@ -38,17 +38,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install -e . 'phonopy==4.9.0'
+      - run: python -m pip install -e . -r benchmarks/requirements.txt
       - name: Download immutable, hash-checked Phonopy mineral datasets
         run: python scripts/fetch_reference_sources.py --destination benchmarks/upstream
-      - name: Independently compare halite and periclase dynamical matrices and bands
-        run: python scripts/benchmark_minerals.py --data-dir benchmarks/upstream --output-dir benchmarks/generated --mesh 4 --points 12
-      - name: Validate generated GeoForm JSON catalog and output schemas
-        run: |
-          python -m json.tool benchmarks/generated/catalog.json > /dev/null
-          python -m json.tool benchmarks/generated/benchmark_receipts.json > /dev/null
-          python -m json.tool benchmarks/generated/halite_phonons.json > /dev/null
-          python -m json.tool benchmarks/generated/periclase_phonons.json > /dev/null
+      - name: Audit VASP archives and compare all pinned crystal datasets
+        run: python scripts/benchmark_minerals.py --data-dir benchmarks/upstream --output-dir benchmarks/generated --mesh 8 --points 24
       - name: Build independently checked site-ready archive
         run: python scripts/build_site_bundle.py --results benchmarks/generated --output benchmarks/geoform_site_phonons.zip
       - name: Publish reproducible, calculated (not measured) benchmark artifacts

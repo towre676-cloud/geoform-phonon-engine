@@ -1,10 +1,8 @@
 """Offline reproducibility and invalid-input handling for pinned sources."""
-import hashlib
 import json
 from pathlib import Path
 import tempfile
 import unittest
-from unittest.mock import patch
 from scripts.fetch_reference_sources import git_blob_sha1, validate_manifest, fetch_benchmarks, MANIFEST
 
 
@@ -15,8 +13,10 @@ class SourceTests(unittest.TestCase):
     def test_reference_manifest_is_pinned(self):
         data=json.loads(MANIFEST.read_text())
         validate_manifest(data)
-        self.assertEqual(len(data['materials']),2)
-        self.assertEqual(len({x['git_blob_sha1'] for m in data['materials'].values() for x in m['files'].values()}),4)
+        self.assertEqual(set(data['materials']), {
+            'halite', 'periclase', 'corundum', 'anatase', 'zincite', 'cubic-catio3', 'cassiterite',
+            'stishovite', 'hexagonal-mgb2'})
+        self.assertEqual(len({x['git_blob_sha1'] for m in data['materials'].values() for x in m['files'].values()}),18)
 
     def test_unexpected_source_rejected(self):
         r=json.loads(MANIFEST.read_text())

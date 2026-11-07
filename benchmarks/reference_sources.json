@@ -3,21 +3,578 @@
   "upstream_repo": "phonopy/phonopy",
   "upstream_commit": "bd260e234de32b3b6c558c60a7c6254b9bdfef71",
   "upstream_license": "BSD-3-Clause",
-  "description": "Official Phonopy VASP finite-displacement examples; force sets are numerical DFT-derived computational inputs, NOT experimental measurements.",
+  "description": "Pinned Phonopy VASP finite-displacement examples. FORCE_SETS contain calculated forces.",
   "materials": {
     "halite": {
-      "name": "Halite", "formula": "NaCl", "origin": "Phonopy official example/NaCl", "evidence_status": "calculated", "lo_to_correction": "excluded",
+      "name": "Halite",
+      "formula": "NaCl",
+      "origin": "Phonopy official example/NaCl",
+      "evidence_status": "calculated",
+      "lo_to_correction": "excluded",
       "files": {
-        "phonopy_disp.yaml": {"path": "example/NaCl/phonopy_disp.yaml", "git_blob_sha1": "2f7d82ecf8f2894d7469c8426a2c92f1512dbc75"},
-        "FORCE_SETS": {"path": "example/NaCl/FORCE_SETS", "git_blob_sha1": "eb9f19a467f8bf8bde709bafc07795fd4d8aedda"}
-      }
+        "phonopy_disp.yaml": {
+          "path": "example/NaCl/phonopy_disp.yaml",
+          "git_blob_sha1": "2f7d82ecf8f2894d7469c8426a2c92f1512dbc75",
+          "sha256": "05553d717297aeef35f8d79bccbb4916a474e7b24ddbafe1b0d9ed148694a602",
+          "bytes": 12203
+        },
+        "FORCE_SETS": {
+          "path": "example/NaCl/FORCE_SETS",
+          "git_blob_sha1": "eb9f19a467f8bf8bde709bafc07795fd4d8aedda",
+          "sha256": "2485a1ee2c43579e868c65f376c45d81caa0928a4899a8edc292ac6843aaac10",
+          "bytes": 6282
+        }
+      },
+      "source_directory": "example/NaCl",
+      "display_name": "Halite"
     },
     "periclase": {
-      "name": "Periclase", "formula": "MgO", "origin": "Phonopy official example/MgO; VASP 500 eV cutoff, 4x4x4 k-points conventional cell", "evidence_status": "calculated", "lo_to_correction": "excluded",
+      "name": "Periclase",
+      "formula": "MgO",
+      "origin": "Phonopy official example/MgO; VASP 500 eV cutoff, 4x4x4 k-points conventional cell",
+      "evidence_status": "calculated",
+      "lo_to_correction": "excluded",
       "files": {
-        "phonopy_disp.yaml": {"path": "example/MgO/phonopy_disp.yaml", "git_blob_sha1": "c92754317dec23afe4538299e3e07889c61a8018"},
-        "FORCE_SETS": {"path": "example/MgO/FORCE_SETS", "git_blob_sha1": "15472f86128544c182bb0cffd4966b6c9b8953c9"}
+        "phonopy_disp.yaml": {
+          "path": "example/MgO/phonopy_disp.yaml",
+          "git_blob_sha1": "c92754317dec23afe4538299e3e07889c61a8018",
+          "sha256": "fc4ae95b377becae740f329e9ab5611a66d34e7a42e1b0c28d05d432708ad008",
+          "bytes": 12692
+        },
+        "FORCE_SETS": {
+          "path": "example/MgO/FORCE_SETS",
+          "git_blob_sha1": "15472f86128544c182bb0cffd4966b6c9b8953c9",
+          "sha256": "a9c88d502ec38871fefaf4b7be521780a7ea2631c6cd650c814333e45833ffc0",
+          "bytes": 6282
+        }
+      },
+      "source_directory": "example/MgO",
+      "display_name": "Periclase"
+    },
+    "corundum": {
+      "name": "Corundum",
+      "display_name": "Corundum",
+      "formula": "Al2O3",
+      "phase": "Corundum structure",
+      "origin": "Phonopy official example/Al2O3",
+      "evidence_status": "calculated",
+      "lo_to_correction": "excluded",
+      "structure": {
+        "space_group": "R-3c",
+        "number": 167,
+        "wyckoff_by_element": {
+          "Al": "c",
+          "O": "e"
+        },
+        "supercell_diagonal": [
+          2,
+          2,
+          1
+        ],
+        "primitive_atoms": 10,
+        "supercell_atoms": 120,
+        "displacements": 5
+      },
+      "vasp": {
+        "encut_ev": 500,
+        "force_k_mesh": [
+          3,
+          3,
+          1
+        ],
+        "born_file_present": true
+      },
+      "source_directory": "example/Al2O3",
+      "files": {
+        "phonopy_disp.yaml": {
+          "path": "example/Al2O3/phonopy_disp.yaml",
+          "git_blob_sha1": "d468c22491d8da184ac8309b30f9ce2d01b7bd90",
+          "sha256": "8fa70df79a959a042c67cdc9dbbf12b41179d82257aff0eda0dfeff5a1ab837e",
+          "bytes": 26770
+        },
+        "FORCE_SETS": {
+          "path": "example/Al2O3/FORCE_SETS",
+          "git_blob_sha1": "d7def58b878e112a3d23450179a390eccd3ceff9",
+          "sha256": "d4e9a1aef70e8b768419c42480f04dcd47ea2cb32968cbaadd7376006cb02f61",
+          "bytes": 29139
+        }
+      },
+      "provenance_files": {
+        "POSCAR-unitcell": {
+          "path": "example/Al2O3/POSCAR-unitcell",
+          "git_blob_sha1": "0b32248bc8a212ac0f626c8a7dbf93a72c13ea14",
+          "sha256": "dead32935601e840c8ded48c8c6f5df09b048f58fb066f11f34778bdfd43f80d",
+          "bytes": 3576
+        },
+        "vaspruns.tar.lzma": {
+          "path": "example/Al2O3/vaspruns.tar.lzma",
+          "git_blob_sha1": "c027098cb615b566337bea166c3b1fc5accdf4f5",
+          "sha256": "54c8081e6c1a8d50a1887dbc152cfe2645e439aa7b4aaf9df104cee298eaede1",
+          "bytes": 36124
+        },
+        "README.md": {
+          "path": "example/Al2O3/README.md",
+          "git_blob_sha1": "6c084c7e5f9949b10c4f3edc341d0652e5f963c0",
+          "sha256": "2c8c1ed9afa67befe494af1782d7a29bbe94a8d7ce0fdb1652ecf9d10a2d82f1",
+          "bytes": 634
+        },
+        "BORN": {
+          "path": "example/Al2O3/BORN",
+          "git_blob_sha1": "b59b910331f3221b2adac7627a118d8e7387edfd",
+          "sha256": "497ebe0c497e042e2183a3a0ade1d13a2244cbb8306e792f26bc95b7c369f5d6",
+          "bytes": 409
+        }
+      }
+    },
+    "anatase": {
+      "name": "Anatase",
+      "display_name": "Anatase",
+      "formula": "TiO2",
+      "phase": "Anatase structure",
+      "origin": "Phonopy official example/TiO2-anatase",
+      "evidence_status": "calculated",
+      "lo_to_correction": "excluded",
+      "structure": {
+        "space_group": "I4_1/amd",
+        "number": 141,
+        "wyckoff_by_element": {
+          "Ti": "b",
+          "O": "e"
+        },
+        "supercell_diagonal": [
+          4,
+          4,
+          1
+        ],
+        "primitive_atoms": 6,
+        "supercell_atoms": 192,
+        "displacements": 4
+      },
+      "vasp": {
+        "encut_ev": 500,
+        "force_k_mesh": [
+          1,
+          1,
+          1
+        ],
+        "born_file_present": true
+      },
+      "source_note": "README says 4×4×2. YAML, force-row count and archived VASP lattices establish 4×4×1. The source 12-atom conventional cell is reduced to a six-atom primitive basis for the comparison.",
+      "source_directory": "example/TiO2-anatase",
+      "files": {
+        "phonopy_disp.yaml": {
+          "path": "example/TiO2-anatase/phonopy_disp.yaml",
+          "git_blob_sha1": "68c6d8bb847fad36f50857dcdfcac32605efff9a",
+          "sha256": "25de992fb63db8e5a756cf2610207d279a04e803ee7916204b726acfbcd7d34b",
+          "bytes": 31890
+        },
+        "FORCE_SETS": {
+          "path": "example/TiO2-anatase/FORCE_SETS",
+          "git_blob_sha1": "a05b05ea6427156600c65902816722e22c20013d",
+          "sha256": "34712dbc2c8858eb63ce9923416dc5e6a2b72c9b8b93075687a5bcb1c505f263",
+          "bytes": 37136
+        }
+      },
+      "provenance_files": {
+        "POSCAR-unitcell": {
+          "path": "example/TiO2-anatase/POSCAR-unitcell",
+          "git_blob_sha1": "64d19b993df7ecaf8a5e7385a2532fa87d18b89e",
+          "sha256": "b03849fa1344435df7f56ed7599dd07aa1f8bc122a5b63b2611ae66ccc3c5c32",
+          "bytes": 977
+        },
+        "vaspruns.tar.lzma": {
+          "path": "example/TiO2-anatase/vaspruns.tar.lzma",
+          "git_blob_sha1": "8ef918407707c083036e7549573eb526a2d8ac7f",
+          "sha256": "e3d3a4e4b29a2b56cb3fd02e41b2440716f6f312a42746e9f4712e368963f589",
+          "bytes": 21593
+        },
+        "README.md": {
+          "path": "example/TiO2-anatase/README.md",
+          "git_blob_sha1": "40e2703033a17d0786a30ada49f46639a7f358c9",
+          "sha256": "5d3aec096fe09a80d1b6c56e3c72973813210a0c633ffdd3aaa41410b3773771",
+          "bytes": 293
+        },
+        "BORN": {
+          "path": "example/TiO2-anatase/BORN",
+          "git_blob_sha1": "36add6bcce792bbc485ec65810c4a1685fb57f95",
+          "sha256": "67ea91a4421830f4d446c96f3a03e0daeb688f4e1cf85c28baee1970fedd0207",
+          "bytes": 127
+        }
+      }
+    },
+    "zincite": {
+      "name": "Zincite",
+      "display_name": "Zincite",
+      "formula": "ZnO",
+      "phase": "Wurtzite-type ZnO",
+      "origin": "Phonopy official example/ZnO",
+      "evidence_status": "calculated",
+      "lo_to_correction": "excluded",
+      "structure": {
+        "space_group": "P6_3mc",
+        "number": 186,
+        "wyckoff_by_element": {
+          "Zn": "b",
+          "O": "b"
+        },
+        "supercell_diagonal": [
+          2,
+          2,
+          2
+        ],
+        "primitive_atoms": 4,
+        "supercell_atoms": 32,
+        "displacements": 6
+      },
+      "vasp": {
+        "encut_ev": 500,
+        "force_k_mesh": [
+          3,
+          3,
+          2
+        ],
+        "born_file_present": true
+      },
+      "source_directory": "example/ZnO",
+      "files": {
+        "phonopy_disp.yaml": {
+          "path": "example/ZnO/phonopy_disp.yaml",
+          "git_blob_sha1": "b5ee970a292d86dc8be3fb388b644d54cce0213a",
+          "sha256": "93f4adbeafa702a85c30da81f17895c13bf38e1d88fe55433966c9137138b40c",
+          "bytes": 7641
+        },
+        "FORCE_SETS": {
+          "path": "example/ZnO/FORCE_SETS",
+          "git_blob_sha1": "71286d7b3e51d3fbe93b047f5aad32a60fcefdb4",
+          "sha256": "403e821f0017ca396874edcdb7da58366c6dce3cbe1f8ca03cd1346f1bd02dc5",
+          "bytes": 9620
+        }
+      },
+      "provenance_files": {
+        "POSCAR-unitcell": {
+          "path": "example/ZnO/POSCAR-unitcell",
+          "git_blob_sha1": "0bd6489ad4c1560125588c1378d9273fcad3046b",
+          "sha256": "dcca1db53bbb878b655ba842004db3462270b67bb52ed3f71fbffba83d563c1a",
+          "bytes": 481
+        },
+        "vaspruns.tar.lzma": {
+          "path": "example/ZnO/vaspruns.tar.lzma",
+          "git_blob_sha1": "2bf12d8b231cff9a4af18d98d6238ce5129361a4",
+          "sha256": "3fc792541e925485c2173a0602a30d605f9afb97f555db27bda7b3a0b715a2fb",
+          "bytes": 21254
+        },
+        "README.md": {
+          "path": "example/ZnO/README.md",
+          "git_blob_sha1": "76a31968eeaf494d31499b0de6f317fc615c1e64",
+          "sha256": "ab3fc552ab8f60269014ca61a6aed2c716376966e3f0a4cdeb3ce06bd0f36c1d",
+          "bytes": 224
+        },
+        "BORN": {
+          "path": "example/ZnO/BORN",
+          "git_blob_sha1": "e3b9587a69c571c4fac8e8ae9ed53be985e9bc5a",
+          "sha256": "902118e6b31c9046c0b22eadac279e079563d2386e675a88409443923ee5063e",
+          "bytes": 112
+        }
+      }
+    },
+    "cubic-catio3": {
+      "name": null,
+      "display_name": "Cubic CaTiO3",
+      "formula": "CaTiO3",
+      "phase": "Ideal cubic perovskite-type CaTiO3",
+      "origin": "Phonopy official example/CaTiO3",
+      "evidence_status": "calculated",
+      "lo_to_correction": "excluded",
+      "structure": {
+        "space_group": "Pm-3m",
+        "number": 221,
+        "wyckoff_by_element": {
+          "Ca": "a",
+          "Ti": "b",
+          "O": "c"
+        },
+        "supercell_diagonal": [
+          2,
+          2,
+          2
+        ],
+        "primitive_atoms": 5,
+        "supercell_atoms": 40,
+        "displacements": 4
+      },
+      "vasp": {
+        "encut_ev": 500,
+        "force_k_mesh": [
+          2,
+          2,
+          2
+        ],
+        "born_file_present": false
+      },
+      "source_note": "Ideal cubic Pm-3m computational model. Mineral-record assignment withheld. No BORN file in this example.",
+      "source_directory": "example/CaTiO3",
+      "files": {
+        "phonopy_disp.yaml": {
+          "path": "example/CaTiO3/phonopy_disp.yaml",
+          "git_blob_sha1": "cdd8f6248f448fd6e4f9ab12454486dc3c3c3bf1",
+          "sha256": "94d117ea286594ddd01f2bbd0b5f38b297836e51b83a07f3c80bebcad7660ef6",
+          "bytes": 8808
+        },
+        "FORCE_SETS": {
+          "path": "example/CaTiO3/FORCE_SETS",
+          "git_blob_sha1": "39e14aca2a94f7cd2282abc85de98117a009583a",
+          "sha256": "06af1ea344f727cb7129454108b4afd144c5d3b58278f227506a404c5b077838",
+          "bytes": 7951
+        }
+      },
+      "provenance_files": {
+        "POSCAR-unitcell": {
+          "path": "example/CaTiO3/POSCAR-unitcell",
+          "git_blob_sha1": "e35d0999706dc1b381a5a5ec9e0819da5a2f94eb",
+          "sha256": "aa57c3065c1238fdd15886c38bf49da3213219449b0ac3be027ab317170cd1bf",
+          "bytes": 550
+        },
+        "vaspruns.tar.lzma": {
+          "path": "example/CaTiO3/vaspruns.tar.lzma",
+          "git_blob_sha1": "6f2658b6ff5fbac19cc42780903ae885c8268179",
+          "sha256": "64a417902fda16f13a44c031c74919a9ac37dae831faeed938e8cc57237972f6",
+          "bytes": 15918
+        }
+      }
+    },
+    "cassiterite": {
+      "name": "Cassiterite",
+      "display_name": "Cassiterite",
+      "formula": "SnO2",
+      "phase": "Rutile-type SnO2",
+      "origin": "Phonopy official example/SnO2",
+      "evidence_status": "calculated",
+      "lo_to_correction": "excluded",
+      "structure": {
+        "space_group": "P4_2/mnm",
+        "number": 136,
+        "wyckoff_by_element": {
+          "Sn": "a",
+          "O": "f"
+        },
+        "supercell_diagonal": [
+          2,
+          2,
+          3
+        ],
+        "primitive_atoms": 6,
+        "supercell_atoms": 72,
+        "displacements": 3
+      },
+      "vasp": {
+        "encut_ev": 500,
+        "force_k_mesh": [
+          2,
+          2,
+          2
+        ],
+        "born_file_present": true
+      },
+      "source_note": "Archived undistorted run 000 is excluded. Displaced runs 001–003 match FORCE_SETS.",
+      "source_directory": "example/SnO2",
+      "files": {
+        "phonopy_disp.yaml": {
+          "path": "example/SnO2/phonopy_disp.yaml",
+          "git_blob_sha1": "01d2f8ff290f658347cb1f7547896a3a1f47b699",
+          "sha256": "71ef230c56d70e6d80f667e1cca77de78c21d8b0f0cbd6fc1d41878be950878d",
+          "bytes": 13427
+        },
+        "FORCE_SETS": {
+          "path": "example/SnO2/FORCE_SETS",
+          "git_blob_sha1": "be850f566d49a86ce4ae5ed37c340ee2bbfa5f89",
+          "sha256": "2dd92add3680c790bee8a56a02229c0bcc5597ad2284d598a58b323d678d413d",
+          "bytes": 10573
+        }
+      },
+      "provenance_files": {
+        "POSCAR-unitcell": {
+          "path": "example/SnO2/POSCAR-unitcell",
+          "git_blob_sha1": "b0fb298180a06785ac5c673e5c1288b8a192d944",
+          "sha256": "7dbe38cc31f6c4ce525494d380a5239ab14f0c873567daa11a6fff9a4023aa8c",
+          "bytes": 608
+        },
+        "vaspruns.tar.lzma": {
+          "path": "example/SnO2/vaspruns.tar.lzma",
+          "git_blob_sha1": "19f61971297d562842d7081e611f451fb902f22e",
+          "sha256": "36d9ee9fa62b5cbb0dad350901aba6dc32aa5e52494787fc118be07a4f442c00",
+          "bytes": 24635
+        },
+        "README.md": {
+          "path": "example/SnO2/README.md",
+          "git_blob_sha1": "39ae638a95289fb98058a28e751172414ad1e816",
+          "sha256": "da8c522cc6531e0cd6676869b07a150d5635f83136ec2cbcc7b641ed354129b0",
+          "bytes": 1036
+        },
+        "BORN": {
+          "path": "example/SnO2/BORN",
+          "git_blob_sha1": "b675a81d8dfe184eb8c5b6bab73508051f6b97f4",
+          "sha256": "fc79e4c7a7a8631d9eb6e1a50a168a984f624fd73f60255f85d16a0e18a033d3",
+          "bytes": 408
+        }
+      }
+    },
+    "stishovite": {
+      "name": "Stishovite",
+      "display_name": "Stishovite",
+      "formula": "SiO2",
+      "phase": "High-pressure rutile-type silica",
+      "origin": "Phonopy official example/SiO2-HP",
+      "evidence_status": "calculated",
+      "lo_to_correction": "excluded",
+      "structure": {
+        "space_group": "P4_2/mnm",
+        "number": 136,
+        "wyckoff_by_element": {
+          "Si": "a",
+          "O": "f"
+        },
+        "supercell_diagonal": [
+          2,
+          2,
+          2
+        ],
+        "primitive_atoms": 6,
+        "supercell_atoms": 48,
+        "displacements": 3
+      },
+      "vasp": {
+        "encut_ev": 500,
+        "force_k_mesh": [
+          2,
+          2,
+          3
+        ],
+        "born_file_present": true
+      },
+      "source_note": "The upstream README reports relaxation with VASP PSTRESS = 400 kbar (40 GPa). The archived displacement runs lack an explicit PSTRESS input. The calculation represents the supplied compressed cell.",
+      "source_directory": "example/SiO2-HP",
+      "files": {
+        "phonopy_disp.yaml": {
+          "path": "example/SiO2-HP/phonopy_disp.yaml",
+          "git_blob_sha1": "682038eda09bd990453c25dc528a61929a2a63ab",
+          "sha256": "1a96c4012829e550c4aea4427bcc18544cbe8d9aa0dba03329a0d5820b3cbcba",
+          "bytes": 10059
+        },
+        "FORCE_SETS": {
+          "path": "example/SiO2-HP/FORCE_SETS",
+          "git_blob_sha1": "c57fe8e91577926636aada59a8630089aac24d43",
+          "sha256": "95a9fa7cddb598c39bb88a039f6d8f85bdde691c82b8ebf44e9a69abb86567ee",
+          "bytes": 7117
+        }
+      },
+      "provenance_files": {
+        "POSCAR-unitcell": {
+          "path": "example/SiO2-HP/POSCAR-unitcell",
+          "git_blob_sha1": "9bbc9c66581d4951c57d7c29723ee0f2bd5faea1",
+          "sha256": "32ae50e9a14a3b360ee97eb34ea69b90e656f2f1c8f8e78aa5c0b3dc51608564",
+          "bytes": 906
+        },
+        "vaspruns.tar.lzma": {
+          "path": "example/SiO2-HP/vaspruns.tar.lzma",
+          "git_blob_sha1": "1403c3560661cc4b61ebf0db7840db9723d25b10",
+          "sha256": "57f631aa2c4c931a0037a96a629a3dc1994f9cccdc0e05e0f4c832a43700e24e",
+          "bytes": 10275
+        },
+        "README.md": {
+          "path": "example/SiO2-HP/README.md",
+          "git_blob_sha1": "f51cbf3167f7a98534d57cff4b6159d849ab103f",
+          "sha256": "fb92accd508e31248ef47d96a9d89d7c7cbd4fa82424a2b9b6c13c123486c6a3",
+          "bytes": 730
+        },
+        "BORN": {
+          "path": "example/SiO2-HP/BORN",
+          "git_blob_sha1": "ef81c86ce455610ca4df5f918bc950b8a9807636",
+          "sha256": "1ef37c08687480292de3f8819ede8824a8ef7a3f82050ef25d8743777b47df2a",
+          "bytes": 357
+        },
+        "INCAR": {
+          "path": "example/SiO2-HP/INCAR",
+          "git_blob_sha1": "927a4e2c7d2ca3839d37db11eaed321a0f95bb7f",
+          "sha256": "55d314121226f142c27aebd514c54d6927df96a56641d00fa76e07df6d79b51f",
+          "bytes": 248
+        }
+      }
+    },
+    "hexagonal-mgb2": {
+      "name": null,
+      "display_name": "Hexagonal MgB₂",
+      "formula": "MgB2",
+      "phase": "AlB₂-type hexagonal magnesium diboride",
+      "origin": "Phonopy official example/MgB2",
+      "evidence_status": "calculated",
+      "lo_to_correction": "excluded",
+      "structure": {
+        "space_group": "P6/mmm",
+        "number": 191,
+        "wyckoff_by_element": {
+          "Mg": "a",
+          "B": "d"
+        },
+        "supercell_diagonal": [
+          3,
+          3,
+          2
+        ],
+        "primitive_atoms": 3,
+        "supercell_atoms": 54,
+        "displacements": 2
+      },
+      "vasp": {
+        "encut_ev": 500,
+        "force_k_mesh": [
+          6,
+          6,
+          9
+        ],
+        "born_file_present": false
+      },
+      "source_note": "The archived VASP force runs use 0.2 eV smearing. This is a computational compound entry. The result contains no electron–phonon coupling or superconducting transition temperature.",
+      "source_directory": "example/MgB2",
+      "files": {
+        "phonopy_disp.yaml": {
+          "path": "example/MgB2/phonopy_disp.yaml",
+          "git_blob_sha1": "a717305a1781f0eb26c51c454173fa4fa5928e7e",
+          "sha256": "780fb6c8455096960eae4f8ab436c30e5d554743fdaf54b3472533fcfa878ce8",
+          "bytes": 9982
+        },
+        "FORCE_SETS": {
+          "path": "example/MgB2/FORCE_SETS",
+          "git_blob_sha1": "fe3a09e02ed114ddc995fb94492634883cafbadc",
+          "sha256": "5400dd39e2079e078ce4f7728bcfb3689c70e272fdbf1e9936e68cad7ecaf6df",
+          "bytes": 5322
+        }
+      },
+      "provenance_files": {
+        "POSCAR-unitcell": {
+          "path": "example/MgB2/POSCAR-unitcell",
+          "git_blob_sha1": "cfe98ac4e066689f3d2cc68f6100b11652063336",
+          "sha256": "e151b70cc0a2b001e2329b57d5a24fd99cad0c2ec24aae0505befa8560d6b174",
+          "bytes": 419
+        },
+        "vaspruns.tar.lzma": {
+          "path": "example/MgB2/vaspruns.tar.lzma",
+          "git_blob_sha1": "863f7ed160a604f7e192cb7467722591107df7f2",
+          "sha256": "2ba98de78f9e67f4cc77131a5e523485d0b65860edda48f02eb3cd60e8a15f82",
+          "bytes": 48627
+        },
+        "README.md": {
+          "path": "example/MgB2/README.md",
+          "git_blob_sha1": "dc568d84a1c81d943e33ce1bc91231fc339a6e86",
+          "sha256": "7355184b6564f9317a597913edc642b800cd0c7483c670c2d73567e6afc1e5de",
+          "bytes": 393
+        }
       }
     }
+  },
+  "license_file": {
+    "path": "LICENSE",
+    "git_blob_sha1": "ad98c46d8bef0cac32974e405865147cc80679ff",
+    "sha256": "2ce26839c8b70d28765d73e934cc1a979d896d8d228d30694fdd9a92e94d43a9",
+    "bytes": 1470
   }
 }

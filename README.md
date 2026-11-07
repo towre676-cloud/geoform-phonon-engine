@@ -7,34 +7,32 @@
 The original `phonon_chain.py` remains a standard-library-only **exact diatomic-chain benchmark**. The new `geoform_phonons` package generalizes it to periodic 3-D crystals with an arbitrary number of atoms in the primitive cell **when an explicit real-space interatomic force-constant (IFC) model is supplied**. No force constants are inferred from a formula or CIF.
 
 
-## Phase 3: real mineral computational benchmarks
+## Source-pinned crystal benchmarks
 
-**Halite (NaCl) and periclase (MgO)** now have a source-pinned validation
-pipeline using Phonopy's upstream VASP displacement-force examples, not
-hand-tuned spring constants. The new
-[`phonopy_native`](geoform_phonons/phonopy_native.py) adapter correctly handles
-**multiple shortest periodic images at finite-supercell boundaries** before
-GeoForm diagonalizes its own dynamical matrix. The benchmark compares complex
-matrices and independently obtained frequencies at 16 reciprocal points per
-material, with strict tolerances and downloadable CI receipts. LO–TO
-nonanalytic corrections are explicitly omitted on both sides.
+The calculated catalog covers **halite, periclase, corundum, anatase, zincite,
+cassiterite, stishovite, hexagonal MgB₂ and ideal cubic CaTiO₃**. GeoForm reconstructs the periodic
+force constants from Phonopy's finite-supercell model and computes its own
+Fourier sums and eigenvalues. All nine cases were compared with Phonopy at
+16 reciprocal points. The seven added datasets were also checked against 27
+original VASP runs and replayed using full and compact IFC storage.
+
+Six cases include dispersion, total and atom-projected DOS and a harmonic
+thermal curve. Cubic CaTiO₃, zincite and stishovite have sampled imaginary modes and
+supply signed dispersion only. Cubic CaTiO₃ and hexagonal MgB₂ have separate
+computational-phase entries. Every case
+omits the polar nonanalytic correction and carries calculated evidence status.
 
 ```sh
-python -m pip install -e . 'phonopy==4.9.0'
+python -m pip install -e . -r benchmarks/requirements.txt
 python scripts/fetch_reference_sources.py --destination benchmarks/upstream
 python scripts/benchmark_minerals.py --data-dir benchmarks/upstream --output-dir benchmarks/generated
+python scripts/build_site_bundle.py --results benchmarks/generated
+python -m http.server 8765 --directory site/geoform-phonons
 ```
 
-View generated `halite_phonons.json` or `periclase_phonons.json` in the
-standalone explorer. When deployed over HTTP(S) alongside a `data/catalog.json`
-containing the calculated results, the explorer also offers a verified-case
-dropdown. Every synthetic vs external-calculated evidence label remains clear.
-
-The optional new **atom-projected density of states** sums exactly to the
-total DOS, and a **harmonic heat-capacity/thermodynamics curve** is returned
-with stable models. Neither is an experimental intensity or heat-flow model.
-
-See [real-mineral reproducibility and scientific limitations](docs/REAL_MINERAL_BENCHMARKS.md).
+The bundled explorer supports `?mineral=anatase` and `?phase=cubic-catio3`.
+The standalone `web/phonon_explorer.html` also accepts manual JSON files.
+See [source provenance, numerical results and limitations](docs/REAL_MINERAL_BENCHMARKS.md).
 
 ## Run now
 

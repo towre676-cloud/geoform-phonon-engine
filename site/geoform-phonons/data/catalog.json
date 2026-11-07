@@ -6,22 +6,112 @@
   "benchmark_scope": "non-NAC harmonic finite-displacement DFT; computational comparison only",
   "entries": [
     {
+      "slug": "anatase",
+      "mineral": "Anatase",
+      "formula": "TiO2",
+      "display_name": "Anatase",
+      "phase": "Anatase structure",
+      "dos_thermal_available": true,
+      "evidence_status": "calculated",
+      "result_file": "anatase_phonons.json",
+      "comparison_points": 16,
+      "max_frequency_error_thz": 3.0272839666167783e-06
+    },
+    {
+      "slug": "cassiterite",
+      "mineral": "Cassiterite",
+      "formula": "SnO2",
+      "display_name": "Cassiterite",
+      "phase": "Rutile-type SnO2",
+      "dos_thermal_available": true,
+      "evidence_status": "calculated",
+      "result_file": "cassiterite_phonons.json",
+      "comparison_points": 16,
+      "max_frequency_error_thz": 2.761086228986187e-06
+    },
+    {
+      "slug": "corundum",
+      "mineral": "Corundum",
+      "formula": "Al2O3",
+      "display_name": "Corundum",
+      "phase": "Corundum structure",
+      "dos_thermal_available": true,
+      "evidence_status": "calculated",
+      "result_file": "corundum_phonons.json",
+      "comparison_points": 16,
+      "max_frequency_error_thz": 3.2373961147413866e-06
+    },
+    {
+      "slug": "cubic-catio3",
+      "mineral": null,
+      "formula": "CaTiO3",
+      "display_name": "Cubic CaTiO3",
+      "phase": "Ideal cubic perovskite-type CaTiO3",
+      "dos_thermal_available": false,
+      "evidence_status": "calculated",
+      "result_file": "cubic-catio3_phonons.json",
+      "comparison_points": 16,
+      "max_frequency_error_thz": 3.189049262886101e-06
+    },
+    {
       "slug": "halite",
       "mineral": "Halite",
       "formula": "NaCl",
+      "display_name": "Halite",
+      "phase": "Rock-salt structure",
+      "dos_thermal_available": true,
       "evidence_status": "calculated",
       "result_file": "halite_phonons.json",
       "comparison_points": 16,
-      "max_frequency_error_thz": 7.744035919188264e-07
+      "max_frequency_error_thz": 7.7440359547154e-07
+    },
+    {
+      "slug": "hexagonal-mgb2",
+      "mineral": null,
+      "formula": "MgB2",
+      "display_name": "Hexagonal MgB\u2082",
+      "phase": "AlB\u2082-type hexagonal magnesium diboride",
+      "dos_thermal_available": true,
+      "evidence_status": "calculated",
+      "result_file": "hexagonal-mgb2_phonons.json",
+      "comparison_points": 16,
+      "max_frequency_error_thz": 2.9692802172576194e-06
     },
     {
       "slug": "periclase",
       "mineral": "Periclase",
       "formula": "MgO",
+      "display_name": "Periclase",
+      "phase": "Rock-salt structure",
+      "dos_thermal_available": true,
       "evidence_status": "calculated",
       "result_file": "periclase_phonons.json",
       "comparison_points": 16,
       "max_frequency_error_thz": 2.1755864274553005e-06
+    },
+    {
+      "slug": "stishovite",
+      "mineral": "Stishovite",
+      "formula": "SiO2",
+      "display_name": "Stishovite",
+      "phase": "High-pressure rutile-type silica",
+      "dos_thermal_available": false,
+      "evidence_status": "calculated",
+      "result_file": "stishovite_phonons.json",
+      "comparison_points": 16,
+      "max_frequency_error_thz": 4.102903083946785e-06
+    },
+    {
+      "slug": "zincite",
+      "mineral": "Zincite",
+      "formula": "ZnO",
+      "display_name": "Zincite",
+      "phase": "Wurtzite-type ZnO",
+      "dos_thermal_available": false,
+      "evidence_status": "calculated",
+      "result_file": "zincite_phonons.json",
+      "comparison_points": 16,
+      "max_frequency_error_thz": 1.913311374224236e-06
     }
   ]
 }
