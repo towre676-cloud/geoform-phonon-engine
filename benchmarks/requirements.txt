@@ -1,0 +1,6 @@
+# Versions used for the retained crystal benchmark receipts (Python 3.12).
+numpy==2.3.5
+phonopy==4.9.0
+spglib==2.8.0
+symfc==1.8.0
+scipy==1.18.1

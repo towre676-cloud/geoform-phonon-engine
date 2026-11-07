@@ -3,36 +3,103 @@
   "site": "https://geoform-mineral-lab.towre676.chatgpt.site/",
   "target_route": "/phonons/",
   "source_repository": "https://github.com/towre676-cloud/geoform-phonon-engine",
-  "source_commit": "186d49d8d88f31fc9b2d1e82f241f65383c22c12",
-  "source_benchmark": "https://github.com/towre676-cloud/geoform-phonon-engine/actions/runs/42172987502",
   "evidence_status": "calculated",
-  "scope": "Phonopy 4.9.0 non-NAC DFT-derived finite-displacement comparison, not experimental validation",
+  "scope": "Phonopy 4.9.0 non-NAC finite-displacement comparison using supplied VASP forces. Calculated evidence.",
   "supported_minerals": {
+    "anatase": {
+      "formula": "TiO2",
+      "viewer_query": "?mineral=anatase"
+    },
+    "cassiterite": {
+      "formula": "SnO2",
+      "viewer_query": "?mineral=cassiterite"
+    },
+    "corundum": {
+      "formula": "Al2O3",
+      "viewer_query": "?mineral=corundum"
+    },
     "halite": {
       "formula": "NaCl",
-      "mineral_detail_route": "/minerals/halite"
+      "mineral_detail_route": "/minerals/halite",
+      "viewer_query": "?mineral=halite"
     },
     "periclase": {
       "formula": "MgO",
-      "mineral_detail_route": "/minerals/periclase"
+      "mineral_detail_route": "/minerals/periclase",
+      "viewer_query": "?mineral=periclase"
+    },
+    "stishovite": {
+      "formula": "SiO2",
+      "viewer_query": "?mineral=stishovite"
+    },
+    "zincite": {
+      "formula": "ZnO",
+      "viewer_query": "?mineral=zincite"
     }
   },
   "assets": {
+    "README.md": {
+      "bytes": 1671,
+      "sha256": "3fa2f415d363d907214a2c7cc276eee0b6208aaf1466a044766a0279959314a2"
+    },
+    "data/anatase_phonons.json": {
+      "bytes": 157208,
+      "sha256": "2ea72ebeb33212a0be234bf6a912583f825cb7563bc62de2403dfa9af409737e"
+    },
     "data/benchmark_receipts.json": {
-      "sha256": "11fdd5336343712ef2104c8687ef896ee7ba8ce7c29328a19c60157d9e4bda57",
-      "bytes": 9803
+      "bytes": 139845,
+      "sha256": "f018dd457c645dbf8a7f3ab1247a94ae9b440a7be2a0a2d849200af47495cccc"
+    },
+    "data/cassiterite_phonons.json": {
+      "bytes": 157361,
+      "sha256": "7572327d93dfdc84ad3c69cc1f60585b16ccfc6e91c926d1fa7f2109840174fb"
     },
     "data/catalog.json": {
-      "sha256": "7dc849402fb5f59391c1804a4fee24503798bcca9fbe42e24db40b0f55d2e81b",
-      "bytes": 854
+      "bytes": 3767,
+      "sha256": "accc36b17e6eb92f71bf044c53dbccfe878c0c7680b15f0ff867b70a50d9fbd9"
+    },
+    "data/corundum_phonons.json": {
+      "bytes": 236646,
+      "sha256": "27afc29cadf41e533e43338c14625e15eb9c627eb63fef95d8494717b1035df5"
+    },
+    "data/cubic-catio3_phonons.json": {
+      "bytes": 54997,
+      "sha256": "9327aab4f77975187d936e3c1dfd867802a06c2f6d36ffd8d604ed3339cd7374"
     },
     "data/halite_phonons.json": {
-      "sha256": "1c09619dd565234a023197bfc02648691a07a0b8d10e4361dd367cd84f98c474",
-      "bytes": 62336
+      "bytes": 77269,
+      "sha256": "9c7d1c06cdd132822affba1d90e60ebc1f62d0b84f5e9090662b0ecd1913f91b"
+    },
+    "data/hexagonal-mgb2_phonons.json": {
+      "bytes": 98118,
+      "sha256": "5bcadba93623016a166a5129b8261de50c84074a5a41f10a74fb5e4d4ffbc2c4"
     },
     "data/periclase_phonons.json": {
-      "sha256": "9e848a4c532e6da3b42627a4798db87815d4ed2863ba0fb68344e18854f0942c",
-      "bytes": 63210
+      "bytes": 77805,
+      "sha256": "0039fc397afd0b6bfbc83550a6a9b90e88502ec8a587cc5ba9874015342e7ead"
+    },
+    "data/stishovite_phonons.json": {
+      "bytes": 63435,
+      "sha256": "a3b3b62b3adb1e4889cc7dd136e5e5155d816d4d1f883d771c1caf44451da774"
+    },
+    "data/zincite_phonons.json": {
+      "bytes": 47210,
+      "sha256": "0aa8080d923b56f4679a317c117a4ff7062df8ef651bf44b0ed5b70881139a75"
+    },
+    "geoform-phonon-card.js": {
+      "bytes": 3082,
+      "sha256": "858073b0ecbf4806d8ffa5f583972a58ee9307c17cbb90d1c84a266c8561c744"
+    },
+    "index.html": {
+      "bytes": 20015,
+      "sha256": "0b718fdbefa5f557008eed573ebd0c15bf3169062bc8277959bf8818bbdf26f9"
     }
-  }
+  },
+  "integration_base_commit": "1e8e6e08fdc25a7aa2705826e537d73f5ed98863",
+  "upstream_input_commit": "bd260e234de32b3b6c558c60a7c6254b9bdfef71",
+  "deployment_status": "integration-ready repository assets",
+  "computational_phases_without_mineral_link": [
+    "cubic-catio3",
+    "hexagonal-mgb2"
+  ]
 }
