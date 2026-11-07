@@ -1,24 +1,168 @@
 {
   "schema_version": "geoform.phonons.benchmark_receipts/1",
+  "upstream_commit": "bd260e234de32b3b6c558c60a7c6254b9bdfef71",
+  "software_versions": {
+    "numpy": "2.3.5",
+    "phonopy": "4.9.0",
+    "spglib": "2.8.0",
+    "symfc": "1.8.0",
+    "scipy": "1.18.1"
+  },
   "results": [
     {
-      "material": "halite",
-      "name": "Halite",
-      "formula": "NaCl",
+      "material": "anatase",
+      "name": "Anatase",
+      "display_name": "Anatase",
+      "formula": "TiO2",
+      "phase": "Anatase structure",
       "evidence_status": "calculated",
       "independent_reference": "Phonopy 4.9.0",
       "from_supplied_forces": true,
+      "source_url": "https://github.com/phonopy/phonopy/tree/bd260e234de32b3b6c558c60a7c6254b9bdfef71/example/TiO2-anatase",
+      "source_note": "README says 4\u00d74\u00d72. YAML, force-row count and archived VASP lattices establish 4\u00d74\u00d71. The source 12-atom conventional cell is reduced to a six-atom primitive basis for the comparison.",
+      "source_sha256": {
+        "phonopy_disp.yaml": "25de992fb63db8e5a756cf2610207d279a04e803ee7916204b726acfbcd7d34b",
+        "FORCE_SETS": "34712dbc2c8858eb63ce9923416dc5e6a2b72c9b8b93075687a5bcb1c505f263",
+        "POSCAR-unitcell": "b03849fa1344435df7f56ed7599dd07aa1f8bc122a5b63b2611ae66ccc3c5c32",
+        "vaspruns.tar.lzma": "e3d3a4e4b29a2b56cb3fd02e41b2440716f6f312a42746e9f4712e368963f589",
+        "README.md": "5d3aec096fe09a80d1b6c56e3c72973813210a0c633ffdd3aaa41410b3773771",
+        "BORN": "67ea91a4421830f4d446c96f3a03e0daeb688f4e1cf85c28baee1970fedd0207"
+      },
+      "source_audit": {
+        "space_group": "I4_1/amd",
+        "space_group_number": 141,
+        "wyckoff_by_element": {
+          "Ti": "b",
+          "O": "e"
+        },
+        "conventional_atoms": 12,
+        "source_yaml_basis_atoms": 12,
+        "primitive_atoms": 6,
+        "supercell_atoms": 192,
+        "supercell_matrix": [
+          [
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "primitive_matrix": [
+          [
+            -0.5,
+            0.5,
+            0.5
+          ],
+          [
+            0.49999999999999994,
+            -0.49999999999999983,
+            0.49999999999999983
+          ],
+          [
+            0.4999999999999999,
+            0.4999999999999999,
+            -0.4999999999999999
+          ]
+        ],
+        "born_file_present": true,
+        "excluded_archive_members": [],
+        "vasp_force_runs": [
+          {
+            "file": "vaspruns/vasprun-001.xml",
+            "version": "5.2.11",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              1,
+              1,
+              1
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "--",
+            "max_lattice_error_angstrom": 4.057730151885153e-09,
+            "max_fractional_position_error": 4.774905359994364e-09,
+            "max_force_error_ev_angstrom": 0.0
+          },
+          {
+            "file": "vaspruns/vasprun-002.xml",
+            "version": "5.2.11",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              1,
+              1,
+              1
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "--",
+            "max_lattice_error_angstrom": 4.057730151885153e-09,
+            "max_fractional_position_error": 4.774905359994364e-09,
+            "max_force_error_ev_angstrom": 0.0
+          },
+          {
+            "file": "vaspruns/vasprun-003.xml",
+            "version": "5.2.11",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              1,
+              1,
+              1
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "--",
+            "max_lattice_error_angstrom": 4.057730151885153e-09,
+            "max_fractional_position_error": 4.690858035338863e-09,
+            "max_force_error_ev_angstrom": 0.0
+          },
+          {
+            "file": "vaspruns/vasprun-004.xml",
+            "version": "5.2.11",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              1,
+              1,
+              1
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "--",
+            "max_lattice_error_angstrom": 4.057730151885153e-09,
+            "max_fractional_position_error": 4.690858035338863e-09,
+            "max_force_error_ev_angstrom": 0.0
+          }
+        ]
+      },
       "supercell_ifc_shape": [
-        2,
-        64,
+        6,
+        192,
         3,
         3
       ],
-      "primitive_atoms": 2,
-      "periodic_ifc_blocks": 250,
-      "asr_error_ev_a2": 3.246209724638849e-15,
-      "max_abs_dynamical_matrix_error": 1.5265566588595902e-16,
-      "max_abs_frequency_error_thz": 7.744035919188264e-07,
+      "full_ifc_shape": [
+        192,
+        192,
+        3,
+        3
+      ],
+      "primitive_atoms": 6,
+      "periodic_ifc_blocks": 1554,
+      "asr_error_ev_a2": 3.555489236362064e-14,
+      "max_abs_dynamical_matrix_error": 1.0213240999700197e-14,
+      "max_abs_frequency_error_thz": 3.0272839666167783e-06,
       "qpoint_comparisons": [
         {
           "q_fractional": [
@@ -26,8 +170,10 @@
             0.0,
             0.0
           ],
-          "max_abs_dynamical_matrix_error": 9.71445146547012e-17,
-          "max_abs_frequency_error_thz": 5.727617580220112e-07
+          "max_abs_dynamical_matrix_error": 9.992007221626409e-16,
+          "max_abs_frequency_error_thz": 2.2658604947878302e-06,
+          "max_abs_imaginary_matrix_entry": 0.0,
+          "min_frequency_thz": 0.0
         },
         {
           "q_fractional": [
@@ -35,8 +181,2112 @@
             0.0,
             0.0
           ],
-          "max_abs_dynamical_matrix_error": 6.938893903907228e-17,
-          "max_abs_frequency_error_thz": 7.744035910306479e-07
+          "max_abs_dynamical_matrix_error": 4.592688183507455e-15,
+          "max_abs_frequency_error_thz": 2.882441588525353e-06,
+          "max_abs_imaginary_matrix_entry": 0.3781048988837964,
+          "min_frequency_thz": 2.9811171203191233
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 6.707954744084491e-15,
+          "max_abs_frequency_error_thz": 2.9701483192923206e-06,
+          "max_abs_imaginary_matrix_entry": 0.25727801184879806,
+          "min_frequency_thz": 3.4494962885861105
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 8.028525142997713e-15,
+          "max_abs_frequency_error_thz": 2.3701341405057974e-06,
+          "max_abs_imaginary_matrix_entry": 0.3797242311081771,
+          "min_frequency_thz": 2.089696439574717
+        },
+        {
+          "q_fractional": [
+            0.125,
+            0.25,
+            0.375
+          ],
+          "max_abs_dynamical_matrix_error": 2.683154621916882e-15,
+          "max_abs_frequency_error_thz": 3.0006783582336993e-06,
+          "max_abs_imaginary_matrix_entry": 0.35739345395572364,
+          "min_frequency_thz": 3.6867794629010726
+        },
+        {
+          "q_fractional": [
+            0.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 3.324773023388753e-15,
+          "max_abs_frequency_error_thz": 3.011744873049338e-06,
+          "max_abs_imaginary_matrix_entry": 0.33672905300115435,
+          "min_frequency_thz": 4.0376531921856875
+        },
+        {
+          "q_fractional": [
+            0.41,
+            0.02,
+            0.28
+          ],
+          "max_abs_dynamical_matrix_error": 3.0993173749433564e-15,
+          "max_abs_frequency_error_thz": 3.0151360128627402e-06,
+          "max_abs_imaginary_matrix_entry": 0.32237347272634964,
+          "min_frequency_thz": 3.9531871046557425
+        },
+        {
+          "q_fractional": [
+            0.21,
+            0.14,
+            0.07
+          ],
+          "max_abs_dynamical_matrix_error": 2.6449840307621204e-15,
+          "max_abs_frequency_error_thz": 3.020110220575134e-06,
+          "max_abs_imaginary_matrix_entry": 0.31040075498211606,
+          "min_frequency_thz": 3.734434886927715
+        },
+        {
+          "q_fractional": [
+            0.36,
+            0.23,
+            0.16
+          ],
+          "max_abs_dynamical_matrix_error": 4.009894271417734e-15,
+          "max_abs_frequency_error_thz": 3.002474862512372e-06,
+          "max_abs_imaginary_matrix_entry": 0.3153635353798121,
+          "min_frequency_thz": 3.6686589160533973
+        },
+        {
+          "q_fractional": [
+            0.49,
+            0.48,
+            0.11
+          ],
+          "max_abs_dynamical_matrix_error": 6.540252599467433e-15,
+          "max_abs_frequency_error_thz": 2.9771238914122478e-06,
+          "max_abs_imaginary_matrix_entry": 0.23530190742997037,
+          "min_frequency_thz": 3.644908003824573
+        },
+        {
+          "q_fractional": [
+            0.13,
+            0.44,
+            0.27
+          ],
+          "max_abs_dynamical_matrix_error": 4.2566819836334444e-15,
+          "max_abs_frequency_error_thz": 3.0272839666167783e-06,
+          "max_abs_imaginary_matrix_entry": 0.32220691014150626,
+          "min_frequency_thz": 3.985695113554861
+        },
+        {
+          "q_fractional": [
+            0.33,
+            0.37,
+            0.19
+          ],
+          "max_abs_dynamical_matrix_error": 4.7527776383897475e-15,
+          "max_abs_frequency_error_thz": 2.985545656031263e-06,
+          "max_abs_imaginary_matrix_entry": 0.285999335753394,
+          "min_frequency_thz": 3.557795391073439
+        },
+        {
+          "q_fractional": [
+            0.07,
+            0.26,
+            0.45
+          ],
+          "max_abs_dynamical_matrix_error": 2.434434559578138e-15,
+          "max_abs_frequency_error_thz": 2.9944496624523254e-06,
+          "max_abs_imaginary_matrix_entry": 0.3708857830955883,
+          "min_frequency_thz": 3.9375713502928753
+        },
+        {
+          "q_fractional": [
+            -0.22,
+            0.14,
+            0.31
+          ],
+          "max_abs_dynamical_matrix_error": 5.898059818321144e-16,
+          "max_abs_frequency_error_thz": 3.01295173343874e-06,
+          "max_abs_imaginary_matrix_entry": 0.41837285647996253,
+          "min_frequency_thz": 3.3183136614115827
+        },
+        {
+          "q_fractional": [
+            1.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 1.0213240999700197e-14,
+          "max_abs_frequency_error_thz": 3.011744873049338e-06,
+          "max_abs_imaginary_matrix_entry": 0.2886532668567984,
+          "min_frequency_thz": 4.037653192185689
+        },
+        {
+          "q_fractional": [
+            0.25,
+            0.0,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 1.8818607763963966e-15,
+          "max_abs_frequency_error_thz": 2.9704545951858563e-06,
+          "max_abs_imaginary_matrix_entry": 0.3884443705088899,
+          "min_frequency_thz": 4.038212398900566
+        }
+      ],
+      "full_ifc_qpoint_comparisons": [
+        {
+          "q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 9.992007221626409e-16,
+          "max_abs_frequency_error_thz": 2.2658604947878302e-06,
+          "max_abs_imaginary_matrix_entry": 0.0,
+          "min_frequency_thz": 0.0
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 4.592688183507455e-15,
+          "max_abs_frequency_error_thz": 2.882441588525353e-06,
+          "max_abs_imaginary_matrix_entry": 0.3781048988837964,
+          "min_frequency_thz": 2.9811171203191233
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 6.707954744084491e-15,
+          "max_abs_frequency_error_thz": 2.9701483192923206e-06,
+          "max_abs_imaginary_matrix_entry": 0.25727801184879806,
+          "min_frequency_thz": 3.4494962885861105
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 8.028525142997713e-15,
+          "max_abs_frequency_error_thz": 2.3701341405057974e-06,
+          "max_abs_imaginary_matrix_entry": 0.3797242311081771,
+          "min_frequency_thz": 2.089696439574717
+        },
+        {
+          "q_fractional": [
+            0.125,
+            0.25,
+            0.375
+          ],
+          "max_abs_dynamical_matrix_error": 2.683154621916882e-15,
+          "max_abs_frequency_error_thz": 3.0006783582336993e-06,
+          "max_abs_imaginary_matrix_entry": 0.35739345395572364,
+          "min_frequency_thz": 3.6867794629010726
+        },
+        {
+          "q_fractional": [
+            0.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 3.324773023388753e-15,
+          "max_abs_frequency_error_thz": 3.011744873049338e-06,
+          "max_abs_imaginary_matrix_entry": 0.33672905300115435,
+          "min_frequency_thz": 4.0376531921856875
+        },
+        {
+          "q_fractional": [
+            0.41,
+            0.02,
+            0.28
+          ],
+          "max_abs_dynamical_matrix_error": 3.0993173749433564e-15,
+          "max_abs_frequency_error_thz": 3.0151360128627402e-06,
+          "max_abs_imaginary_matrix_entry": 0.32237347272634964,
+          "min_frequency_thz": 3.9531871046557425
+        },
+        {
+          "q_fractional": [
+            0.21,
+            0.14,
+            0.07
+          ],
+          "max_abs_dynamical_matrix_error": 2.6449840307621204e-15,
+          "max_abs_frequency_error_thz": 3.020110220575134e-06,
+          "max_abs_imaginary_matrix_entry": 0.31040075498211606,
+          "min_frequency_thz": 3.734434886927715
+        },
+        {
+          "q_fractional": [
+            0.36,
+            0.23,
+            0.16
+          ],
+          "max_abs_dynamical_matrix_error": 4.009894271417734e-15,
+          "max_abs_frequency_error_thz": 3.002474862512372e-06,
+          "max_abs_imaginary_matrix_entry": 0.3153635353798121,
+          "min_frequency_thz": 3.6686589160533973
+        },
+        {
+          "q_fractional": [
+            0.49,
+            0.48,
+            0.11
+          ],
+          "max_abs_dynamical_matrix_error": 6.540252599467433e-15,
+          "max_abs_frequency_error_thz": 2.9771238914122478e-06,
+          "max_abs_imaginary_matrix_entry": 0.23530190742997037,
+          "min_frequency_thz": 3.644908003824573
+        },
+        {
+          "q_fractional": [
+            0.13,
+            0.44,
+            0.27
+          ],
+          "max_abs_dynamical_matrix_error": 4.2566819836334444e-15,
+          "max_abs_frequency_error_thz": 3.0272839666167783e-06,
+          "max_abs_imaginary_matrix_entry": 0.32220691014150626,
+          "min_frequency_thz": 3.985695113554861
+        },
+        {
+          "q_fractional": [
+            0.33,
+            0.37,
+            0.19
+          ],
+          "max_abs_dynamical_matrix_error": 4.7527776383897475e-15,
+          "max_abs_frequency_error_thz": 2.985545656031263e-06,
+          "max_abs_imaginary_matrix_entry": 0.285999335753394,
+          "min_frequency_thz": 3.557795391073439
+        },
+        {
+          "q_fractional": [
+            0.07,
+            0.26,
+            0.45
+          ],
+          "max_abs_dynamical_matrix_error": 2.434434559578138e-15,
+          "max_abs_frequency_error_thz": 2.9944496624523254e-06,
+          "max_abs_imaginary_matrix_entry": 0.3708857830955883,
+          "min_frequency_thz": 3.9375713502928753
+        },
+        {
+          "q_fractional": [
+            -0.22,
+            0.14,
+            0.31
+          ],
+          "max_abs_dynamical_matrix_error": 5.898059818321144e-16,
+          "max_abs_frequency_error_thz": 3.01295173343874e-06,
+          "max_abs_imaginary_matrix_entry": 0.41837285647996253,
+          "min_frequency_thz": 3.3183136614115827
+        },
+        {
+          "q_fractional": [
+            1.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 1.0213240999700197e-14,
+          "max_abs_frequency_error_thz": 3.011744873049338e-06,
+          "max_abs_imaginary_matrix_entry": 0.2886532668567984,
+          "min_frequency_thz": 4.037653192185689
+        },
+        {
+          "q_fractional": [
+            0.25,
+            0.0,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 1.8818607763963966e-15,
+          "max_abs_frequency_error_thz": 2.9704545951858563e-06,
+          "max_abs_imaginary_matrix_entry": 0.3884443705088899,
+          "min_frequency_thz": 4.038212398900566
+        }
+      ],
+      "sampled_stability": {
+        "dispersion": {
+          "q_points": 96,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 0.0,
+          "min_q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "shifted_mesh": {
+          "q_points": 512,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 0.438097305643127,
+          "min_q_fractional": [
+            0.9375,
+            0.9375,
+            0.0625
+          ]
+        },
+        "comparison_points": {
+          "q_points": 16,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 0.0,
+          "min_q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "dispersion_reference": {
+        "q_points": 96,
+        "max_abs_frequency_error_thz": 3.1296875810937763e-06,
+        "min_frequency_thz": 1.1590476581137793e-07
+      },
+      "dos_thermal_available": true,
+      "reference_file": "anatase_phonons.json",
+      "result_sha256": "2ea72ebeb33212a0be234bf6a912583f825cb7563bc62de2403dfa9af409737e",
+      "lo_to_limitation": "omitted; polar LO-TO splitting not reproduced",
+      "frequency_conversion_thz": {
+        "geoform": 15.633304239856193,
+        "phonopy": 15.633302300230191
+      }
+    },
+    {
+      "material": "cassiterite",
+      "name": "Cassiterite",
+      "display_name": "Cassiterite",
+      "formula": "SnO2",
+      "phase": "Rutile-type SnO2",
+      "evidence_status": "calculated",
+      "independent_reference": "Phonopy 4.9.0",
+      "from_supplied_forces": true,
+      "source_url": "https://github.com/phonopy/phonopy/tree/bd260e234de32b3b6c558c60a7c6254b9bdfef71/example/SnO2",
+      "source_note": "Archived undistorted run 000 is excluded. Displaced runs 001\u2013003 match FORCE_SETS.",
+      "source_sha256": {
+        "phonopy_disp.yaml": "71ef230c56d70e6d80f667e1cca77de78c21d8b0f0cbd6fc1d41878be950878d",
+        "FORCE_SETS": "2dd92add3680c790bee8a56a02229c0bcc5597ad2284d598a58b323d678d413d",
+        "POSCAR-unitcell": "7dbe38cc31f6c4ce525494d380a5239ab14f0c873567daa11a6fff9a4023aa8c",
+        "vaspruns.tar.lzma": "36d9ee9fa62b5cbb0dad350901aba6dc32aa5e52494787fc118be07a4f442c00",
+        "README.md": "da8c522cc6531e0cd6676869b07a150d5635f83136ec2cbcc7b641ed354129b0",
+        "BORN": "fc79e4c7a7a8631d9eb6e1a50a168a984f624fd73f60255f85d16a0e18a033d3"
+      },
+      "source_audit": {
+        "space_group": "P4_2/mnm",
+        "space_group_number": 136,
+        "wyckoff_by_element": {
+          "Sn": "a",
+          "O": "f"
+        },
+        "conventional_atoms": 6,
+        "source_yaml_basis_atoms": 6,
+        "primitive_atoms": 6,
+        "supercell_atoms": 72,
+        "supercell_matrix": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            3
+          ]
+        ],
+        "primitive_matrix": [
+          [
+            0.9999999999999998,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.9999999999999998,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "born_file_present": true,
+        "excluded_archive_members": [
+          "vaspruns/vasprun.xml-000",
+          "vaspruns/vasprun.xml-born"
+        ],
+        "vasp_force_runs": [
+          {
+            "file": "vaspruns/vasprun.xml-001",
+            "version": "5.4.4.18Apr17-6-g9f103f2a35",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              2,
+              2,
+              2
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "PS",
+            "max_lattice_error_angstrom": 0.0,
+            "max_fractional_position_error": 3.3333330540230577e-09,
+            "max_force_error_ev_angstrom": 0.0
+          },
+          {
+            "file": "vaspruns/vasprun.xml-002",
+            "version": "5.4.4.18Apr17-6-g9f103f2a35",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              2,
+              2,
+              2
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "PS",
+            "max_lattice_error_angstrom": 0.0,
+            "max_fractional_position_error": 4.128801855962649e-09,
+            "max_force_error_ev_angstrom": 0.0
+          },
+          {
+            "file": "vaspruns/vasprun.xml-003",
+            "version": "5.4.4.18Apr17-6-g9f103f2a35",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              2,
+              2,
+              2
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "PS",
+            "max_lattice_error_angstrom": 0.0,
+            "max_fractional_position_error": 3.3333330540230577e-09,
+            "max_force_error_ev_angstrom": 0.0
+          }
+        ]
+      },
+      "supercell_ifc_shape": [
+        6,
+        72,
+        3,
+        3
+      ],
+      "full_ifc_shape": [
+        72,
+        72,
+        3,
+        3
+      ],
+      "primitive_atoms": 6,
+      "periodic_ifc_blocks": 594,
+      "asr_error_ev_a2": 5.773159728050814e-14,
+      "max_abs_dynamical_matrix_error": 1.1102230246251565e-15,
+      "max_abs_frequency_error_thz": 2.761086228986187e-06,
+      "qpoint_comparisons": [
+        {
+          "q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.7272122942179067e-06,
+          "max_abs_imaginary_matrix_entry": 0.0,
+          "min_frequency_thz": 0.0
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.7162173132921907e-06,
+          "max_abs_imaginary_matrix_entry": 0.13476574809475808,
+          "min_frequency_thz": 3.2226340607113038
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 2.6798449610510033e-06,
+          "max_abs_imaginary_matrix_entry": 0.19241798147141895,
+          "min_frequency_thz": 2.321022301042348
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 8.881784197001252e-16,
+          "max_abs_frequency_error_thz": 2.5945718995501466e-06,
+          "max_abs_imaginary_matrix_entry": 0.09466395599451394,
+          "min_frequency_thz": 3.0968327410661964
+        },
+        {
+          "q_fractional": [
+            0.125,
+            0.25,
+            0.375
+          ],
+          "max_abs_dynamical_matrix_error": 2.220446049250313e-16,
+          "max_abs_frequency_error_thz": 2.608175293516979e-06,
+          "max_abs_imaginary_matrix_entry": 0.11803554535401288,
+          "min_frequency_thz": 3.3606540444791406
+        },
+        {
+          "q_fractional": [
+            0.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 2.7574161158838706e-06,
+          "max_abs_imaginary_matrix_entry": 0.12386180802326746,
+          "min_frequency_thz": 2.445034484319276
+        },
+        {
+          "q_fractional": [
+            0.41,
+            0.02,
+            0.28
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 2.63843314485257e-06,
+          "max_abs_imaginary_matrix_entry": 0.11840980570038753,
+          "min_frequency_thz": 3.8042802883792115
+        },
+        {
+          "q_fractional": [
+            0.21,
+            0.14,
+            0.07
+          ],
+          "max_abs_dynamical_matrix_error": 2.220446049250313e-16,
+          "max_abs_frequency_error_thz": 2.761086228986187e-06,
+          "max_abs_imaginary_matrix_entry": 0.10265112161145645,
+          "min_frequency_thz": 1.734787721487532
+        },
+        {
+          "q_fractional": [
+            0.36,
+            0.23,
+            0.16
+          ],
+          "max_abs_dynamical_matrix_error": 3.330669084536253e-16,
+          "max_abs_frequency_error_thz": 2.712955623707103e-06,
+          "max_abs_imaginary_matrix_entry": 0.14104207968932092,
+          "min_frequency_thz": 2.7692204825876288
+        },
+        {
+          "q_fractional": [
+            0.49,
+            0.48,
+            0.11
+          ],
+          "max_abs_dynamical_matrix_error": 2.220446049250313e-16,
+          "max_abs_frequency_error_thz": 2.668930626725796e-06,
+          "max_abs_imaginary_matrix_entry": 0.1836807968172871,
+          "min_frequency_thz": 2.448391240171147
+        },
+        {
+          "q_fractional": [
+            0.13,
+            0.44,
+            0.27
+          ],
+          "max_abs_dynamical_matrix_error": 3.3307396285043606e-16,
+          "max_abs_frequency_error_thz": 2.636790586763027e-06,
+          "max_abs_imaginary_matrix_entry": 0.13987540765326434,
+          "min_frequency_thz": 3.5699509716084763
+        },
+        {
+          "q_fractional": [
+            0.33,
+            0.37,
+            0.19
+          ],
+          "max_abs_dynamical_matrix_error": 6.661361344979282e-16,
+          "max_abs_frequency_error_thz": 2.683400349923204e-06,
+          "max_abs_imaginary_matrix_entry": 0.15324481076420496,
+          "min_frequency_thz": 2.721219259207423
+        },
+        {
+          "q_fractional": [
+            0.07,
+            0.26,
+            0.45
+          ],
+          "max_abs_dynamical_matrix_error": 1.1102230246251565e-15,
+          "max_abs_frequency_error_thz": 2.5650137196464584e-06,
+          "max_abs_imaginary_matrix_entry": 0.11056367808158066,
+          "min_frequency_thz": 3.56182945198456
+        },
+        {
+          "q_fractional": [
+            -0.22,
+            0.14,
+            0.31
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 2.6449656758131823e-06,
+          "max_abs_imaginary_matrix_entry": 0.10996146345562395,
+          "min_frequency_thz": 3.1142280014999777
+        },
+        {
+          "q_fractional": [
+            1.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 2.7574161158838706e-06,
+          "max_abs_imaginary_matrix_entry": 0.19997327331360465,
+          "min_frequency_thz": 2.4450344843192884
+        },
+        {
+          "q_fractional": [
+            0.25,
+            0.0,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.535647681156661e-06,
+          "max_abs_imaginary_matrix_entry": 0.08920877286823993,
+          "min_frequency_thz": 3.706919713651933
+        }
+      ],
+      "full_ifc_qpoint_comparisons": [
+        {
+          "q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.7272122942179067e-06,
+          "max_abs_imaginary_matrix_entry": 0.0,
+          "min_frequency_thz": 0.0
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.7162173132921907e-06,
+          "max_abs_imaginary_matrix_entry": 0.13476574809475808,
+          "min_frequency_thz": 3.2226340607113038
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 2.6798449610510033e-06,
+          "max_abs_imaginary_matrix_entry": 0.19241798147141895,
+          "min_frequency_thz": 2.321022301042348
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 8.881784197001252e-16,
+          "max_abs_frequency_error_thz": 2.5945718995501466e-06,
+          "max_abs_imaginary_matrix_entry": 0.09466395599451394,
+          "min_frequency_thz": 3.0968327410661964
+        },
+        {
+          "q_fractional": [
+            0.125,
+            0.25,
+            0.375
+          ],
+          "max_abs_dynamical_matrix_error": 2.220446049250313e-16,
+          "max_abs_frequency_error_thz": 2.608175293516979e-06,
+          "max_abs_imaginary_matrix_entry": 0.11803554535401288,
+          "min_frequency_thz": 3.3606540444791406
+        },
+        {
+          "q_fractional": [
+            0.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 2.7574161158838706e-06,
+          "max_abs_imaginary_matrix_entry": 0.12386180802326746,
+          "min_frequency_thz": 2.445034484319276
+        },
+        {
+          "q_fractional": [
+            0.41,
+            0.02,
+            0.28
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 2.63843314485257e-06,
+          "max_abs_imaginary_matrix_entry": 0.11840980570038753,
+          "min_frequency_thz": 3.8042802883792115
+        },
+        {
+          "q_fractional": [
+            0.21,
+            0.14,
+            0.07
+          ],
+          "max_abs_dynamical_matrix_error": 2.220446049250313e-16,
+          "max_abs_frequency_error_thz": 2.761086228986187e-06,
+          "max_abs_imaginary_matrix_entry": 0.10265112161145645,
+          "min_frequency_thz": 1.734787721487532
+        },
+        {
+          "q_fractional": [
+            0.36,
+            0.23,
+            0.16
+          ],
+          "max_abs_dynamical_matrix_error": 3.330669084536253e-16,
+          "max_abs_frequency_error_thz": 2.712955623707103e-06,
+          "max_abs_imaginary_matrix_entry": 0.14104207968932092,
+          "min_frequency_thz": 2.7692204825876288
+        },
+        {
+          "q_fractional": [
+            0.49,
+            0.48,
+            0.11
+          ],
+          "max_abs_dynamical_matrix_error": 2.220446049250313e-16,
+          "max_abs_frequency_error_thz": 2.668930626725796e-06,
+          "max_abs_imaginary_matrix_entry": 0.1836807968172871,
+          "min_frequency_thz": 2.448391240171147
+        },
+        {
+          "q_fractional": [
+            0.13,
+            0.44,
+            0.27
+          ],
+          "max_abs_dynamical_matrix_error": 3.3307396285043606e-16,
+          "max_abs_frequency_error_thz": 2.636790586763027e-06,
+          "max_abs_imaginary_matrix_entry": 0.13987540765326434,
+          "min_frequency_thz": 3.5699509716084763
+        },
+        {
+          "q_fractional": [
+            0.33,
+            0.37,
+            0.19
+          ],
+          "max_abs_dynamical_matrix_error": 6.661361344979282e-16,
+          "max_abs_frequency_error_thz": 2.683400349923204e-06,
+          "max_abs_imaginary_matrix_entry": 0.15324481076420496,
+          "min_frequency_thz": 2.721219259207423
+        },
+        {
+          "q_fractional": [
+            0.07,
+            0.26,
+            0.45
+          ],
+          "max_abs_dynamical_matrix_error": 1.1102230246251565e-15,
+          "max_abs_frequency_error_thz": 2.5650137196464584e-06,
+          "max_abs_imaginary_matrix_entry": 0.11056367808158066,
+          "min_frequency_thz": 3.56182945198456
+        },
+        {
+          "q_fractional": [
+            -0.22,
+            0.14,
+            0.31
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 2.6449656758131823e-06,
+          "max_abs_imaginary_matrix_entry": 0.10996146345562395,
+          "min_frequency_thz": 3.1142280014999777
+        },
+        {
+          "q_fractional": [
+            1.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 2.7574161158838706e-06,
+          "max_abs_imaginary_matrix_entry": 0.19997327331360465,
+          "min_frequency_thz": 2.4450344843192884
+        },
+        {
+          "q_fractional": [
+            0.25,
+            0.0,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.535647681156661e-06,
+          "max_abs_imaginary_matrix_entry": 0.08920877286823993,
+          "min_frequency_thz": 3.706919713651933
+        }
+      ],
+      "sampled_stability": {
+        "dispersion": {
+          "q_points": 96,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 0.0,
+          "min_q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "shifted_mesh": {
+          "q_points": 512,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 0.7949520304752692,
+          "min_q_fractional": [
+            0.0625,
+            0.9375,
+            0.9375
+          ]
+        },
+        "comparison_points": {
+          "q_points": 16,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 0.0,
+          "min_q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "dispersion_reference": {
+        "q_points": 96,
+        "max_abs_frequency_error_thz": 2.778153927351923e-06,
+        "min_frequency_thz": -3.0018195882064267e-07
+      },
+      "dos_thermal_available": true,
+      "reference_file": "cassiterite_phonons.json",
+      "result_sha256": "7572327d93dfdc84ad3c69cc1f60585b16ccfc6e91c926d1fa7f2109840174fb",
+      "lo_to_limitation": "omitted; polar LO-TO splitting not reproduced",
+      "frequency_conversion_thz": {
+        "geoform": 15.633304239856193,
+        "phonopy": 15.633302300230191
+      }
+    },
+    {
+      "material": "corundum",
+      "name": "Corundum",
+      "display_name": "Corundum",
+      "formula": "Al2O3",
+      "phase": "Corundum structure",
+      "evidence_status": "calculated",
+      "independent_reference": "Phonopy 4.9.0",
+      "from_supplied_forces": true,
+      "source_url": "https://github.com/phonopy/phonopy/tree/bd260e234de32b3b6c558c60a7c6254b9bdfef71/example/Al2O3",
+      "source_note": null,
+      "source_sha256": {
+        "phonopy_disp.yaml": "8fa70df79a959a042c67cdc9dbbf12b41179d82257aff0eda0dfeff5a1ab837e",
+        "FORCE_SETS": "d4e9a1aef70e8b768419c42480f04dcd47ea2cb32968cbaadd7376006cb02f61",
+        "POSCAR-unitcell": "dead32935601e840c8ded48c8c6f5df09b048f58fb066f11f34778bdfd43f80d",
+        "vaspruns.tar.lzma": "54c8081e6c1a8d50a1887dbc152cfe2645e439aa7b4aaf9df104cee298eaede1",
+        "README.md": "2c8c1ed9afa67befe494af1782d7a29bbe94a8d7ce0fdb1652ecf9d10a2d82f1",
+        "BORN": "497ebe0c497e042e2183a3a0ade1d13a2244cbb8306e792f26bc95b7c369f5d6"
+      },
+      "source_audit": {
+        "space_group": "R-3c",
+        "space_group_number": 167,
+        "wyckoff_by_element": {
+          "Al": "c",
+          "O": "e"
+        },
+        "conventional_atoms": 30,
+        "source_yaml_basis_atoms": 10,
+        "primitive_atoms": 10,
+        "supercell_atoms": 120,
+        "supercell_matrix": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "primitive_matrix": [
+          [
+            0.666666666666667,
+            -0.333333333333333,
+            -0.333333333333333
+          ],
+          [
+            0.333333333333333,
+            0.333333333333333,
+            -0.666666666666667
+          ],
+          [
+            0.333333333333333,
+            0.333333333333333,
+            0.333333333333333
+          ]
+        ],
+        "born_file_present": true,
+        "excluded_archive_members": [
+          "vaspruns/vasprun-born.xml"
+        ],
+        "vasp_force_runs": [
+          {
+            "file": "vaspruns/vasprun-001.xml",
+            "version": "5.4.4.18Apr17-6-g9f103f2a35",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              3,
+              3,
+              1
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "PS",
+            "max_lattice_error_angstrom": 4.701005806850844e-09,
+            "max_fractional_position_error": 4.562461075607871e-09,
+            "max_force_error_ev_angstrom": 0.0
+          },
+          {
+            "file": "vaspruns/vasprun-002.xml",
+            "version": "5.4.4.18Apr17-6-g9f103f2a35",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              3,
+              3,
+              1
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "PS",
+            "max_lattice_error_angstrom": 4.701005806850844e-09,
+            "max_fractional_position_error": 4.562461075607871e-09,
+            "max_force_error_ev_angstrom": 0.0
+          },
+          {
+            "file": "vaspruns/vasprun-003.xml",
+            "version": "5.4.4.18Apr17-6-g9f103f2a35",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              3,
+              3,
+              1
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "PS",
+            "max_lattice_error_angstrom": 4.701005806850844e-09,
+            "max_fractional_position_error": 4.562461075607871e-09,
+            "max_force_error_ev_angstrom": 0.0
+          },
+          {
+            "file": "vaspruns/vasprun-004.xml",
+            "version": "5.4.4.18Apr17-6-g9f103f2a35",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              3,
+              3,
+              1
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "PS",
+            "max_lattice_error_angstrom": 4.701005806850844e-09,
+            "max_fractional_position_error": 4.562461075607871e-09,
+            "max_force_error_ev_angstrom": 0.0
+          },
+          {
+            "file": "vaspruns/vasprun-005.xml",
+            "version": "5.4.4.18Apr17-6-g9f103f2a35",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              3,
+              3,
+              1
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "PS",
+            "max_lattice_error_angstrom": 4.701005806850844e-09,
+            "max_fractional_position_error": 4.562461075607871e-09,
+            "max_force_error_ev_angstrom": 0.0
+          }
+        ]
+      },
+      "supercell_ifc_shape": [
+        10,
+        120,
+        3,
+        3
+      ],
+      "full_ifc_shape": [
+        120,
+        120,
+        3,
+        3
+      ],
+      "primitive_atoms": 10,
+      "periodic_ifc_blocks": 1478,
+      "asr_error_ev_a2": 4.732672587159925e-14,
+      "max_abs_dynamical_matrix_error": 9.182587941547713e-15,
+      "max_abs_frequency_error_thz": 3.2373961147413866e-06,
+      "qpoint_comparisons": [
+        {
+          "q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 1.7763568394002505e-15,
+          "max_abs_frequency_error_thz": 2.7326552043405172e-06,
+          "max_abs_imaginary_matrix_entry": 0.0,
+          "min_frequency_thz": 0.0
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 4.85722573273506e-15,
+          "max_abs_frequency_error_thz": 2.9994943560041065e-06,
+          "max_abs_imaginary_matrix_entry": 0.2719483533544661,
+          "min_frequency_thz": 6.830480158045039
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 4.632458786145299e-15,
+          "max_abs_frequency_error_thz": 2.9423501146652598e-06,
+          "max_abs_imaginary_matrix_entry": 0.28942282388735535,
+          "min_frequency_thz": 6.454578211557091
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 4.0931711144555684e-15,
+          "max_abs_frequency_error_thz": 3.2373961147413866e-06,
+          "max_abs_imaginary_matrix_entry": 0.23375168026029386,
+          "min_frequency_thz": 6.5766831970626285
+        },
+        {
+          "q_fractional": [
+            0.125,
+            0.25,
+            0.375
+          ],
+          "max_abs_dynamical_matrix_error": 2.4444217419384483e-15,
+          "max_abs_frequency_error_thz": 2.843380169537113e-06,
+          "max_abs_imaginary_matrix_entry": 0.1878069210828117,
+          "min_frequency_thz": 4.869062977212543
+        },
+        {
+          "q_fractional": [
+            0.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 2.3126928453226126e-15,
+          "max_abs_frequency_error_thz": 2.808599479209306e-06,
+          "max_abs_imaginary_matrix_entry": 0.13659404207037723,
+          "min_frequency_thz": 4.098674609035131
+        },
+        {
+          "q_fractional": [
+            0.41,
+            0.02,
+            0.28
+          ],
+          "max_abs_dynamical_matrix_error": 6.480436559008221e-15,
+          "max_abs_frequency_error_thz": 2.891409749850027e-06,
+          "max_abs_imaginary_matrix_entry": 0.2618507706212511,
+          "min_frequency_thz": 5.997652468358925
+        },
+        {
+          "q_fractional": [
+            0.21,
+            0.14,
+            0.07
+          ],
+          "max_abs_dynamical_matrix_error": 1.2050523549074438e-15,
+          "max_abs_frequency_error_thz": 2.7353810061470085e-06,
+          "max_abs_imaginary_matrix_entry": 0.09895900236122901,
+          "min_frequency_thz": 2.8913519201849076
+        },
+        {
+          "q_fractional": [
+            0.36,
+            0.23,
+            0.16
+          ],
+          "max_abs_dynamical_matrix_error": 2.9378001735622727e-15,
+          "max_abs_frequency_error_thz": 2.8283108726157025e-06,
+          "max_abs_imaginary_matrix_entry": 0.1380487583044163,
+          "min_frequency_thz": 4.345722618285357
+        },
+        {
+          "q_fractional": [
+            0.49,
+            0.48,
+            0.11
+          ],
+          "max_abs_dynamical_matrix_error": 3.6260351814809e-15,
+          "max_abs_frequency_error_thz": 2.9549244189297497e-06,
+          "max_abs_imaginary_matrix_entry": 0.26788606716055396,
+          "min_frequency_thz": 6.455660623963717
+        },
+        {
+          "q_fractional": [
+            0.13,
+            0.44,
+            0.27
+          ],
+          "max_abs_dynamical_matrix_error": 3.1538093388847222e-15,
+          "max_abs_frequency_error_thz": 2.9125446197042493e-06,
+          "max_abs_imaginary_matrix_entry": 0.24360491902186587,
+          "min_frequency_thz": 5.549140048416883
+        },
+        {
+          "q_fractional": [
+            0.33,
+            0.37,
+            0.19
+          ],
+          "max_abs_dynamical_matrix_error": 2.687852006228282e-15,
+          "max_abs_frequency_error_thz": 2.9438352058264172e-06,
+          "max_abs_imaginary_matrix_entry": 0.1564162378756433,
+          "min_frequency_thz": 4.950771894076979
+        },
+        {
+          "q_fractional": [
+            0.07,
+            0.26,
+            0.45
+          ],
+          "max_abs_dynamical_matrix_error": 2.326341149472307e-15,
+          "max_abs_frequency_error_thz": 2.9386955304744333e-06,
+          "max_abs_imaginary_matrix_entry": 0.2337210341165304,
+          "min_frequency_thz": 6.044015159411576
+        },
+        {
+          "q_fractional": [
+            -0.22,
+            0.14,
+            0.31
+          ],
+          "max_abs_dynamical_matrix_error": 1.1358664123950323e-15,
+          "max_abs_frequency_error_thz": 2.984724950749751e-06,
+          "max_abs_imaginary_matrix_entry": 0.24572369663748797,
+          "min_frequency_thz": 6.291440650014081
+        },
+        {
+          "q_fractional": [
+            1.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 9.182587941547713e-15,
+          "max_abs_frequency_error_thz": 2.8085994827620198e-06,
+          "max_abs_imaginary_matrix_entry": 0.27141265920874624,
+          "min_frequency_thz": 4.098674609035115
+        },
+        {
+          "q_fractional": [
+            0.25,
+            0.0,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 7.253504297423988e-15,
+          "max_abs_frequency_error_thz": 2.996743059924256e-06,
+          "max_abs_imaginary_matrix_entry": 0.25175411095861855,
+          "min_frequency_thz": 6.5351248718953805
+        }
+      ],
+      "full_ifc_qpoint_comparisons": [
+        {
+          "q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 1.7763568394002505e-15,
+          "max_abs_frequency_error_thz": 2.7326552043405172e-06,
+          "max_abs_imaginary_matrix_entry": 0.0,
+          "min_frequency_thz": 0.0
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 4.85722573273506e-15,
+          "max_abs_frequency_error_thz": 2.9994943560041065e-06,
+          "max_abs_imaginary_matrix_entry": 0.2719483533544661,
+          "min_frequency_thz": 6.830480158045039
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 4.632458786145299e-15,
+          "max_abs_frequency_error_thz": 2.9423501146652598e-06,
+          "max_abs_imaginary_matrix_entry": 0.28942282388735535,
+          "min_frequency_thz": 6.454578211557091
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 4.0931711144555684e-15,
+          "max_abs_frequency_error_thz": 3.2373961147413866e-06,
+          "max_abs_imaginary_matrix_entry": 0.23375168026029386,
+          "min_frequency_thz": 6.5766831970626285
+        },
+        {
+          "q_fractional": [
+            0.125,
+            0.25,
+            0.375
+          ],
+          "max_abs_dynamical_matrix_error": 2.4444217419384483e-15,
+          "max_abs_frequency_error_thz": 2.843380169537113e-06,
+          "max_abs_imaginary_matrix_entry": 0.1878069210828117,
+          "min_frequency_thz": 4.869062977212543
+        },
+        {
+          "q_fractional": [
+            0.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 2.3126928453226126e-15,
+          "max_abs_frequency_error_thz": 2.808599479209306e-06,
+          "max_abs_imaginary_matrix_entry": 0.13659404207037723,
+          "min_frequency_thz": 4.098674609035131
+        },
+        {
+          "q_fractional": [
+            0.41,
+            0.02,
+            0.28
+          ],
+          "max_abs_dynamical_matrix_error": 6.480436559008221e-15,
+          "max_abs_frequency_error_thz": 2.891409749850027e-06,
+          "max_abs_imaginary_matrix_entry": 0.2618507706212511,
+          "min_frequency_thz": 5.997652468358925
+        },
+        {
+          "q_fractional": [
+            0.21,
+            0.14,
+            0.07
+          ],
+          "max_abs_dynamical_matrix_error": 1.2050523549074438e-15,
+          "max_abs_frequency_error_thz": 2.7353810061470085e-06,
+          "max_abs_imaginary_matrix_entry": 0.09895900236122901,
+          "min_frequency_thz": 2.8913519201849076
+        },
+        {
+          "q_fractional": [
+            0.36,
+            0.23,
+            0.16
+          ],
+          "max_abs_dynamical_matrix_error": 2.9378001735622727e-15,
+          "max_abs_frequency_error_thz": 2.8283108726157025e-06,
+          "max_abs_imaginary_matrix_entry": 0.1380487583044163,
+          "min_frequency_thz": 4.345722618285357
+        },
+        {
+          "q_fractional": [
+            0.49,
+            0.48,
+            0.11
+          ],
+          "max_abs_dynamical_matrix_error": 3.6260351814809e-15,
+          "max_abs_frequency_error_thz": 2.9549244189297497e-06,
+          "max_abs_imaginary_matrix_entry": 0.26788606716055396,
+          "min_frequency_thz": 6.455660623963717
+        },
+        {
+          "q_fractional": [
+            0.13,
+            0.44,
+            0.27
+          ],
+          "max_abs_dynamical_matrix_error": 3.1538093388847222e-15,
+          "max_abs_frequency_error_thz": 2.9125446197042493e-06,
+          "max_abs_imaginary_matrix_entry": 0.24360491902186587,
+          "min_frequency_thz": 5.549140048416883
+        },
+        {
+          "q_fractional": [
+            0.33,
+            0.37,
+            0.19
+          ],
+          "max_abs_dynamical_matrix_error": 2.687852006228282e-15,
+          "max_abs_frequency_error_thz": 2.9438352058264172e-06,
+          "max_abs_imaginary_matrix_entry": 0.1564162378756433,
+          "min_frequency_thz": 4.950771894076979
+        },
+        {
+          "q_fractional": [
+            0.07,
+            0.26,
+            0.45
+          ],
+          "max_abs_dynamical_matrix_error": 2.326341149472307e-15,
+          "max_abs_frequency_error_thz": 2.9386955304744333e-06,
+          "max_abs_imaginary_matrix_entry": 0.2337210341165304,
+          "min_frequency_thz": 6.044015159411576
+        },
+        {
+          "q_fractional": [
+            -0.22,
+            0.14,
+            0.31
+          ],
+          "max_abs_dynamical_matrix_error": 1.1358664123950323e-15,
+          "max_abs_frequency_error_thz": 2.984724950749751e-06,
+          "max_abs_imaginary_matrix_entry": 0.24572369663748797,
+          "min_frequency_thz": 6.291440650014081
+        },
+        {
+          "q_fractional": [
+            1.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 9.182587941547713e-15,
+          "max_abs_frequency_error_thz": 2.8085994827620198e-06,
+          "max_abs_imaginary_matrix_entry": 0.27141265920874624,
+          "min_frequency_thz": 4.098674609035115
+        },
+        {
+          "q_fractional": [
+            0.25,
+            0.0,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 7.253504297423988e-15,
+          "max_abs_frequency_error_thz": 2.996743059924256e-06,
+          "max_abs_imaginary_matrix_entry": 0.25175411095861855,
+          "min_frequency_thz": 6.5351248718953805
+        }
+      ],
+      "sampled_stability": {
+        "dispersion": {
+          "q_points": 96,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 0.0,
+          "min_q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "shifted_mesh": {
+          "q_points": 512,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 0.8679855580122936,
+          "min_q_fractional": [
+            0.9375,
+            0.9375,
+            0.9375
+          ]
+        },
+        "comparison_points": {
+          "q_points": 16,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 0.0,
+          "min_q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "dispersion_reference": {
+        "q_points": 96,
+        "max_abs_frequency_error_thz": 3.262764781908345e-06,
+        "min_frequency_thz": 3.7799644787971937e-07
+      },
+      "dos_thermal_available": true,
+      "reference_file": "corundum_phonons.json",
+      "result_sha256": "27afc29cadf41e533e43338c14625e15eb9c627eb63fef95d8494717b1035df5",
+      "lo_to_limitation": "omitted; polar LO-TO splitting not reproduced",
+      "frequency_conversion_thz": {
+        "geoform": 15.633304239856193,
+        "phonopy": 15.633302300230191
+      }
+    },
+    {
+      "material": "cubic-catio3",
+      "name": null,
+      "display_name": "Cubic CaTiO3",
+      "formula": "CaTiO3",
+      "phase": "Ideal cubic perovskite-type CaTiO3",
+      "evidence_status": "calculated",
+      "independent_reference": "Phonopy 4.9.0",
+      "from_supplied_forces": true,
+      "source_url": "https://github.com/phonopy/phonopy/tree/bd260e234de32b3b6c558c60a7c6254b9bdfef71/example/CaTiO3",
+      "source_note": "Ideal cubic Pm-3m computational model. Mineral-record assignment withheld. No BORN file in this example.",
+      "source_sha256": {
+        "phonopy_disp.yaml": "94d117ea286594ddd01f2bbd0b5f38b297836e51b83a07f3c80bebcad7660ef6",
+        "FORCE_SETS": "06af1ea344f727cb7129454108b4afd144c5d3b58278f227506a404c5b077838",
+        "POSCAR-unitcell": "aa57c3065c1238fdd15886c38bf49da3213219449b0ac3be027ab317170cd1bf",
+        "vaspruns.tar.lzma": "64a417902fda16f13a44c031c74919a9ac37dae831faeed938e8cc57237972f6"
+      },
+      "source_audit": {
+        "space_group": "Pm-3m",
+        "space_group_number": 221,
+        "wyckoff_by_element": {
+          "Ca": "a",
+          "Ti": "b",
+          "O": "c"
+        },
+        "conventional_atoms": 5,
+        "source_yaml_basis_atoms": 5,
+        "primitive_atoms": 5,
+        "supercell_atoms": 40,
+        "supercell_matrix": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "primitive_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "born_file_present": false,
+        "excluded_archive_members": [],
+        "vasp_force_runs": [
+          {
+            "file": "vaspruns/vasprun-001.xml",
+            "version": "5.2.12",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              2,
+              2,
+              2
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "--",
+            "max_lattice_error_angstrom": 0.0,
+            "max_fractional_position_error": 3.4032657802995914e-09,
+            "max_force_error_ev_angstrom": 0.0
+          },
+          {
+            "file": "vaspruns/vasprun-002.xml",
+            "version": "5.2.12",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              2,
+              2,
+              2
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "--",
+            "max_lattice_error_angstrom": 0.0,
+            "max_fractional_position_error": 3.4032657802995914e-09,
+            "max_force_error_ev_angstrom": 0.0
+          },
+          {
+            "file": "vaspruns/vasprun-003.xml",
+            "version": "5.2.12",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              2,
+              2,
+              2
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "--",
+            "max_lattice_error_angstrom": 0.0,
+            "max_fractional_position_error": 3.4032657802995914e-09,
+            "max_force_error_ev_angstrom": 0.0
+          },
+          {
+            "file": "vaspruns/vasprun-004.xml",
+            "version": "5.2.12",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              2,
+              2,
+              2
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "--",
+            "max_lattice_error_angstrom": 0.0,
+            "max_fractional_position_error": 3.4032657802995914e-09,
+            "max_force_error_ev_angstrom": 0.0
+          }
+        ]
+      },
+      "supercell_ifc_shape": [
+        5,
+        40,
+        3,
+        3
+      ],
+      "full_ifc_shape": [
+        40,
+        40,
+        3,
+        3
+      ],
+      "primitive_atoms": 5,
+      "periodic_ifc_blocks": 403,
+      "asr_error_ev_a2": 1.0258287275188849e-13,
+      "max_abs_dynamical_matrix_error": 1.3322676295501878e-15,
+      "max_abs_frequency_error_thz": 3.189049262886101e-06,
+      "qpoint_comparisons": [
+        {
+          "q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 2.074543271390894e-06,
+          "max_abs_imaginary_matrix_entry": 0.0,
+          "min_frequency_thz": -5.468258606959544
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 1.3322676295501878e-15,
+          "max_abs_frequency_error_thz": 2.9031325006201314e-06,
+          "max_abs_imaginary_matrix_entry": 9.682288486113784e-17,
+          "min_frequency_thz": -1.8389647153879383
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 3.060934826493167e-06,
+          "max_abs_imaginary_matrix_entry": 6.519190053991382e-17,
+          "min_frequency_thz": -5.674189614309946
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 3.189049262886101e-06,
+          "max_abs_imaginary_matrix_entry": 6.318599590791646e-17,
+          "min_frequency_thz": -6.004689272195198
+        },
+        {
+          "q_fractional": [
+            0.125,
+            0.25,
+            0.375
+          ],
+          "max_abs_dynamical_matrix_error": 2.220446049250313e-16,
+          "max_abs_frequency_error_thz": 2.8583752929023376e-06,
+          "max_abs_imaginary_matrix_entry": 1.0495470609807551e-16,
+          "min_frequency_thz": -2.6974057828315368
+        },
+        {
+          "q_fractional": [
+            0.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 2.685821186787507e-06,
+          "max_abs_imaginary_matrix_entry": 1.3271132258682275e-16,
+          "min_frequency_thz": -1.5637694515976455
+        },
+        {
+          "q_fractional": [
+            0.41,
+            0.02,
+            0.28
+          ],
+          "max_abs_dynamical_matrix_error": 8.881784197001252e-16,
+          "max_abs_frequency_error_thz": 2.906117373413508e-06,
+          "max_abs_imaginary_matrix_entry": 9.720914636989239e-17,
+          "min_frequency_thz": -3.470428237136733
+        },
+        {
+          "q_fractional": [
+            0.21,
+            0.14,
+            0.07
+          ],
+          "max_abs_dynamical_matrix_error": 2.220446049250313e-16,
+          "max_abs_frequency_error_thz": 2.4397371092277353e-06,
+          "max_abs_imaginary_matrix_entry": 1.0929167742444226e-16,
+          "min_frequency_thz": -3.2098106322036206
+        },
+        {
+          "q_fractional": [
+            0.36,
+            0.23,
+            0.16
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.8359035901814877e-06,
+          "max_abs_imaginary_matrix_entry": 5.854911290595121e-17,
+          "min_frequency_thz": -2.16775526231852
+        },
+        {
+          "q_fractional": [
+            0.49,
+            0.48,
+            0.11
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 3.065441237737332e-06,
+          "max_abs_imaginary_matrix_entry": 6.76567526913214e-17,
+          "min_frequency_thz": -5.694994450613918
+        },
+        {
+          "q_fractional": [
+            0.13,
+            0.44,
+            0.27
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.9347885863728607e-06,
+          "max_abs_imaginary_matrix_entry": 1.3748199104582619e-16,
+          "min_frequency_thz": -3.424770519601056
+        },
+        {
+          "q_fractional": [
+            0.33,
+            0.37,
+            0.19
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 2.9480242460522277e-06,
+          "max_abs_imaginary_matrix_entry": 8.966688217263269e-17,
+          "min_frequency_thz": -4.175294944804421
+        },
+        {
+          "q_fractional": [
+            0.07,
+            0.26,
+            0.45
+          ],
+          "max_abs_dynamical_matrix_error": 8.881784197001252e-16,
+          "max_abs_frequency_error_thz": 2.925212509552466e-06,
+          "max_abs_imaginary_matrix_entry": 1.1623083154662907e-16,
+          "min_frequency_thz": -3.1116850224100636
+        },
+        {
+          "q_fractional": [
+            -0.22,
+            0.14,
+            0.31
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 2.7423223372124994e-06,
+          "max_abs_imaginary_matrix_entry": 9.725658199377452e-17,
+          "min_frequency_thz": -1.4152948994148986
+        },
+        {
+          "q_fractional": [
+            1.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.6858211832347934e-06,
+          "max_abs_imaginary_matrix_entry": 1.335787168520961e-16,
+          "min_frequency_thz": -1.5637694515976543
+        },
+        {
+          "q_fractional": [
+            0.25,
+            0.0,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 2.931461956734438e-06,
+          "max_abs_imaginary_matrix_entry": 8.351380410334986e-17,
+          "min_frequency_thz": -2.8079382774608326
+        }
+      ],
+      "full_ifc_qpoint_comparisons": [
+        {
+          "q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 2.074543271390894e-06,
+          "max_abs_imaginary_matrix_entry": 0.0,
+          "min_frequency_thz": -5.468258606959544
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 1.3322676295501878e-15,
+          "max_abs_frequency_error_thz": 2.9031325006201314e-06,
+          "max_abs_imaginary_matrix_entry": 9.682288486113784e-17,
+          "min_frequency_thz": -1.8389647153879383
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 3.060934826493167e-06,
+          "max_abs_imaginary_matrix_entry": 6.519190053991382e-17,
+          "min_frequency_thz": -5.674189614309946
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 3.189049262886101e-06,
+          "max_abs_imaginary_matrix_entry": 6.318599590791646e-17,
+          "min_frequency_thz": -6.004689272195198
+        },
+        {
+          "q_fractional": [
+            0.125,
+            0.25,
+            0.375
+          ],
+          "max_abs_dynamical_matrix_error": 2.220446049250313e-16,
+          "max_abs_frequency_error_thz": 2.8583752929023376e-06,
+          "max_abs_imaginary_matrix_entry": 1.0495470609807551e-16,
+          "min_frequency_thz": -2.6974057828315368
+        },
+        {
+          "q_fractional": [
+            0.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 2.685821186787507e-06,
+          "max_abs_imaginary_matrix_entry": 1.3271132258682275e-16,
+          "min_frequency_thz": -1.5637694515976455
+        },
+        {
+          "q_fractional": [
+            0.41,
+            0.02,
+            0.28
+          ],
+          "max_abs_dynamical_matrix_error": 8.881784197001252e-16,
+          "max_abs_frequency_error_thz": 2.906117373413508e-06,
+          "max_abs_imaginary_matrix_entry": 9.720914636989239e-17,
+          "min_frequency_thz": -3.470428237136733
+        },
+        {
+          "q_fractional": [
+            0.21,
+            0.14,
+            0.07
+          ],
+          "max_abs_dynamical_matrix_error": 2.220446049250313e-16,
+          "max_abs_frequency_error_thz": 2.4397371092277353e-06,
+          "max_abs_imaginary_matrix_entry": 1.0929167742444226e-16,
+          "min_frequency_thz": -3.2098106322036206
+        },
+        {
+          "q_fractional": [
+            0.36,
+            0.23,
+            0.16
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.8359035901814877e-06,
+          "max_abs_imaginary_matrix_entry": 5.854911290595121e-17,
+          "min_frequency_thz": -2.16775526231852
+        },
+        {
+          "q_fractional": [
+            0.49,
+            0.48,
+            0.11
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 3.065441237737332e-06,
+          "max_abs_imaginary_matrix_entry": 6.76567526913214e-17,
+          "min_frequency_thz": -5.694994450613918
+        },
+        {
+          "q_fractional": [
+            0.13,
+            0.44,
+            0.27
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.9347885863728607e-06,
+          "max_abs_imaginary_matrix_entry": 1.3748199104582619e-16,
+          "min_frequency_thz": -3.424770519601056
+        },
+        {
+          "q_fractional": [
+            0.33,
+            0.37,
+            0.19
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 2.9480242460522277e-06,
+          "max_abs_imaginary_matrix_entry": 8.966688217263269e-17,
+          "min_frequency_thz": -4.175294944804421
+        },
+        {
+          "q_fractional": [
+            0.07,
+            0.26,
+            0.45
+          ],
+          "max_abs_dynamical_matrix_error": 8.881784197001252e-16,
+          "max_abs_frequency_error_thz": 2.925212509552466e-06,
+          "max_abs_imaginary_matrix_entry": 1.1623083154662907e-16,
+          "min_frequency_thz": -3.1116850224100636
+        },
+        {
+          "q_fractional": [
+            -0.22,
+            0.14,
+            0.31
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 2.7423223372124994e-06,
+          "max_abs_imaginary_matrix_entry": 9.725658199377452e-17,
+          "min_frequency_thz": -1.4152948994148986
+        },
+        {
+          "q_fractional": [
+            1.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.6858211832347934e-06,
+          "max_abs_imaginary_matrix_entry": 1.335787168520961e-16,
+          "min_frequency_thz": -1.5637694515976543
+        },
+        {
+          "q_fractional": [
+            0.25,
+            0.0,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 2.931461956734438e-06,
+          "max_abs_imaginary_matrix_entry": 8.351380410334986e-17,
+          "min_frequency_thz": -2.8079382774608326
+        }
+      ],
+      "sampled_stability": {
+        "dispersion": {
+          "q_points": 96,
+          "imaginary_modes": 178,
+          "min_frequency_thz": -6.004689272195198,
+          "min_q_fractional": [
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        "shifted_mesh": {
+          "q_points": 512,
+          "imaginary_modes": 816,
+          "min_frequency_thz": -5.765808503823588,
+          "min_q_fractional": [
+            0.4375,
+            0.5625,
+            0.4375
+          ]
+        },
+        "comparison_points": {
+          "q_points": 16,
+          "imaginary_modes": 23,
+          "min_frequency_thz": -6.004689272195198,
+          "min_q_fractional": [
+            0.5,
+            0.5,
+            0.5
+          ]
+        }
+      },
+      "dispersion_reference": {
+        "q_points": 96,
+        "max_abs_frequency_error_thz": 3.189049262886101e-06,
+        "min_frequency_thz": -6.004688527192648
+      },
+      "dos_thermal_available": false,
+      "reference_file": "cubic-catio3_phonons.json",
+      "result_sha256": "9327aab4f77975187d936e3c1dfd867802a06c2f6d36ffd8d604ed3339cd7374",
+      "lo_to_limitation": "omitted; polar LO-TO splitting not reproduced",
+      "frequency_conversion_thz": {
+        "geoform": 15.633304239856193,
+        "phonopy": 15.633302300230191
+      }
+    },
+    {
+      "material": "halite",
+      "name": "Halite",
+      "display_name": "Halite",
+      "formula": "NaCl",
+      "phase": "Rock-salt structure",
+      "evidence_status": "calculated",
+      "independent_reference": "Phonopy 4.9.0",
+      "from_supplied_forces": true,
+      "source_url": "https://github.com/phonopy/phonopy/tree/bd260e234de32b3b6c558c60a7c6254b9bdfef71/example/NaCl",
+      "source_note": null,
+      "source_sha256": {
+        "phonopy_disp.yaml": "05553d717297aeef35f8d79bccbb4916a474e7b24ddbafe1b0d9ed148694a602",
+        "FORCE_SETS": "2485a1ee2c43579e868c65f376c45d81caa0928a4899a8edc292ac6843aaac10"
+      },
+      "source_audit": null,
+      "supercell_ifc_shape": [
+        2,
+        64,
+        3,
+        3
+      ],
+      "full_ifc_shape": null,
+      "primitive_atoms": 2,
+      "periodic_ifc_blocks": 250,
+      "asr_error_ev_a2": 1.6273874609007422e-15,
+      "max_abs_dynamical_matrix_error": 1.5265566588595902e-16,
+      "max_abs_frequency_error_thz": 7.7440359547154e-07,
+      "qpoint_comparisons": [
+        {
+          "q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 4.85722573273506e-17,
+          "max_abs_frequency_error_thz": 5.727617571338328e-07,
+          "max_abs_imaginary_matrix_entry": 0.0,
+          "min_frequency_thz": 0.0
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 2.7755575615628914e-17,
+          "max_abs_frequency_error_thz": 7.7440359547154e-07,
+          "max_abs_imaginary_matrix_entry": 1.5069128544095826e-17,
+          "min_frequency_thz": 3.2726715158580912
         },
         {
           "q_fractional": [
@@ -45,7 +2295,9 @@
             0.0
           ],
           "max_abs_dynamical_matrix_error": 1.5265566588595902e-16,
-          "max_abs_frequency_error_thz": 6.520703834667074e-07
+          "max_abs_frequency_error_thz": 6.520703772494585e-07,
+          "max_abs_imaginary_matrix_entry": 2.0238016295191148e-34,
+          "min_frequency_thz": 2.4138205910373554
         },
         {
           "q_fractional": [
@@ -53,8 +2305,10 @@
             0.5,
             0.5
           ],
-          "max_abs_dynamical_matrix_error": 6.938893903907228e-17,
-          "max_abs_frequency_error_thz": 7.744035919188264e-07
+          "max_abs_dynamical_matrix_error": 2.7755575615628914e-17,
+          "max_abs_frequency_error_thz": 7.7440359547154e-07,
+          "max_abs_imaginary_matrix_entry": 1.6041330385650393e-17,
+          "min_frequency_thz": 3.272671515858092
         },
         {
           "q_fractional": [
@@ -62,8 +2316,10 @@
             0.25,
             0.375
           ],
-          "max_abs_dynamical_matrix_error": 1.249000902703301e-16,
-          "max_abs_frequency_error_thz": 7.454129153927624e-07
+          "max_abs_dynamical_matrix_error": 8.326672684688674e-17,
+          "max_abs_frequency_error_thz": 7.454129189454761e-07,
+          "max_abs_imaginary_matrix_entry": 1.6041330385650393e-17,
+          "min_frequency_thz": 2.117119719256067
         },
         {
           "q_fractional": [
@@ -71,8 +2327,10 @@
             0.31,
             0.09
           ],
-          "max_abs_dynamical_matrix_error": 1.1102230246251565e-16,
-          "max_abs_frequency_error_thz": 7.408499147487646e-07
+          "max_abs_dynamical_matrix_error": 1.249000902703301e-16,
+          "max_abs_frequency_error_thz": 7.408499165251214e-07,
+          "max_abs_imaginary_matrix_entry": 9.251108148542699e-18,
+          "min_frequency_thz": 1.7743431987250813
         },
         {
           "q_fractional": [
@@ -80,8 +2338,10 @@
             0.02,
             0.28
           ],
-          "max_abs_dynamical_matrix_error": 6.938893903907228e-17,
-          "max_abs_frequency_error_thz": 6.945243677947133e-07
+          "max_abs_dynamical_matrix_error": 4.163336342344337e-17,
+          "max_abs_frequency_error_thz": 6.94524365130178e-07,
+          "max_abs_imaginary_matrix_entry": 4.906581169095717e-18,
+          "min_frequency_thz": 2.190449575085631
         },
         {
           "q_fractional": [
@@ -89,8 +2349,10 @@
             0.14,
             0.07
           ],
-          "max_abs_dynamical_matrix_error": 9.71445146547012e-17,
-          "max_abs_frequency_error_thz": 6.929494782426104e-07
+          "max_abs_dynamical_matrix_error": 9.020562075079397e-17,
+          "max_abs_frequency_error_thz": 6.929494809071457e-07,
+          "max_abs_imaginary_matrix_entry": 1.3918436520693347e-18,
+          "min_frequency_thz": 1.2210311113593197
         },
         {
           "q_fractional": [
@@ -98,8 +2360,10 @@
             0.23,
             0.16
           ],
-          "max_abs_dynamical_matrix_error": 8.326672684688674e-17,
-          "max_abs_frequency_error_thz": 7.491861815367429e-07
+          "max_abs_dynamical_matrix_error": 6.938893903907228e-17,
+          "max_abs_frequency_error_thz": 7.491861833130997e-07,
+          "max_abs_imaginary_matrix_entry": 7.595326887145073e-19,
+          "min_frequency_thz": 2.0407110023762884
         },
         {
           "q_fractional": [
@@ -107,8 +2371,10 @@
             0.48,
             0.11
           ],
-          "max_abs_dynamical_matrix_error": 6.938893903907228e-17,
-          "max_abs_frequency_error_thz": 6.34895141793379e-07
+          "max_abs_dynamical_matrix_error": 9.71445146547012e-17,
+          "max_abs_frequency_error_thz": 6.348951400170222e-07,
+          "max_abs_imaginary_matrix_entry": 4.450861555867013e-18,
+          "min_frequency_thz": 2.3744392373663246
         },
         {
           "q_fractional": [
@@ -116,8 +2382,10 @@
             0.44,
             0.27
           ],
-          "max_abs_dynamical_matrix_error": 9.71445146547012e-17,
-          "max_abs_frequency_error_thz": 7.294536539248497e-07
+          "max_abs_dynamical_matrix_error": 6.938893903907228e-17,
+          "max_abs_frequency_error_thz": 7.29453656589385e-07,
+          "max_abs_imaginary_matrix_entry": 1.3124724860986686e-17,
+          "min_frequency_thz": 2.421662822990873
         },
         {
           "q_fractional": [
@@ -125,8 +2393,10 @@
             0.37,
             0.19
           ],
-          "max_abs_dynamical_matrix_error": 9.71445146547012e-17,
-          "max_abs_frequency_error_thz": 7.498918623838335e-07
+          "max_abs_dynamical_matrix_error": 4.862178704752511e-17,
+          "max_abs_frequency_error_thz": 7.498918623838335e-07,
+          "max_abs_imaginary_matrix_entry": 8.472587142610329e-18,
+          "min_frequency_thz": 2.075091513571393
         },
         {
           "q_fractional": [
@@ -134,8 +2404,10 @@
             0.26,
             0.45
           ],
-          "max_abs_dynamical_matrix_error": 9.71445146547012e-17,
-          "max_abs_frequency_error_thz": 7.140737867672442e-07
+          "max_abs_dynamical_matrix_error": 1.1102230246251565e-16,
+          "max_abs_frequency_error_thz": 7.140737894317795e-07,
+          "max_abs_imaginary_matrix_entry": 1.5038747236547246e-17,
+          "min_frequency_thz": 2.348143806731691
         },
         {
           "q_fractional": [
@@ -143,8 +2415,10 @@
             0.14,
             0.31
           ],
-          "max_abs_dynamical_matrix_error": 1.249000902703301e-16,
-          "max_abs_frequency_error_thz": 6.904257441320283e-07
+          "max_abs_dynamical_matrix_error": 8.326672684688674e-17,
+          "max_abs_frequency_error_thz": 6.904257441320283e-07,
+          "max_abs_imaginary_matrix_entry": 1.5069128544095826e-17,
+          "min_frequency_thz": 2.8299827468593794
         },
         {
           "q_fractional": [
@@ -152,8 +2426,10 @@
             0.31,
             0.09
           ],
-          "max_abs_dynamical_matrix_error": 5.551115123125783e-17,
-          "max_abs_frequency_error_thz": 7.408499147487646e-07
+          "max_abs_dynamical_matrix_error": 1.5265566588595902e-16,
+          "max_abs_frequency_error_thz": 7.408499165251214e-07,
+          "max_abs_imaginary_matrix_entry": 8.795388535313995e-18,
+          "min_frequency_thz": 1.7743431987250815
         },
         {
           "q_fractional": [
@@ -161,34 +2437,607 @@
             0.0,
             0.5
           ],
-          "max_abs_dynamical_matrix_error": 2.0816681711721685e-17,
-          "max_abs_frequency_error_thz": 6.819804214686087e-07
+          "max_abs_dynamical_matrix_error": 4.163336342344337e-17,
+          "max_abs_frequency_error_thz": 6.819804232449656e-07,
+          "max_abs_imaginary_matrix_entry": 1.2415046758660367e-17,
+          "min_frequency_thz": 2.4557853756785306
         }
       ],
-      "source_sha256": {
-        "phonopy_disp.yaml": "05553d717297aeef35f8d79bccbb4916a474e7b24ddbafe1b0d9ed148694a602",
-        "FORCE_SETS": "2485a1ee2c43579e868c65f376c45d81caa0928a4899a8edc292ac6843aaac10"
+      "full_ifc_qpoint_comparisons": null,
+      "sampled_stability": {
+        "dispersion": {
+          "q_points": 96,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 0.0,
+          "min_q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "shifted_mesh": {
+          "q_points": 512,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 0.4873355723200798,
+          "min_q_fractional": [
+            0.0625,
+            0.0625,
+            0.0625
+          ]
+        },
+        "comparison_points": {
+          "q_points": 16,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 0.0,
+          "min_q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
       },
+      "dispersion_reference": {
+        "q_points": 96,
+        "max_abs_frequency_error_thz": 7.802079977636822e-07,
+        "min_frequency_thz": -6.385780532694831e-08
+      },
+      "dos_thermal_available": true,
       "reference_file": "halite_phonons.json",
-      "lo_to_limitation": "nonanalytic correction off in both codes; not a full polar crystal spectrum"
+      "result_sha256": "9c7d1c06cdd132822affba1d90e60ebc1f62d0b84f5e9090662b0ecd1913f91b",
+      "lo_to_limitation": "omitted; polar LO-TO splitting not reproduced",
+      "frequency_conversion_thz": {
+        "geoform": 15.633304239856193,
+        "phonopy": 15.633302300230191
+      }
+    },
+    {
+      "material": "hexagonal-mgb2",
+      "name": null,
+      "display_name": "Hexagonal MgB\u2082",
+      "formula": "MgB2",
+      "phase": "AlB\u2082-type hexagonal magnesium diboride",
+      "evidence_status": "calculated",
+      "independent_reference": "Phonopy 4.9.0",
+      "from_supplied_forces": true,
+      "source_url": "https://github.com/phonopy/phonopy/tree/bd260e234de32b3b6c558c60a7c6254b9bdfef71/example/MgB2",
+      "source_note": "The archived VASP force runs use 0.2 eV smearing. This is a computational compound entry. The result contains no electron\u2013phonon coupling or superconducting transition temperature.",
+      "source_sha256": {
+        "phonopy_disp.yaml": "780fb6c8455096960eae4f8ab436c30e5d554743fdaf54b3472533fcfa878ce8",
+        "FORCE_SETS": "5400dd39e2079e078ce4f7728bcfb3689c70e272fdbf1e9936e68cad7ecaf6df",
+        "POSCAR-unitcell": "e151b70cc0a2b001e2329b57d5a24fd99cad0c2ec24aae0505befa8560d6b174",
+        "vaspruns.tar.lzma": "2ba98de78f9e67f4cc77131a5e523485d0b65860edda48f02eb3cd60e8a15f82",
+        "README.md": "7355184b6564f9317a597913edc642b800cd0c7483c670c2d73567e6afc1e5de"
+      },
+      "source_audit": {
+        "space_group": "P6/mmm",
+        "space_group_number": 191,
+        "wyckoff_by_element": {
+          "Mg": "a",
+          "B": "d"
+        },
+        "conventional_atoms": 3,
+        "source_yaml_basis_atoms": 3,
+        "primitive_atoms": 3,
+        "supercell_atoms": 54,
+        "supercell_matrix": [
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "primitive_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "born_file_present": false,
+        "excluded_archive_members": [],
+        "vasp_force_runs": [
+          {
+            "file": "vaspruns/vasprun-001.xml",
+            "version": "5.2.12",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              6,
+              6,
+              9
+            ],
+            "smearing_method": "1",
+            "smearing_width_ev": "0.20000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "--",
+            "max_lattice_error_angstrom": 3.7173037981119705e-09,
+            "max_fractional_position_error": 4.44444497871288e-09,
+            "max_force_error_ev_angstrom": 0.0
+          },
+          {
+            "file": "vaspruns/vasprun-002.xml",
+            "version": "5.2.12",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              6,
+              6,
+              9
+            ],
+            "smearing_method": "1",
+            "smearing_width_ev": "0.20000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "--",
+            "max_lattice_error_angstrom": 3.7173037981119705e-09,
+            "max_fractional_position_error": 4.44444497871288e-09,
+            "max_force_error_ev_angstrom": 0.0
+          }
+        ]
+      },
+      "supercell_ifc_shape": [
+        3,
+        54,
+        3,
+        3
+      ],
+      "full_ifc_shape": [
+        54,
+        54,
+        3,
+        3
+      ],
+      "primitive_atoms": 3,
+      "periodic_ifc_blocks": 285,
+      "asr_error_ev_a2": 7.688294445529209e-15,
+      "max_abs_dynamical_matrix_error": 1.7763568394002505e-15,
+      "max_abs_frequency_error_thz": 2.9692802172576194e-06,
+      "qpoint_comparisons": [
+        {
+          "q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 9.992007221626409e-16,
+          "max_abs_frequency_error_thz": 2.5515039290269215e-06,
+          "max_abs_imaginary_matrix_entry": 0.0,
+          "min_frequency_thz": 0.0
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 1.7763568394002505e-15,
+          "max_abs_frequency_error_thz": 2.8824856173059743e-06,
+          "max_abs_imaginary_matrix_entry": 0.3892021758445142,
+          "min_frequency_thz": 7.570518332792991
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 8.881784197001252e-16,
+          "max_abs_frequency_error_thz": 2.8824856137532606e-06,
+          "max_abs_imaginary_matrix_entry": 3.0386184553929383e-17,
+          "min_frequency_thz": 7.570518332793001
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.924532040537997e-06,
+          "max_abs_imaginary_matrix_entry": 0.1626860133877632,
+          "min_frequency_thz": 7.7310968059052305
+        },
+        {
+          "q_fractional": [
+            0.125,
+            0.25,
+            0.375
+          ],
+          "max_abs_dynamical_matrix_error": 8.881784197001252e-16,
+          "max_abs_frequency_error_thz": 2.9374043393204374e-06,
+          "max_abs_imaginary_matrix_entry": 0.2397460857784982,
+          "min_frequency_thz": 7.588534573798786
+        },
+        {
+          "q_fractional": [
+            0.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 1.3322676295501878e-15,
+          "max_abs_frequency_error_thz": 2.8848875253117967e-06,
+          "max_abs_imaginary_matrix_entry": 0.2680472138542104,
+          "min_frequency_thz": 7.523493628922761
+        },
+        {
+          "q_fractional": [
+            0.41,
+            0.02,
+            0.28
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.9692802172576194e-06,
+          "max_abs_imaginary_matrix_entry": 0.28772480410169193,
+          "min_frequency_thz": 7.591740378808173
+        },
+        {
+          "q_fractional": [
+            0.21,
+            0.14,
+            0.07
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.8243990968235266e-06,
+          "max_abs_imaginary_matrix_entry": 0.1635555244150275,
+          "min_frequency_thz": 6.053318271456195
+        },
+        {
+          "q_fractional": [
+            0.36,
+            0.23,
+            0.16
+          ],
+          "max_abs_dynamical_matrix_error": 8.881784197001252e-16,
+          "max_abs_frequency_error_thz": 2.8103497520248766e-06,
+          "max_abs_imaginary_matrix_entry": 0.2500753789843265,
+          "min_frequency_thz": 7.954368826256961
+        },
+        {
+          "q_fractional": [
+            0.49,
+            0.48,
+            0.11
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.884732285934888e-06,
+          "max_abs_imaginary_matrix_entry": 0.05491806331636216,
+          "min_frequency_thz": 7.604774263818567
+        },
+        {
+          "q_fractional": [
+            0.13,
+            0.44,
+            0.27
+          ],
+          "max_abs_dynamical_matrix_error": 1.7763568394002505e-15,
+          "max_abs_frequency_error_thz": 2.8460110890193846e-06,
+          "max_abs_imaginary_matrix_entry": 0.43785394877637307,
+          "min_frequency_thz": 7.955370317949268
+        },
+        {
+          "q_fractional": [
+            0.33,
+            0.37,
+            0.19
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.8089545480725064e-06,
+          "max_abs_imaginary_matrix_entry": 0.15849242916157452,
+          "min_frequency_thz": 8.01006455630666
+        },
+        {
+          "q_fractional": [
+            0.07,
+            0.26,
+            0.45
+          ],
+          "max_abs_dynamical_matrix_error": 1.2212453270876722e-15,
+          "max_abs_frequency_error_thz": 2.9120849198704946e-06,
+          "max_abs_imaginary_matrix_entry": 0.2536387139457491,
+          "min_frequency_thz": 7.463136905164039
+        },
+        {
+          "q_fractional": [
+            -0.22,
+            0.14,
+            0.31
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.5688479148300303e-06,
+          "max_abs_imaginary_matrix_entry": 0.16019966974545338,
+          "min_frequency_thz": 6.338275590148616
+        },
+        {
+          "q_fractional": [
+            1.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 1.1102230246251565e-15,
+          "max_abs_frequency_error_thz": 2.884887521759083e-06,
+          "max_abs_imaginary_matrix_entry": 0.5025609853452124,
+          "min_frequency_thz": 7.5234936289227825
+        },
+        {
+          "q_fractional": [
+            0.25,
+            0.0,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 3.342213888644167e-16,
+          "max_abs_frequency_error_thz": 2.787840681861553e-06,
+          "max_abs_imaginary_matrix_entry": 0.1784023760492422,
+          "min_frequency_thz": 7.275627655876715
+        }
+      ],
+      "full_ifc_qpoint_comparisons": [
+        {
+          "q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 9.992007221626409e-16,
+          "max_abs_frequency_error_thz": 2.5515039290269215e-06,
+          "max_abs_imaginary_matrix_entry": 0.0,
+          "min_frequency_thz": 0.0
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 1.7763568394002505e-15,
+          "max_abs_frequency_error_thz": 2.8824856173059743e-06,
+          "max_abs_imaginary_matrix_entry": 0.3892021758445142,
+          "min_frequency_thz": 7.570518332792991
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 8.881784197001252e-16,
+          "max_abs_frequency_error_thz": 2.8824856137532606e-06,
+          "max_abs_imaginary_matrix_entry": 3.0386184553929383e-17,
+          "min_frequency_thz": 7.570518332793001
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.924532040537997e-06,
+          "max_abs_imaginary_matrix_entry": 0.1626860133877632,
+          "min_frequency_thz": 7.7310968059052305
+        },
+        {
+          "q_fractional": [
+            0.125,
+            0.25,
+            0.375
+          ],
+          "max_abs_dynamical_matrix_error": 8.881784197001252e-16,
+          "max_abs_frequency_error_thz": 2.9374043393204374e-06,
+          "max_abs_imaginary_matrix_entry": 0.2397460857784982,
+          "min_frequency_thz": 7.588534573798786
+        },
+        {
+          "q_fractional": [
+            0.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 1.3322676295501878e-15,
+          "max_abs_frequency_error_thz": 2.8848875253117967e-06,
+          "max_abs_imaginary_matrix_entry": 0.2680472138542104,
+          "min_frequency_thz": 7.523493628922761
+        },
+        {
+          "q_fractional": [
+            0.41,
+            0.02,
+            0.28
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.9692802172576194e-06,
+          "max_abs_imaginary_matrix_entry": 0.28772480410169193,
+          "min_frequency_thz": 7.591740378808173
+        },
+        {
+          "q_fractional": [
+            0.21,
+            0.14,
+            0.07
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.8243990968235266e-06,
+          "max_abs_imaginary_matrix_entry": 0.1635555244150275,
+          "min_frequency_thz": 6.053318271456195
+        },
+        {
+          "q_fractional": [
+            0.36,
+            0.23,
+            0.16
+          ],
+          "max_abs_dynamical_matrix_error": 8.881784197001252e-16,
+          "max_abs_frequency_error_thz": 2.8103497520248766e-06,
+          "max_abs_imaginary_matrix_entry": 0.2500753789843265,
+          "min_frequency_thz": 7.954368826256961
+        },
+        {
+          "q_fractional": [
+            0.49,
+            0.48,
+            0.11
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.884732285934888e-06,
+          "max_abs_imaginary_matrix_entry": 0.05491806331636216,
+          "min_frequency_thz": 7.604774263818567
+        },
+        {
+          "q_fractional": [
+            0.13,
+            0.44,
+            0.27
+          ],
+          "max_abs_dynamical_matrix_error": 1.7763568394002505e-15,
+          "max_abs_frequency_error_thz": 2.8460110890193846e-06,
+          "max_abs_imaginary_matrix_entry": 0.43785394877637307,
+          "min_frequency_thz": 7.955370317949268
+        },
+        {
+          "q_fractional": [
+            0.33,
+            0.37,
+            0.19
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.8089545480725064e-06,
+          "max_abs_imaginary_matrix_entry": 0.15849242916157452,
+          "min_frequency_thz": 8.01006455630666
+        },
+        {
+          "q_fractional": [
+            0.07,
+            0.26,
+            0.45
+          ],
+          "max_abs_dynamical_matrix_error": 1.2212453270876722e-15,
+          "max_abs_frequency_error_thz": 2.9120849198704946e-06,
+          "max_abs_imaginary_matrix_entry": 0.2536387139457491,
+          "min_frequency_thz": 7.463136905164039
+        },
+        {
+          "q_fractional": [
+            -0.22,
+            0.14,
+            0.31
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.5688479148300303e-06,
+          "max_abs_imaginary_matrix_entry": 0.16019966974545338,
+          "min_frequency_thz": 6.338275590148616
+        },
+        {
+          "q_fractional": [
+            1.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 1.1102230246251565e-15,
+          "max_abs_frequency_error_thz": 2.884887521759083e-06,
+          "max_abs_imaginary_matrix_entry": 0.5025609853452124,
+          "min_frequency_thz": 7.5234936289227825
+        },
+        {
+          "q_fractional": [
+            0.25,
+            0.0,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 3.342213888644167e-16,
+          "max_abs_frequency_error_thz": 2.787840681861553e-06,
+          "max_abs_imaginary_matrix_entry": 0.1784023760492422,
+          "min_frequency_thz": 7.275627655876715
+        }
+      ],
+      "sampled_stability": {
+        "dispersion": {
+          "q_points": 96,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 0.0,
+          "min_q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "shifted_mesh": {
+          "q_points": 512,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 1.8850144937142574,
+          "min_q_fractional": [
+            0.0625,
+            0.9375,
+            0.0625
+          ]
+        },
+        "comparison_points": {
+          "q_points": 16,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 0.0,
+          "min_q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "dispersion_reference": {
+        "q_points": 96,
+        "max_abs_frequency_error_thz": 2.9273650952177377e-06,
+        "min_frequency_thz": -1.9479054900311824e-07
+      },
+      "dos_thermal_available": true,
+      "reference_file": "hexagonal-mgb2_phonons.json",
+      "result_sha256": "5bcadba93623016a166a5129b8261de50c84074a5a41f10a74fb5e4d4ffbc2c4",
+      "lo_to_limitation": "omitted; polar LO-TO splitting not reproduced",
+      "frequency_conversion_thz": {
+        "geoform": 15.633304239856193,
+        "phonopy": 15.633302300230191
+      }
     },
     {
       "material": "periclase",
       "name": "Periclase",
+      "display_name": "Periclase",
       "formula": "MgO",
+      "phase": "Rock-salt structure",
       "evidence_status": "calculated",
       "independent_reference": "Phonopy 4.9.0",
       "from_supplied_forces": true,
+      "source_url": "https://github.com/phonopy/phonopy/tree/bd260e234de32b3b6c558c60a7c6254b9bdfef71/example/MgO",
+      "source_note": null,
+      "source_sha256": {
+        "phonopy_disp.yaml": "fc4ae95b377becae740f329e9ab5611a66d34e7a42e1b0c28d05d432708ad008",
+        "FORCE_SETS": "a9c88d502ec38871fefaf4b7be521780a7ea2631c6cd650c814333e45833ffc0"
+      },
+      "source_audit": null,
       "supercell_ifc_shape": [
         2,
         64,
         3,
         3
       ],
+      "full_ifc_shape": null,
       "primitive_atoms": 2,
       "periodic_ifc_blocks": 250,
-      "asr_error_ev_a2": 1.0211558161554724e-14,
-      "max_abs_dynamical_matrix_error": 1.1102230246251565e-15,
+      "asr_error_ev_a2": 1.103761179677143e-14,
+      "max_abs_dynamical_matrix_error": 8.881784197001252e-16,
       "max_abs_frequency_error_thz": 2.1755864274553005e-06,
       "qpoint_comparisons": [
         {
@@ -198,7 +3047,9 @@
             0.0
           ],
           "max_abs_dynamical_matrix_error": 2.7755575615628914e-16,
-          "max_abs_frequency_error_thz": 1.3893676431564472e-06
+          "max_abs_frequency_error_thz": 1.3893676431564472e-06,
+          "max_abs_imaginary_matrix_entry": 0.0,
+          "min_frequency_thz": 0.0
         },
         {
           "q_fractional": [
@@ -206,8 +3057,10 @@
             0.0,
             0.0
           ],
-          "max_abs_dynamical_matrix_error": 7.771561172376096e-16,
-          "max_abs_frequency_error_thz": 2.0434575596084414e-06
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.043457552503014e-06,
+          "max_abs_imaginary_matrix_entry": 8.726543685379305e-17,
+          "min_frequency_thz": 7.9287331818158995
         },
         {
           "q_fractional": [
@@ -215,8 +3068,10 @@
             0.5,
             0.0
           ],
-          "max_abs_dynamical_matrix_error": 1.1102230246251565e-15,
-          "max_abs_frequency_error_thz": 1.9668761392921397e-06
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 1.9668761392921397e-06,
+          "max_abs_imaginary_matrix_entry": 2.8127641136822046e-33,
+          "min_frequency_thz": 8.454639673979727
         },
         {
           "q_fractional": [
@@ -224,8 +3079,10 @@
             0.5,
             0.5
           ],
-          "max_abs_dynamical_matrix_error": 7.771561172376096e-16,
-          "max_abs_frequency_error_thz": 2.0434575596084414e-06
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 2.043457552503014e-06,
+          "max_abs_imaginary_matrix_entry": 4.7855239564983285e-17,
+          "min_frequency_thz": 7.9287331818158995
         },
         {
           "q_fractional": [
@@ -233,8 +3090,10 @@
             0.25,
             0.375
           ],
-          "max_abs_dynamical_matrix_error": 5.551115123125783e-16,
-          "max_abs_frequency_error_thz": 2.1755864274553005e-06
+          "max_abs_dynamical_matrix_error": 2.220446049250313e-16,
+          "max_abs_frequency_error_thz": 2.1755864274553005e-06,
+          "max_abs_imaginary_matrix_entry": 9.289546503790873e-17,
+          "min_frequency_thz": 6.5667643477370605
         },
         {
           "q_fractional": [
@@ -242,8 +3101,10 @@
             0.31,
             0.09
           ],
-          "max_abs_dynamical_matrix_error": 4.996003610813204e-16,
-          "max_abs_frequency_error_thz": 2.0961109825634594e-06
+          "max_abs_dynamical_matrix_error": 8.881784197001252e-16,
+          "max_abs_frequency_error_thz": 2.096110986116173e-06,
+          "max_abs_imaginary_matrix_entry": 3.615533724486788e-17,
+          "min_frequency_thz": 5.395530175492229
         },
         {
           "q_fractional": [
@@ -251,8 +3112,10 @@
             0.02,
             0.28
           ],
-          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
-          "max_abs_frequency_error_thz": 2.158599315293941e-06
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 2.158599301083086e-06,
+          "max_abs_imaginary_matrix_entry": 2.9584154733280663e-17,
+          "min_frequency_thz": 7.484509447251947
         },
         {
           "q_fractional": [
@@ -260,8 +3123,10 @@
             0.14,
             0.07
           ],
-          "max_abs_dynamical_matrix_error": 7.771561172376096e-16,
-          "max_abs_frequency_error_thz": 1.8968323320933678e-06
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 1.8968323320933678e-06,
+          "max_abs_imaginary_matrix_entry": 2.8624010754020595e-17,
+          "min_frequency_thz": 3.885010143550981
         },
         {
           "q_fractional": [
@@ -269,8 +3134,10 @@
             0.23,
             0.16
           ],
-          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
-          "max_abs_frequency_error_thz": 2.1350256140806323e-06
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 2.1350256140806323e-06,
+          "max_abs_imaginary_matrix_entry": 1.8648976703377053e-17,
+          "min_frequency_thz": 6.010845189704475
         },
         {
           "q_fractional": [
@@ -278,8 +3145,10 @@
             0.48,
             0.11
           ],
-          "max_abs_dynamical_matrix_error": 5.551115123125783e-16,
-          "max_abs_frequency_error_thz": 1.9967806146325984e-06
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 1.9967806146325984e-06,
+          "max_abs_imaginary_matrix_entry": 3.078921663188263e-17,
+          "min_frequency_thz": 8.15342040059642
         },
         {
           "q_fractional": [
@@ -287,8 +3156,10 @@
             0.44,
             0.27
           ],
-          "max_abs_dynamical_matrix_error": 3.885780586188048e-16,
-          "max_abs_frequency_error_thz": 2.1583402300962007e-06
+          "max_abs_dynamical_matrix_error": 5.551115123125783e-16,
+          "max_abs_frequency_error_thz": 2.158340237201628e-06,
+          "max_abs_imaginary_matrix_entry": 3.6004140198907746e-17,
+          "min_frequency_thz": 7.40469333254234
         },
         {
           "q_fractional": [
@@ -297,7 +3168,9 @@
             0.19
           ],
           "max_abs_dynamical_matrix_error": 5.551115123125783e-16,
-          "max_abs_frequency_error_thz": 2.1737082995798573e-06
+          "max_abs_frequency_error_thz": 2.173708303132571e-06,
+          "max_abs_imaginary_matrix_entry": 3.118507798857826e-17,
+          "min_frequency_thz": 6.58217776262032
         },
         {
           "q_fractional": [
@@ -305,8 +3178,10 @@
             0.26,
             0.45
           ],
-          "max_abs_dynamical_matrix_error": 7.771561172376096e-16,
-          "max_abs_frequency_error_thz": 2.141540377920137e-06
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 2.1415403708147096e-06,
+          "max_abs_imaginary_matrix_entry": 9.006945479705379e-17,
+          "min_frequency_thz": 7.479440858733027
         },
         {
           "q_fractional": [
@@ -314,8 +3189,10 @@
             0.14,
             0.31
           ],
-          "max_abs_dynamical_matrix_error": 2.7755575615628914e-16,
-          "max_abs_frequency_error_thz": 2.0662070134847e-06
+          "max_abs_dynamical_matrix_error": 1.6653345369377348e-16,
+          "max_abs_frequency_error_thz": 2.0662070134847e-06,
+          "max_abs_imaginary_matrix_entry": 8.55060530462569e-17,
+          "min_frequency_thz": 8.17180819757102
         },
         {
           "q_fractional": [
@@ -323,8 +3200,10 @@
             0.31,
             0.09
           ],
-          "max_abs_dynamical_matrix_error": 5.551115123125783e-16,
-          "max_abs_frequency_error_thz": 2.0961109825634594e-06
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 2.0961109825634594e-06,
+          "max_abs_imaginary_matrix_entry": 2.603888035153502e-17,
+          "min_frequency_thz": 5.395530175492224
         },
         {
           "q_fractional": [
@@ -332,16 +3211,1190 @@
             0.0,
             0.5
           ],
-          "max_abs_dynamical_matrix_error": 1.1102230246251565e-16,
-          "max_abs_frequency_error_thz": 2.0375741023315186e-06
+          "max_abs_dynamical_matrix_error": 2.220446049250313e-16,
+          "max_abs_frequency_error_thz": 2.0375741023315186e-06,
+          "max_abs_imaginary_matrix_entry": 7.644912230698764e-17,
+          "min_frequency_thz": 7.536673417058664
         }
       ],
-      "source_sha256": {
-        "phonopy_disp.yaml": "fc4ae95b377becae740f329e9ab5611a66d34e7a42e1b0c28d05d432708ad008",
-        "FORCE_SETS": "a9c88d502ec38871fefaf4b7be521780a7ea2631c6cd650c814333e45833ffc0"
+      "full_ifc_qpoint_comparisons": null,
+      "sampled_stability": {
+        "dispersion": {
+          "q_points": 96,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 0.0,
+          "min_q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "shifted_mesh": {
+          "q_points": 512,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 1.3930701483776873,
+          "min_q_fractional": [
+            0.0625,
+            0.0625,
+            0.0625
+          ]
+        },
+        "comparison_points": {
+          "q_points": 16,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 0.0,
+          "min_q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
       },
+      "dispersion_reference": {
+        "q_points": 96,
+        "max_abs_frequency_error_thz": 2.2400371619824e-06,
+        "min_frequency_thz": -7.707436791296853e-08
+      },
+      "dos_thermal_available": true,
       "reference_file": "periclase_phonons.json",
-      "lo_to_limitation": "nonanalytic correction off in both codes; not a full polar crystal spectrum"
+      "result_sha256": "0039fc397afd0b6bfbc83550a6a9b90e88502ec8a587cc5ba9874015342e7ead",
+      "lo_to_limitation": "omitted; polar LO-TO splitting not reproduced",
+      "frequency_conversion_thz": {
+        "geoform": 15.633304239856193,
+        "phonopy": 15.633302300230191
+      }
+    },
+    {
+      "material": "stishovite",
+      "name": "Stishovite",
+      "display_name": "Stishovite",
+      "formula": "SiO2",
+      "phase": "High-pressure rutile-type silica",
+      "evidence_status": "calculated",
+      "independent_reference": "Phonopy 4.9.0",
+      "from_supplied_forces": true,
+      "source_url": "https://github.com/phonopy/phonopy/tree/bd260e234de32b3b6c558c60a7c6254b9bdfef71/example/SiO2-HP",
+      "source_note": "The upstream README reports relaxation with VASP PSTRESS = 400 kbar (40 GPa). The archived displacement runs lack an explicit PSTRESS input. The calculation represents the supplied compressed cell.",
+      "source_sha256": {
+        "phonopy_disp.yaml": "1a96c4012829e550c4aea4427bcc18544cbe8d9aa0dba03329a0d5820b3cbcba",
+        "FORCE_SETS": "95a9fa7cddb598c39bb88a039f6d8f85bdde691c82b8ebf44e9a69abb86567ee",
+        "POSCAR-unitcell": "32ae50e9a14a3b360ee97eb34ea69b90e656f2f1c8f8e78aa5c0b3dc51608564",
+        "vaspruns.tar.lzma": "57f631aa2c4c931a0037a96a629a3dc1994f9cccdc0e05e0f4c832a43700e24e",
+        "README.md": "fb92accd508e31248ef47d96a9d89d7c7cbd4fa82424a2b9b6c13c123486c6a3",
+        "BORN": "1ef37c08687480292de3f8819ede8824a8ef7a3f82050ef25d8743777b47df2a",
+        "INCAR": "55d314121226f142c27aebd514c54d6927df96a56641d00fa76e07df6d79b51f"
+      },
+      "source_audit": {
+        "space_group": "P4_2/mnm",
+        "space_group_number": 136,
+        "wyckoff_by_element": {
+          "Si": "a",
+          "O": "f"
+        },
+        "conventional_atoms": 6,
+        "source_yaml_basis_atoms": 6,
+        "primitive_atoms": 6,
+        "supercell_atoms": 48,
+        "supercell_matrix": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "primitive_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "born_file_present": true,
+        "excluded_archive_members": [
+          "vaspruns/vasprun.xml-sposcar"
+        ],
+        "vasp_force_runs": [
+          {
+            "file": "vaspruns/vasprun.xml-001",
+            "version": "4.6.35",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              2,
+              2,
+              3
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "--",
+            "max_lattice_error_angstrom": 2.5594326658051614e-09,
+            "max_fractional_position_error": 3.1336810923932035e-09,
+            "max_force_error_ev_angstrom": 0.0
+          },
+          {
+            "file": "vaspruns/vasprun.xml-002",
+            "version": "4.6.35",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              2,
+              2,
+              3
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "--",
+            "max_lattice_error_angstrom": 2.5594326658051614e-09,
+            "max_fractional_position_error": 3.1336810923932035e-09,
+            "max_force_error_ev_angstrom": 0.0
+          },
+          {
+            "file": "vaspruns/vasprun.xml-003",
+            "version": "4.6.35",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              2,
+              2,
+              3
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "--",
+            "max_lattice_error_angstrom": 2.5594326658051614e-09,
+            "max_fractional_position_error": 3.941618031966243e-09,
+            "max_force_error_ev_angstrom": 0.0
+          }
+        ]
+      },
+      "supercell_ifc_shape": [
+        6,
+        48,
+        3,
+        3
+      ],
+      "full_ifc_shape": [
+        48,
+        48,
+        3,
+        3
+      ],
+      "primitive_atoms": 6,
+      "periodic_ifc_blocks": 450,
+      "asr_error_ev_a2": 5.928590951498336e-14,
+      "max_abs_dynamical_matrix_error": 1.3322676295501878e-15,
+      "max_abs_frequency_error_thz": 4.102903083946785e-06,
+      "qpoint_comparisons": [
+        {
+          "q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 8.881784197001252e-16,
+          "max_abs_frequency_error_thz": 3.923170652342378e-06,
+          "max_abs_imaginary_matrix_entry": 0.0,
+          "min_frequency_thz": 0.0
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 1.3322676295501878e-15,
+          "max_abs_frequency_error_thz": 4.102903083946785e-06,
+          "max_abs_imaginary_matrix_entry": 0.4720556656847399,
+          "min_frequency_thz": 8.693418203658403
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 1.3322676295501878e-15,
+          "max_abs_frequency_error_thz": 3.7541362480908447e-06,
+          "max_abs_imaginary_matrix_entry": 0.5806689828662124,
+          "min_frequency_thz": 7.661238774554289
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 1.3322676295501878e-15,
+          "max_abs_frequency_error_thz": 3.770126312474531e-06,
+          "max_abs_imaginary_matrix_entry": 0.2667986635503561,
+          "min_frequency_thz": 8.719074232003402
+        },
+        {
+          "q_fractional": [
+            0.125,
+            0.25,
+            0.375
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 3.787199098326255e-06,
+          "max_abs_imaginary_matrix_entry": 0.26376810920381466,
+          "min_frequency_thz": 9.719505105574335
+        },
+        {
+          "q_fractional": [
+            0.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 1.3322676295501878e-15,
+          "max_abs_frequency_error_thz": 4.0696995782241174e-06,
+          "max_abs_imaginary_matrix_entry": 0.4065493026648277,
+          "min_frequency_thz": 5.590504594122673
+        },
+        {
+          "q_fractional": [
+            0.41,
+            0.02,
+            0.28
+          ],
+          "max_abs_dynamical_matrix_error": 1.3322676295501878e-15,
+          "max_abs_frequency_error_thz": 3.876977515915314e-06,
+          "max_abs_imaginary_matrix_entry": 0.3120388110887871,
+          "min_frequency_thz": 8.083274827308117
+        },
+        {
+          "q_fractional": [
+            0.21,
+            0.14,
+            0.07
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 4.06026895660716e-06,
+          "max_abs_imaginary_matrix_entry": 0.3377959604932606,
+          "min_frequency_thz": 3.7625432666099634
+        },
+        {
+          "q_fractional": [
+            0.36,
+            0.23,
+            0.16
+          ],
+          "max_abs_dynamical_matrix_error": 8.881784197001252e-16,
+          "max_abs_frequency_error_thz": 3.9642427367425626e-06,
+          "max_abs_imaginary_matrix_entry": 0.37680408394872045,
+          "min_frequency_thz": 6.90229089170252
+        },
+        {
+          "q_fractional": [
+            0.49,
+            0.48,
+            0.11
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 3.7531529670786767e-06,
+          "max_abs_imaginary_matrix_entry": 0.538811738621089,
+          "min_frequency_thz": 7.848785640419003
+        },
+        {
+          "q_fractional": [
+            0.13,
+            0.44,
+            0.27
+          ],
+          "max_abs_dynamical_matrix_error": 1.3322676295501878e-15,
+          "max_abs_frequency_error_thz": 3.8631712158121445e-06,
+          "max_abs_imaginary_matrix_entry": 0.3322197155420712,
+          "min_frequency_thz": 8.502063460920926
+        },
+        {
+          "q_fractional": [
+            0.33,
+            0.37,
+            0.19
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 3.87127788314956e-06,
+          "max_abs_imaginary_matrix_entry": 0.38656899289617486,
+          "min_frequency_thz": 7.642544593111182
+        },
+        {
+          "q_fractional": [
+            0.07,
+            0.26,
+            0.45
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 3.718289761422966e-06,
+          "max_abs_imaginary_matrix_entry": 0.2718640892071551,
+          "min_frequency_thz": 11.09975550795834
+        },
+        {
+          "q_fractional": [
+            -0.22,
+            0.14,
+            0.31
+          ],
+          "max_abs_dynamical_matrix_error": 1.1102230246251565e-15,
+          "max_abs_frequency_error_thz": 3.845356808085398e-06,
+          "max_abs_imaginary_matrix_entry": 0.24972760646830175,
+          "min_frequency_thz": 8.3967107263395
+        },
+        {
+          "q_fractional": [
+            1.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 1.3322676295501878e-15,
+          "max_abs_frequency_error_thz": 4.069699606645827e-06,
+          "max_abs_imaginary_matrix_entry": 0.608068910489926,
+          "min_frequency_thz": 5.590504594122674
+        },
+        {
+          "q_fractional": [
+            0.25,
+            0.0,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 3.6734573782837288e-06,
+          "max_abs_imaginary_matrix_entry": 0.26977892385850905,
+          "min_frequency_thz": 11.775780427851041
+        }
+      ],
+      "full_ifc_qpoint_comparisons": [
+        {
+          "q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 8.881784197001252e-16,
+          "max_abs_frequency_error_thz": 3.923170652342378e-06,
+          "max_abs_imaginary_matrix_entry": 0.0,
+          "min_frequency_thz": 0.0
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 1.3322676295501878e-15,
+          "max_abs_frequency_error_thz": 4.102903083946785e-06,
+          "max_abs_imaginary_matrix_entry": 0.4720556656847399,
+          "min_frequency_thz": 8.693418203658403
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 1.3322676295501878e-15,
+          "max_abs_frequency_error_thz": 3.7541362480908447e-06,
+          "max_abs_imaginary_matrix_entry": 0.5806689828662124,
+          "min_frequency_thz": 7.661238774554289
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 1.3322676295501878e-15,
+          "max_abs_frequency_error_thz": 3.770126312474531e-06,
+          "max_abs_imaginary_matrix_entry": 0.2667986635503561,
+          "min_frequency_thz": 8.719074232003402
+        },
+        {
+          "q_fractional": [
+            0.125,
+            0.25,
+            0.375
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 3.787199098326255e-06,
+          "max_abs_imaginary_matrix_entry": 0.26376810920381466,
+          "min_frequency_thz": 9.719505105574335
+        },
+        {
+          "q_fractional": [
+            0.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 1.3322676295501878e-15,
+          "max_abs_frequency_error_thz": 4.0696995782241174e-06,
+          "max_abs_imaginary_matrix_entry": 0.4065493026648277,
+          "min_frequency_thz": 5.590504594122673
+        },
+        {
+          "q_fractional": [
+            0.41,
+            0.02,
+            0.28
+          ],
+          "max_abs_dynamical_matrix_error": 1.3322676295501878e-15,
+          "max_abs_frequency_error_thz": 3.876977515915314e-06,
+          "max_abs_imaginary_matrix_entry": 0.3120388110887871,
+          "min_frequency_thz": 8.083274827308117
+        },
+        {
+          "q_fractional": [
+            0.21,
+            0.14,
+            0.07
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 4.06026895660716e-06,
+          "max_abs_imaginary_matrix_entry": 0.3377959604932606,
+          "min_frequency_thz": 3.7625432666099634
+        },
+        {
+          "q_fractional": [
+            0.36,
+            0.23,
+            0.16
+          ],
+          "max_abs_dynamical_matrix_error": 8.881784197001252e-16,
+          "max_abs_frequency_error_thz": 3.9642427367425626e-06,
+          "max_abs_imaginary_matrix_entry": 0.37680408394872045,
+          "min_frequency_thz": 6.90229089170252
+        },
+        {
+          "q_fractional": [
+            0.49,
+            0.48,
+            0.11
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 3.7531529670786767e-06,
+          "max_abs_imaginary_matrix_entry": 0.538811738621089,
+          "min_frequency_thz": 7.848785640419003
+        },
+        {
+          "q_fractional": [
+            0.13,
+            0.44,
+            0.27
+          ],
+          "max_abs_dynamical_matrix_error": 1.3322676295501878e-15,
+          "max_abs_frequency_error_thz": 3.8631712158121445e-06,
+          "max_abs_imaginary_matrix_entry": 0.3322197155420712,
+          "min_frequency_thz": 8.502063460920926
+        },
+        {
+          "q_fractional": [
+            0.33,
+            0.37,
+            0.19
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 3.87127788314956e-06,
+          "max_abs_imaginary_matrix_entry": 0.38656899289617486,
+          "min_frequency_thz": 7.642544593111182
+        },
+        {
+          "q_fractional": [
+            0.07,
+            0.26,
+            0.45
+          ],
+          "max_abs_dynamical_matrix_error": 6.661338147750939e-16,
+          "max_abs_frequency_error_thz": 3.718289761422966e-06,
+          "max_abs_imaginary_matrix_entry": 0.2718640892071551,
+          "min_frequency_thz": 11.09975550795834
+        },
+        {
+          "q_fractional": [
+            -0.22,
+            0.14,
+            0.31
+          ],
+          "max_abs_dynamical_matrix_error": 1.1102230246251565e-15,
+          "max_abs_frequency_error_thz": 3.845356808085398e-06,
+          "max_abs_imaginary_matrix_entry": 0.24972760646830175,
+          "min_frequency_thz": 8.3967107263395
+        },
+        {
+          "q_fractional": [
+            1.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 1.3322676295501878e-15,
+          "max_abs_frequency_error_thz": 4.069699606645827e-06,
+          "max_abs_imaginary_matrix_entry": 0.608068910489926,
+          "min_frequency_thz": 5.590504594122674
+        },
+        {
+          "q_fractional": [
+            0.25,
+            0.0,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 3.6734573782837288e-06,
+          "max_abs_imaginary_matrix_entry": 0.26977892385850905,
+          "min_frequency_thz": 11.775780427851041
+        }
+      ],
+      "sampled_stability": {
+        "dispersion": {
+          "q_points": 96,
+          "imaginary_modes": 3,
+          "min_frequency_thz": -0.4941714132252879,
+          "min_q_fractional": [
+            0.041666666666666685,
+            0.041666666666666685,
+            0.0
+          ]
+        },
+        "shifted_mesh": {
+          "q_points": 512,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 1.7080010772115648,
+          "min_q_fractional": [
+            0.9375,
+            0.0625,
+            0.9375
+          ]
+        },
+        "comparison_points": {
+          "q_points": 16,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 0.0,
+          "min_q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "dispersion_reference": {
+        "q_points": 96,
+        "max_abs_frequency_error_thz": 4.182059726076659e-06,
+        "min_frequency_thz": -0.4941713519135141
+      },
+      "dos_thermal_available": false,
+      "reference_file": "stishovite_phonons.json",
+      "result_sha256": "a3b3b62b3adb1e4889cc7dd136e5e5155d816d4d1f883d771c1caf44451da774",
+      "lo_to_limitation": "omitted; polar LO-TO splitting not reproduced",
+      "frequency_conversion_thz": {
+        "geoform": 15.633304239856193,
+        "phonopy": 15.633302300230191
+      }
+    },
+    {
+      "material": "zincite",
+      "name": "Zincite",
+      "display_name": "Zincite",
+      "formula": "ZnO",
+      "phase": "Wurtzite-type ZnO",
+      "evidence_status": "calculated",
+      "independent_reference": "Phonopy 4.9.0",
+      "from_supplied_forces": true,
+      "source_url": "https://github.com/phonopy/phonopy/tree/bd260e234de32b3b6c558c60a7c6254b9bdfef71/example/ZnO",
+      "source_note": null,
+      "source_sha256": {
+        "phonopy_disp.yaml": "93f4adbeafa702a85c30da81f17895c13bf38e1d88fe55433966c9137138b40c",
+        "FORCE_SETS": "403e821f0017ca396874edcdb7da58366c6dce3cbe1f8ca03cd1346f1bd02dc5",
+        "POSCAR-unitcell": "dcca1db53bbb878b655ba842004db3462270b67bb52ed3f71fbffba83d563c1a",
+        "vaspruns.tar.lzma": "3fc792541e925485c2173a0602a30d605f9afb97f555db27bda7b3a0b715a2fb",
+        "README.md": "ab3fc552ab8f60269014ca61a6aed2c716376966e3f0a4cdeb3ce06bd0f36c1d",
+        "BORN": "902118e6b31c9046c0b22eadac279e079563d2386e675a88409443923ee5063e"
+      },
+      "source_audit": {
+        "space_group": "P6_3mc",
+        "space_group_number": 186,
+        "wyckoff_by_element": {
+          "Zn": "b",
+          "O": "b"
+        },
+        "conventional_atoms": 4,
+        "source_yaml_basis_atoms": 4,
+        "primitive_atoms": 4,
+        "supercell_atoms": 32,
+        "supercell_matrix": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "primitive_matrix": [
+          [
+            1.0000000000000002,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.9999999999999998
+          ]
+        ],
+        "born_file_present": true,
+        "excluded_archive_members": [],
+        "vasp_force_runs": [
+          {
+            "file": "vaspruns/vasprun.xml-001",
+            "version": "5.2.12",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              3,
+              3,
+              2
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "--",
+            "max_lattice_error_angstrom": 4.0871386275398436e-09,
+            "max_fractional_position_error": 3.894869982090654e-09,
+            "max_force_error_ev_angstrom": 0.0
+          },
+          {
+            "file": "vaspruns/vasprun.xml-002",
+            "version": "5.2.12",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              3,
+              3,
+              2
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "--",
+            "max_lattice_error_angstrom": 4.0871386275398436e-09,
+            "max_fractional_position_error": 3.894869982090654e-09,
+            "max_force_error_ev_angstrom": 0.0
+          },
+          {
+            "file": "vaspruns/vasprun.xml-003",
+            "version": "5.2.12",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              3,
+              3,
+              2
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "--",
+            "max_lattice_error_angstrom": 4.0871386275398436e-09,
+            "max_fractional_position_error": 4.338592707320288e-09,
+            "max_force_error_ev_angstrom": 0.0
+          },
+          {
+            "file": "vaspruns/vasprun.xml-004",
+            "version": "5.2.12",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              3,
+              3,
+              2
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "--",
+            "max_lattice_error_angstrom": 4.0871386275398436e-09,
+            "max_fractional_position_error": 3.894869982090654e-09,
+            "max_force_error_ev_angstrom": 0.0
+          },
+          {
+            "file": "vaspruns/vasprun.xml-005",
+            "version": "5.2.12",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              3,
+              3,
+              2
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "--",
+            "max_lattice_error_angstrom": 4.0871386275398436e-09,
+            "max_fractional_position_error": 3.894869982090654e-09,
+            "max_force_error_ev_angstrom": 0.0
+          },
+          {
+            "file": "vaspruns/vasprun.xml-006",
+            "version": "5.2.12",
+            "encut_ev": 500.0,
+            "force_k_mesh": [
+              3,
+              3,
+              2
+            ],
+            "smearing_method": "0",
+            "smearing_width_ev": "0.01000000",
+            "external_pressure_kbar": null,
+            "gga_tag": "--",
+            "max_lattice_error_angstrom": 4.0871386275398436e-09,
+            "max_fractional_position_error": 3.897404621255873e-09,
+            "max_force_error_ev_angstrom": 0.0
+          }
+        ]
+      },
+      "supercell_ifc_shape": [
+        4,
+        32,
+        3,
+        3
+      ],
+      "full_ifc_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "primitive_atoms": 4,
+      "periodic_ifc_blocks": 236,
+      "asr_error_ev_a2": 1.3322676295501878e-14,
+      "max_abs_dynamical_matrix_error": 5.551115123125783e-16,
+      "max_abs_frequency_error_thz": 1.913311374224236e-06,
+      "qpoint_comparisons": [
+        {
+          "q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 3.885780586188048e-16,
+          "max_abs_frequency_error_thz": 1.9015580274839294e-06,
+          "max_abs_imaginary_matrix_entry": 0.0,
+          "min_frequency_thz": 0.0
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 1.9082991098429147e-06,
+          "max_abs_imaginary_matrix_entry": 0.11380828302118667,
+          "min_frequency_thz": 2.5917988376112815
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 1.908299108066558e-06,
+          "max_abs_imaginary_matrix_entry": 5.590147035874152e-17,
+          "min_frequency_thz": 2.591798837611293
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 1.1102230246251565e-16,
+          "max_abs_frequency_error_thz": 1.9084757330034563e-06,
+          "max_abs_imaginary_matrix_entry": 0.1379699286212321,
+          "min_frequency_thz": 3.2160817791501852
+        },
+        {
+          "q_fractional": [
+            0.125,
+            0.25,
+            0.375
+          ],
+          "max_abs_dynamical_matrix_error": 1.1102230246251565e-16,
+          "max_abs_frequency_error_thz": 1.846273562478018e-06,
+          "max_abs_imaginary_matrix_entry": 0.14503765891307782,
+          "min_frequency_thz": 2.6098885822978075
+        },
+        {
+          "q_fractional": [
+            0.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 2.220446049250313e-16,
+          "max_abs_frequency_error_thz": 1.853992774414337e-06,
+          "max_abs_imaginary_matrix_entry": 0.13229266378786286,
+          "min_frequency_thz": 3.063897697712801
+        },
+        {
+          "q_fractional": [
+            0.41,
+            0.02,
+            0.28
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 1.8991850172511704e-06,
+          "max_abs_imaginary_matrix_entry": 0.11620529995918012,
+          "min_frequency_thz": 2.850638351671636
+        },
+        {
+          "q_fractional": [
+            0.21,
+            0.14,
+            0.07
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 1.8116365207987428e-06,
+          "max_abs_imaginary_matrix_entry": 0.09320035527476449,
+          "min_frequency_thz": 2.3543560233189464
+        },
+        {
+          "q_fractional": [
+            0.36,
+            0.23,
+            0.16
+          ],
+          "max_abs_dynamical_matrix_error": 5.551115123125783e-16,
+          "max_abs_frequency_error_thz": 1.86817940495132e-06,
+          "max_abs_imaginary_matrix_entry": 0.10855531642946852,
+          "min_frequency_thz": 3.26169701660303
+        },
+        {
+          "q_fractional": [
+            0.49,
+            0.48,
+            0.11
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 1.910688046891096e-06,
+          "max_abs_imaginary_matrix_entry": 0.04146924741996812,
+          "min_frequency_thz": 2.6941235423383723
+        },
+        {
+          "q_fractional": [
+            0.13,
+            0.44,
+            0.27
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 1.9011854117678695e-06,
+          "max_abs_imaginary_matrix_entry": 0.17081821862378704,
+          "min_frequency_thz": 2.8496919530181826
+        },
+        {
+          "q_fractional": [
+            0.33,
+            0.37,
+            0.19
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 1.8471947971221425e-06,
+          "max_abs_imaginary_matrix_entry": 0.0935866431124481,
+          "min_frequency_thz": 3.2929954953774914
+        },
+        {
+          "q_fractional": [
+            0.07,
+            0.26,
+            0.45
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 1.83783891749556e-06,
+          "max_abs_imaginary_matrix_entry": 0.15784954342184343,
+          "min_frequency_thz": 2.907073805361159
+        },
+        {
+          "q_fractional": [
+            -0.22,
+            0.14,
+            0.31
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 1.913311374224236e-06,
+          "max_abs_imaginary_matrix_entry": 0.14759084650529664,
+          "min_frequency_thz": 2.2256144317631366
+        },
+        {
+          "q_fractional": [
+            1.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 1.8539927726379801e-06,
+          "max_abs_imaginary_matrix_entry": 0.1644966261117387,
+          "min_frequency_thz": 3.0638976977128034
+        },
+        {
+          "q_fractional": [
+            0.25,
+            0.0,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 1.8267219576983962e-06,
+          "max_abs_imaginary_matrix_entry": 0.1767141411449634,
+          "min_frequency_thz": 2.842194142134719
+        }
+      ],
+      "full_ifc_qpoint_comparisons": [
+        {
+          "q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 3.885780586188048e-16,
+          "max_abs_frequency_error_thz": 1.9015580274839294e-06,
+          "max_abs_imaginary_matrix_entry": 0.0,
+          "min_frequency_thz": 0.0
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 1.9082991098429147e-06,
+          "max_abs_imaginary_matrix_entry": 0.11380828302118667,
+          "min_frequency_thz": 2.5917988376112815
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 1.908299108066558e-06,
+          "max_abs_imaginary_matrix_entry": 5.590147035874152e-17,
+          "min_frequency_thz": 2.591798837611293
+        },
+        {
+          "q_fractional": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 1.1102230246251565e-16,
+          "max_abs_frequency_error_thz": 1.9084757330034563e-06,
+          "max_abs_imaginary_matrix_entry": 0.1379699286212321,
+          "min_frequency_thz": 3.2160817791501852
+        },
+        {
+          "q_fractional": [
+            0.125,
+            0.25,
+            0.375
+          ],
+          "max_abs_dynamical_matrix_error": 1.1102230246251565e-16,
+          "max_abs_frequency_error_thz": 1.846273562478018e-06,
+          "max_abs_imaginary_matrix_entry": 0.14503765891307782,
+          "min_frequency_thz": 2.6098885822978075
+        },
+        {
+          "q_fractional": [
+            0.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 2.220446049250313e-16,
+          "max_abs_frequency_error_thz": 1.853992774414337e-06,
+          "max_abs_imaginary_matrix_entry": 0.13229266378786286,
+          "min_frequency_thz": 3.063897697712801
+        },
+        {
+          "q_fractional": [
+            0.41,
+            0.02,
+            0.28
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 1.8991850172511704e-06,
+          "max_abs_imaginary_matrix_entry": 0.11620529995918012,
+          "min_frequency_thz": 2.850638351671636
+        },
+        {
+          "q_fractional": [
+            0.21,
+            0.14,
+            0.07
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 1.8116365207987428e-06,
+          "max_abs_imaginary_matrix_entry": 0.09320035527476449,
+          "min_frequency_thz": 2.3543560233189464
+        },
+        {
+          "q_fractional": [
+            0.36,
+            0.23,
+            0.16
+          ],
+          "max_abs_dynamical_matrix_error": 5.551115123125783e-16,
+          "max_abs_frequency_error_thz": 1.86817940495132e-06,
+          "max_abs_imaginary_matrix_entry": 0.10855531642946852,
+          "min_frequency_thz": 3.26169701660303
+        },
+        {
+          "q_fractional": [
+            0.49,
+            0.48,
+            0.11
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 1.910688046891096e-06,
+          "max_abs_imaginary_matrix_entry": 0.04146924741996812,
+          "min_frequency_thz": 2.6941235423383723
+        },
+        {
+          "q_fractional": [
+            0.13,
+            0.44,
+            0.27
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 1.9011854117678695e-06,
+          "max_abs_imaginary_matrix_entry": 0.17081821862378704,
+          "min_frequency_thz": 2.8496919530181826
+        },
+        {
+          "q_fractional": [
+            0.33,
+            0.37,
+            0.19
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 1.8471947971221425e-06,
+          "max_abs_imaginary_matrix_entry": 0.0935866431124481,
+          "min_frequency_thz": 3.2929954953774914
+        },
+        {
+          "q_fractional": [
+            0.07,
+            0.26,
+            0.45
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 1.83783891749556e-06,
+          "max_abs_imaginary_matrix_entry": 0.15784954342184343,
+          "min_frequency_thz": 2.907073805361159
+        },
+        {
+          "q_fractional": [
+            -0.22,
+            0.14,
+            0.31
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 1.913311374224236e-06,
+          "max_abs_imaginary_matrix_entry": 0.14759084650529664,
+          "min_frequency_thz": 2.2256144317631366
+        },
+        {
+          "q_fractional": [
+            1.17,
+            0.31,
+            0.09
+          ],
+          "max_abs_dynamical_matrix_error": 3.3306690738754696e-16,
+          "max_abs_frequency_error_thz": 1.8539927726379801e-06,
+          "max_abs_imaginary_matrix_entry": 0.1644966261117387,
+          "min_frequency_thz": 3.0638976977128034
+        },
+        {
+          "q_fractional": [
+            0.25,
+            0.0,
+            0.5
+          ],
+          "max_abs_dynamical_matrix_error": 4.440892098500626e-16,
+          "max_abs_frequency_error_thz": 1.8267219576983962e-06,
+          "max_abs_imaginary_matrix_entry": 0.1767141411449634,
+          "min_frequency_thz": 2.842194142134719
+        }
+      ],
+      "sampled_stability": {
+        "dispersion": {
+          "q_points": 96,
+          "imaginary_modes": 1,
+          "min_frequency_thz": -0.14346227405238848,
+          "min_q_fractional": [
+            0.020833333333333332,
+            0.0,
+            0.0
+          ]
+        },
+        "shifted_mesh": {
+          "q_points": 512,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 0.6157963806111879,
+          "min_q_fractional": [
+            0.9375,
+            0.0625,
+            0.9375
+          ]
+        },
+        "comparison_points": {
+          "q_points": 16,
+          "imaginary_modes": 0,
+          "min_frequency_thz": 0.0,
+          "min_q_fractional": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "dispersion_reference": {
+        "q_points": 96,
+        "max_abs_frequency_error_thz": 1.908532389904849e-06,
+        "min_frequency_thz": -0.14346225625313958
+      },
+      "dos_thermal_available": false,
+      "reference_file": "zincite_phonons.json",
+      "result_sha256": "0aa8080d923b56f4679a317c117a4ff7062df8ef651bf44b0ed5b70881139a75",
+      "lo_to_limitation": "omitted; polar LO-TO splitting not reproduced",
+      "frequency_conversion_thz": {
+        "geoform": 15.633304239856193,
+        "phonopy": 15.633302300230191
+      }
     }
   ]
 }
