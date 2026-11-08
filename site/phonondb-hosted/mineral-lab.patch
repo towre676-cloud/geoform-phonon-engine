@@ -1,0 +1,100 @@
+--- a/phonon-nims.mjs
++++ b/phonon-nims.mjs
+@@ -58,12 +58,14 @@
+     </div>
+     <p id="nims-source-note" class="fine-print" hidden>Source-only records link to NIMS. Locally verified records open their GeoForm calculation.</p>
+     <p id="nims-count" aria-live="polite"></p><div id="nims-list"></div>
+-    <button id="nims-more" type="button" class="text-button" hidden>Show more phases</button>
++    <div class="profile-actions"><button id="nims-prev" type="button" class="text-button" disabled>Previous page</button>
++    <button id="nims-next" type="button" class="text-button" disabled>Next page</button></div>
+     <p id="nims-status" role="status"></p><div id="nims-detail"></div>
+-    <p class="fine-print">Computational phases have no assigned mineral identity. NIMS and the published DFPT archive can contain separate calculations for the same phase.</p>
++    <p class="fine-print">Mineral links appear only for independently matched crystal structures. NIMS and the published DFPT archive can contain separate calculations for the same phase.</p>
+   </section>`;
+   const $ = id => host.querySelector('#nims-' + id);
+-  let index, sourceIndex, sourceRequest, shown = 16, generation = 0;
++  const pageSize = 24;
++  let index, sourceIndex, sourceRequest, page = 0, generation = 0;
+   const ready = fetch(root + 'index.bin').then(async response => {
+     if (!response.ok) throw Error('NIMS calculation index unavailable.');
+     const stream = response.body.pipeThrough(new DecompressionStream('gzip'));
+@@ -96,7 +98,7 @@
+     if (sourceMode && !sourceIndex) {
+       $('count').textContent = 'Loading source index…';
+       $('list').replaceChildren();
+-      $('more').hidden = true;
++      $('prev').disabled = $('next').disabled = true;
+       try {
+         await loadSourceIndex();
+       } catch (error) {
+@@ -107,8 +109,11 @@
+     }
+     const matches = findNimsPhases(sourceMode ? sourceIndex : index.entries,
+       $('search').value, $('scope').value, $('system').value);
+-    $('count').textContent = `${matches.length.toLocaleString()} matching phases${matches.length > shown ? ' · showing ' + shown : ''}`;
+-    $('list').innerHTML = matches.slice(0, shown).map(row => {
++    page = Math.min(page, Math.max(0, Math.ceil(matches.length / pageSize) - 1));
++    const start = page * pageSize;
++    const range = matches.length ? ` · showing ${start + 1}–${Math.min(start + pageSize, matches.length)}` : '';
++    $('count').textContent = `${matches.length.toLocaleString()} matching phases${range}`;
++    $('list').innerHTML = matches.slice(start, start + pageSize).map(row => {
+       const local = typeof row.dos === 'boolean';
+       const body = `<strong>${escape(row.formula)}</strong><small>${escape(row.mp)} ·
+         ${escape(row.group)} (${row.number}) · ${local
+@@ -119,7 +124,8 @@
+       return `<a class="phonon-archive-item" href="https://mdr.nims.go.jp/concern/datasets/${row.id}"
+         target="_blank" rel="noopener noreferrer">${body}</a>`;
+     }).join('');
+-    $('more').hidden = matches.length <= shown;
++    $('prev').disabled = page === 0;
++    $('next').disabled = start + pageSize >= matches.length;
+   }
+   function clear() {
+     generation++;
+@@ -141,9 +147,13 @@
+       if (request !== generation || !host.isConnected) return;
+       const c = result.crystal, d = result.dispersion, s = result.physics.sampled_stability;
+       const dos = result.density_of_states, thermal = result.thermodynamic_curve;
++      const mineral = entry.mineralStructure;
+       $('detail').innerHTML = `<div class="phonon-archive-detail">
+         <span class="eyebrow">DFT-DERIVED · GEOFORM / PHONOPY CROSS-CHECK</span>
+         <h3 tabindex="-1">${escape(entry.formula)} <small>${escape(entry.mp)}</small></h3>
++        <p>Calculated harmonic phonons. Frequencies come from a lattice-dynamics model rather than a measured spectrum.</p>
++        ${mineral ? `<p><a href="#mineral/${encodeURIComponent(mineral.name)}">Open ${escape(mineral.name)} profile ↗</a> ·
++          ${escape(mineral.basis)} · <a href="${escape(mineral.reference)}" target="_blank" rel="noopener noreferrer">Structural reference ↗</a></p>` : ''}
+         <p>Space group ${escape(entry.group)} (${entry.number}) · ${c.n_atoms_primitive} primitive atoms · MDR ${entry.id}.</p>
+         <p>${entry.dos ? 'No unresolved imaginary modes on the sampled mesh and probes.' : 'Sampled imaginary modes. DOS and equilibrium thermal curves are withheld.'}
+         Lowest raw sampled frequency <strong>${number(s.signed_minimum_thz)} THz</strong>.
+@@ -194,8 +204,9 @@
+       if (request === generation && host.isConnected) $('status').textContent = error.message;
+     }
+   }
+-  $('search').oninput = $('scope').onchange = $('system').onchange = $('catalog').onchange = () => { shown = 16; update(); };
+-  $('more').onclick = () => { shown += 32; update(); };
++  $('search').oninput = $('scope').onchange = $('system').onchange = $('catalog').onchange = () => { page = 0; update(); };
++  $('prev').onclick = () => { page = Math.max(0, page - 1); update(); };
++  $('next').onclick = () => { page++; update(); };
+   $('list').onclick = event => {
+     const button = event.target.closest('button[data-id]');
+     if (button) open(button.dataset.id);
+--- a/phonon-ui.mjs
++++ b/phonon-ui.mjs
+@@ -1,11 +1,17 @@
+ import {mountNimsPhases} from './phonon-nims.mjs';
++import {nimsMineralLinks} from './phonon-nims-links.mjs';
+ import {mountPhononArchive} from './phonon-archive.mjs';
+ import {phononCases,phononSource,phononScope,phononStudy,validatePhononResult,phononCSV,phononHash} from './phonon-core.mjs';
+ const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const num=(v,n=5)=>typeof v==='number'&&Number.isFinite(v)?v!==0&&Math.abs(v)<10**(-n)?v.toExponential(2):v.toLocaleString(undefined,{maximumFractionDigits:n}):'Unreported';
+ const link=(href,label)=>`<a href="${esc(href)}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>`;
+ const colors=['#d7dd9a','#91bbcd','#dba78f','#b8a3d4','#7cba9c','#e2cfb6'];
+-export function phononProfileHTML(m){const p=m.phononData;if(!p)return m.name==='Perovskite'?`<section class="profile-dark phonon-profile-link"><div><span class="eyebrow">PHASE COMPARISON · CALCULATED</span><h2>Same chemistry.<br>Different crystal.</h2><p>The cubic CaTiO₃ model has imaginary modes. This Perovskite profile describes the orthorhombic mineral.</p><a class="button" href="#phonons?mineral=cubic-calcium-titanate">Inspect cubic CaTiO₃ →</a></div></section>`:'';return `<section class="profile-dark phonon-profile-link"><div><span class="eyebrow">CALCULATED · HARMONIC LATTICE DYNAMICS</span><h2>Vibrations inside<br>the crystal.</h2><p>${esc(p.name)} has a DFT-derived phonon dataset compared with Phonopy at 16 q-points using the same force inputs. It includes signed dispersion. ${p.hasThermal?'Atom-projected vibrational DOS and harmonic heat capacity are available.':'Sampled imaginary modes prevent equilibrium DOS and thermal outputs.'}</p><a class="button" href="#phonons?mineral=${p.slug}">Inspect ${esc(p.name)} phonons ↗</a></div><div><p>${esc(p.scope)}</p><p>Largest frequency difference between the two calculations: ${esc(p.errorTHz.toExponential(3))} THz. This is numerical agreement, not an experimental error estimate.</p><p>${link(p.dataset,'Source result JSON')} · ${link('phonons/data/benchmark_receipts.json','Comparison record')}</p></div></section>`}
++export function phononProfileHTML(m){
++ const href=m.predictionsWithheld?null:nimsMineralLinks.get(m.name);
++ const nims=href?`<section class="profile-paper"><span class="eyebrow">CALCULATED · NIMS PHONONDB</span><h2>Phonons for the matching crystal structure</h2><p>A separately sourced calculation matches the ordered mineral structure. The signed dispersion is computed from supplied forces.</p><a class="button" href="${esc(href)}">Open NIMS calculation ↗</a></section>`:'';
++ return benchmarkProfileHTML(m)+nims;
++}
++function benchmarkProfileHTML(m){const p=m.phononData;if(!p)return m.name==='Perovskite'?`<section class="profile-dark phonon-profile-link"><div><span class="eyebrow">PHASE COMPARISON · CALCULATED</span><h2>Same chemistry.<br>Different crystal.</h2><p>The cubic CaTiO₃ model has imaginary modes. This Perovskite profile describes the orthorhombic mineral.</p><a class="button" href="#phonons?mineral=cubic-calcium-titanate">Inspect cubic CaTiO₃ →</a></div></section>`:'';return `<section class="profile-dark phonon-profile-link"><div><span class="eyebrow">CALCULATED · HARMONIC LATTICE DYNAMICS</span><h2>Vibrations inside<br>the crystal.</h2><p>${esc(p.name)} has a DFT-derived phonon dataset compared with Phonopy at 16 q-points using the same force inputs. It includes signed dispersion. ${p.hasThermal?'Atom-projected vibrational DOS and harmonic heat capacity are available.':'Sampled imaginary modes prevent equilibrium DOS and thermal outputs.'}</p><a class="button" href="#phonons?mineral=${p.slug}">Inspect ${esc(p.name)} phonons ↗</a></div><div><p>${esc(p.scope)}</p><p>Largest frequency difference between the two calculations: ${esc(p.errorTHz.toExponential(3))} THz. This is numerical agreement, not an experimental error estimate.</p><p>${link(p.dataset,'Source result JSON')} · ${link('phonons/data/benchmark_receipts.json','Comparison record')}</p></div></section>`}
+ function graph(series,{xLabel='',yLabel='',marker=null,vertices=[]}={}){
+  const W=900,H=350,L=75,R=25,T=25,B=55;
+  if(!series.length||!series[0].x.length)return '<p>No source curve is available.</p>';

@@ -83,8 +83,10 @@ and checked at the release cutoff.
 | Primitive-cell budget exclusions | 8 | 36 |
 
 The 220 new calculations span 220 distinct reduced compositions. The combined
-catalog has 359 compositions after integer stoichiometries are reduced by their
-greatest common divisor, and 105 space-group numbers. The comparison uses the
+catalog has 372 compositions after integer stoichiometries are reduced by their
+greatest common divisor, and 105 space-group numbers. The earlier count of 359
+treated 14 distinct parenthesized formulas as one unparsed value. The corrected
+count uses the verified primitive-cell species totals. The comparison uses the
 same force inputs, 16 matrix probes, generic path, shifted mesh and omitted
 nonanalytic correction described above.
 
@@ -104,3 +106,5 @@ The combined replay expects both batches' pinned archives in the same cache and
 can exit nonzero for the documented resource exclusions. The verified catalog,
 per-record receipts and payloads remain available. Source-index discovery and
 verified result counts are reported separately.
+
+For the separately gated Mineral Lab export, see [PhononDB Site export](PHONONDB_SITE_EXPORT.md).
