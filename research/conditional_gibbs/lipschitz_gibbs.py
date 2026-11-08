@@ -6,25 +6,30 @@ No source is inferred or verified from a provenance string.
 Energies: eV/formula; volumes: Angstrom^3/formula; P: GPa.
 """
 from dataclasses import dataclass
+from fractions import Fraction
 import math
 
-GPA_A3_TO_EV = 0.006241509074460763
+# 1 GPa Å³ = 10⁻²¹ J. The elementary charge and Avogadro constant are exact.
+GPA_A3_TO_EV_EXACT = Fraction(10**7, 1602176634)
+GPA_A3_TO_EV = float(GPA_A3_TO_EV_EXACT)
+EV_FORMULA_TO_KJ_MOL = Fraction("96.4853321233100184")
+Numeric = int | float | Fraction
 
 def finite(x):
-    return isinstance(x, (int, float)) and not isinstance(x, bool) and math.isfinite(x)
+    return type(x) in (int, Fraction) or isinstance(x, float) and math.isfinite(x)
 
 @dataclass(frozen=True)
 class Sample:
-    volume: float
-    energy: float
-    error: float
+    volume: Numeric
+    energy: Numeric
+    error: Numeric
 
 @dataclass(frozen=True)
 class Phase:
     name: str
     composition: tuple
     samples: tuple
-    lipschitz_ev_per_a3: float
+    lipschitz_ev_per_a3: Numeric
     reference: str
     method: str
     source: str
@@ -56,42 +61,69 @@ class Phase:
             raise ValueError("invalid samples")
         if any(a.volume >= b.volume for a, b in zip(self.samples, self.samples[1:])):
             raise ValueError("volumes must strictly increase")
-        # Necessary and sufficient for existence of an L-Lipschitz graph
-        # through the error intervals; does NOT prove the true graph is one.
-        for i, a in enumerate(self.samples):
-            for b in self.samples[i + 1:]:
-                if abs(a.energy - b.energy) > L * (b.volume - a.volume) + a.error + b.error + 1e-12:
-                    raise ValueError("inconsistent Lipschitz and sample intervals")
+        # Each shifted endpoint is checked against all prior samples via
+        # running extrema. This is equivalent to pairwise consistency.
+        L = Fraction(L)
+        prior_lower, prior_upper = -math.inf, math.inf
+        for v, e, error in _rational_samples(self):
+            if prior_lower > e + error + L * v or prior_upper < e - error - L * v:
+                raise ValueError("inconsistent Lipschitz and sample intervals")
+            prior_lower = max(prior_lower, e - error + L * v)
+            prior_upper = min(prior_upper, e + error - L * v)
+
+
+def _rational_samples(phase):
+    return [(Fraction(s.volume), Fraction(s.energy), Fraction(s.error))
+            for s in phase.samples]
+
 
 def envelope_minimum(phase, p, lower):
-    """Exact minimum of max lower cones or min upper cones plus p*V."""
-    L = phase.lipschitz_ev_per_a3
-    best = (math.inf, None)
-    for a, b in zip(phase.samples, phase.samples[1:]):
-        left, right = a.volume, b.volume
-        midpoint = (left + right) / 2
-        lines = []
-        for s in phase.samples:
-            side = 1 if midpoint >= s.volume else -1
-            if lower:
-                slope, intercept = -L * side, s.energy - s.error + L * side * s.volume
-            else:
-                slope, intercept = L * side, s.energy + s.error - L * side * s.volume
-            lines.append((slope, intercept))
+    """Return the exact (energy, volume) minimum for a validated phase."""
+    samples = _rational_samples(phase)
+    L, p = Fraction(phase.lipschitz_ev_per_a3), Fraction(p)
+    first, last = samples[0][0], samples[-1][0]
+    if not lower:
+        # A minimum over volumes and upper cones can be taken in either order.
+        candidates = []
+        for v, e, error in samples:
+            at = first if p >= L else last if p < -L else v
+            candidates.append((e + error + L * abs(at - v) + p * at, at))
+        return min(candidates)
+
+    # Between knots the lower envelope is the maximum of two lines. All
+    # cones from the left share slope -L and those from the right share +L.
+    suffix = [None] * len(samples)
+    right_intercept = -math.inf
+    for i in range(len(samples) - 1, -1, -1):
+        v, e, error = samples[i]
+        right_intercept = max(right_intercept, e - error - L * v)
+        suffix[i] = right_intercept
+
+    left_intercept = -math.inf
+    best = (math.inf, first)
+    for i, (left, e, error) in enumerate(samples[:-1]):
+        right = samples[i + 1][0]
+        left_intercept = max(left_intercept, e - error + L * left)
+        right_intercept = suffix[i + 1]
         candidates = [left, right]
-        for i, (m, c) in enumerate(lines):
-            for n, d in lines[i + 1:]:
-                if abs(m - n) < 1e-15:
-                    continue
-                root = (d - c) / (m - n)
-                if left < root < right:
-                    candidates.append(root)
+        if L:
+            crossing = (left_intercept - right_intercept) / (2 * L)
+            if left < crossing < right:
+                candidates.append(crossing)
         for v in candidates:
-            values = [m * v + c for m, c in lines]
-            energy = (max(values) if lower else min(values)) + p * v
-            if energy < best[0]:
-                best = (energy, v)
+            value = max(left_intercept - L * v, right_intercept + L * v) + p * v
+            best = min(best, (value, v))
     return best
+
+
+def _outward_float(value, *, upper):
+    rounded = float(value)
+    if (upper and rounded < value) or (not upper and rounded > value):
+        rounded = math.nextafter(rounded, math.inf if upper else -math.inf)
+    if not math.isfinite(rounded):
+        raise OverflowError("energy interval exceeds finite float output range")
+    return rounded
+
 
 def minimum_bounds(phase, pressure_gpa, *, allow_illustrative=False):
     """Sharp min(F+PV) interval under independently justified assumptions."""
@@ -100,16 +132,17 @@ def minimum_bounds(phase, pressure_gpa, *, allow_illustrative=False):
         raise ValueError("illustrative input requires explicit override")
     if not finite(pressure_gpa) or pressure_gpa < 0:
         raise ValueError("pressure must be finite and nonnegative")
-    p = pressure_gpa * GPA_A3_TO_EV
+    p = Fraction(pressure_gpa) * GPA_A3_TO_EV_EXACT
     low, lower_argmin = envelope_minimum(phase, p, True)
     high, upper_argmin = envelope_minimum(phase, p, False)
-    if low > high + 1e-9:
-        raise ArithmeticError("impossible bounds")
-    return {"phase": phase.name, "pressure_gpa": pressure_gpa,
-            "temperature_k": phase.temperature_k,
-            "interval_ev_formula": [low, high],
-            "lower_envelope_argmin_a3_formula": lower_argmin,
-            "upper_envelope_argmin_a3_formula": upper_argmin,
+    return {"phase": phase.name, "pressure_gpa": float(pressure_gpa),
+            "temperature_k": float(phase.temperature_k),
+            "interval_ev_formula": [_outward_float(low, upper=False),
+                                    _outward_float(high, upper=True)],
+            "volume_domain_a3_formula": [float(phase.samples[0].volume),
+                                          float(phase.samples[-1].volume)],
+            "lower_envelope_argmin_a3_formula": float(lower_argmin),
+            "upper_envelope_argmin_a3_formula": float(upper_argmin),
             "method": "exact Lipschitz-envelope minimization, no spline/EOS extrapolation",
             "conditional": True, "evidence": phase.evidence,
             "source": phase.source, "error_source": phase.error_source,
@@ -135,4 +168,4 @@ def compare(phases, pressure_gpa, *, allow_illustrative=False):
     winner = winners[0]["phase"] if len(winners) == 1 else None
     return {"status": "conditional_bounded_winner" if winner else "abstain_overlap",
             "winner": winner, "results": results,
-            "scope": "supplied polymorphs only; source error and global Lipschitz assumptions unverified"}
+            "scope": "supplied polymorphs and sampled volume domains only; exterior minima, source error and global Lipschitz assumptions unverified"}
