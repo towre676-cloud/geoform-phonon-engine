@@ -9,6 +9,7 @@ import json
 from pathlib import Path
 import shutil
 import sys
+from tempfile import NamedTemporaryFile
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -118,17 +119,31 @@ def stage_handoff(results):
     save_json(handoff, path)
 
 
-def create_bundle(results, output):
+def create_bundle(results, output, *, phase_assets=None):
     results=Path(results)
     items=verify_results(results)
     out=Path(output)
     out.parent.mkdir(parents=True,exist_ok=True)
-    with zipfile.ZipFile(out,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
-        z.write(ROOT/'web'/'phonon_explorer.html',arcname='phonon_explorer.html')
-        for name in result_names(items):
-            z.write(results / name, arcname=f'data/{name}')
-        z.write(MANIFEST, arcname='REFERENCE_SOURCES.json')
-        z.write(ROOT/'docs'/'REAL_MINERAL_BENCHMARKS.md',arcname='SCIENCE_AND_PROVENANCE.md')
+    sources = {
+        'phonon_explorer.html': ROOT / 'web' / 'phonon_explorer.html',
+        **{f'data/{name}': results / name for name in result_names(items)},
+        'REFERENCE_SOURCES.json': MANIFEST,
+        'SCIENCE_AND_PROVENANCE.md': ROOT / 'docs' / 'REAL_MINERAL_BENCHMARKS.md',
+    }
+    assets = {name: path.read_bytes() for name, path in sources.items()}
+    if phase_assets:
+        assets.update(phase_assets)
+    # Write a complete bundle before replacing any prior export.
+    with NamedTemporaryFile(dir=out.parent, delete=False) as temporary:
+        staged = Path(temporary.name)
+    try:
+        with zipfile.ZipFile(staged, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
+            for name, data in sorted(assets.items()):
+                archive.writestr(zipfile.ZipInfo(name), data, compress_type=zipfile.ZIP_DEFLATED,
+                                 compresslevel=9)
+        staged.replace(out)
+    finally:
+        staged.unlink(missing_ok=True)
     return out
 
 
@@ -138,10 +153,29 @@ def main(argv=None):
     p.add_argument('--output',type=Path,default=ROOT/'benchmarks'/'geoform_site_phonons.zip')
     p.add_argument('--stage-handoff', action='store_true',
                    help='refresh checked-in Site handoff assets and their local digests')
+    p.add_argument('--phonondb-replay', type=Path, help='directory containing catalog, receipts and results')
+    p.add_argument('--phonondb-cache', type=Path, help='directory of pinned original ZIPs and locks')
+    p.add_argument('--phonondb-index', type=Path, help='pinned official index Markdown bytes')
+    p.add_argument('--phonondb-collection-page', type=Path, help='saved NIMS collection DOI landing page')
+    p.add_argument('--allow-collection-license', action='store_true',
+                   help='allow the checked collection license when an individual license is unavailable')
+    p.add_argument('--allow-partial-phonondb', action='store_true', help='generate a partial review bundle')
     args=p.parse_args(argv)
+    inputs = (args.phonondb_replay, args.phonondb_cache, args.phonondb_index,
+              args.phonondb_collection_page)
+    phase_assets = None
+    if any(inputs) or args.allow_collection_license or args.allow_partial_phonondb:
+        if not all(inputs):
+            p.error('Provide all four PhononDB input paths together')
+        from scripts.phonondb_site import export_phases
+        try:
+            phase_assets = export_phases(*inputs, allow_collection=args.allow_collection_license,
+                                         allow_partial=args.allow_partial_phonondb)
+        except (ValueError, KeyError, OSError) as exc:
+            p.error(str(exc))
     if args.stage_handoff:
         stage_handoff(args.results)
-    output=create_bundle(args.results,args.output)
+    output=create_bundle(args.results,args.output,phase_assets=phase_assets)
     print(f'Verified site bundle: {output}, {output.stat().st_size:,} bytes')
 
 if __name__=='__main__':main()

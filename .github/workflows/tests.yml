@@ -31,6 +31,7 @@ jobs:
       - run: python -m pip install -e . 'phonopy==4.9.0'
       - run: python scripts/check_phonopy_reference.py
       - run: python -m unittest discover -s tests -p test_phonondb.py -v
+      - run: python -m unittest discover -s tests -p test_phonondb_site.py -v
   real-mineral-benchmarks:
     runs-on: ubuntu-latest
     timeout-minutes: 20
