@@ -1,0 +1,2102 @@
+{
+  "05741z14x": {
+    "bytes": 262779,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "00bc73e42a8119b9aee5185945ade6c7da7168a061b8e0a42ca7d2d7059b193e",
+    "url": "https://mdr.nims.go.jp/download_all/05741z14x.zip"
+  },
+  "08612s32p": {
+    "bytes": 164142,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "76e734ad68624900b8e87c5396fe97821ab5f336714b0cbb7ac03653fbf48f84",
+    "url": "https://mdr.nims.go.jp/download_all/08612s32p.zip"
+  },
+  "08612s682": {
+    "bytes": 270832,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "09b602fb0e3606fad32065567d8ffa4097e10bc4964c6bfb48d4619ef8ea9a7e",
+    "url": "https://mdr.nims.go.jp/download_all/08612s682.zip"
+  },
+  "0c483n92f": {
+    "bytes": 320865,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "16d5c0702a5dca97f9b63e9d74cfb273465c0b93cbf03faca3d1b775b99b3565",
+    "url": "https://mdr.nims.go.jp/download_all/0c483n92f.zip"
+  },
+  "0g354k19w": {
+    "bytes": 203171,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "078563a060e0e8ba8d1055ce104aee288a32c001e4155383e0d5ffd099224e09",
+    "url": "https://mdr.nims.go.jp/download_all/0g354k19w.zip"
+  },
+  "0g354m73w": {
+    "bytes": 152096,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "33029725e0adf87bb23c09c1d22deafd73b76c4a73a5a7631c66eb9272c4393b",
+    "url": "https://mdr.nims.go.jp/download_all/0g354m73w.zip"
+  },
+  "0g354n024": {
+    "bytes": 281350,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "2a8a23293303b7e187b6829fc2e3b1b300fefd637351c852633c5ed5b2726727",
+    "url": "https://mdr.nims.go.jp/download_all/0g354n024.zip"
+  },
+  "0k225f961": {
+    "bytes": 269821,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "cdc7418bc42f18ef25d4c32fa70fe51664bf7bb106ba84112903bdcc0ab13466",
+    "url": "https://mdr.nims.go.jp/download_all/0k225f961.zip"
+  },
+  "0k225h025": {
+    "bytes": 216105,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "7e36d20243c3b68197eb271c381b44b04c8c91e540a560a5c1bd323f504a1d6c",
+    "url": "https://mdr.nims.go.jp/download_all/0k225h025.zip"
+  },
+  "0k225h08t": {
+    "bytes": 141826,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "4e475fca29ae97b1e82a883bb27b677f1c15e08a3b61ce645ae1a95c1d7c0533",
+    "url": "https://mdr.nims.go.jp/download_all/0k225h08t.zip"
+  },
+  "0k225h52c": {
+    "bytes": 159252,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "1eb0259ec41c6663a994f79fa2a277b94b8c312e0c89a34bcd2bb1cdb3f9bece",
+    "url": "https://mdr.nims.go.jp/download_all/0k225h52c.zip"
+  },
+  "0p096b869": {
+    "bytes": 276216,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "7d5054572928214a814b76642086708fa8ece84e27f70dd437e8b295d52eb658",
+    "url": "https://mdr.nims.go.jp/download_all/0p096b869.zip"
+  },
+  "0p096c326": {
+    "bytes": 192668,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "337ada88ecd466937965953c57cbc8b771cfa4078766af1cee4aaba48ec908db",
+    "url": "https://mdr.nims.go.jp/download_all/0p096c326.zip"
+  },
+  "0r967760c": {
+    "bytes": 207769,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "ab2ff222ad7b358c339590c5d425a7d9eed1b52945e7d127419d5f9ccd669dd8",
+    "url": "https://mdr.nims.go.jp/download_all/0r967760c.zip"
+  },
+  "0r967864p": {
+    "bytes": 154779,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "938387677ebefc5c52e526ed81fc7e6d2a3e8f378fc13c0f5b87cd7672239ab9",
+    "url": "https://mdr.nims.go.jp/download_all/0r967864p.zip"
+  },
+  "0v8386181": {
+    "bytes": 258995,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "ccd3af6fa2908900876b8700c3f82e68253d076b95e68f01679d63985553a325",
+    "url": "https://mdr.nims.go.jp/download_all/0v8386181.zip"
+  },
+  "12579z816": {
+    "bytes": 118351,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "cfda308e38d3be1aa9ed9a3ebc0908e757531e8140e4ce2feeeb4d05762444e7",
+    "url": "https://mdr.nims.go.jp/download_all/12579z816.zip"
+  },
+  "1544bs97x": {
+    "bytes": 198922,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "93ff39a7f8ce2fb22d751fd91e807bfb97b65320ff00f6535b33190fd5114829",
+    "url": "https://mdr.nims.go.jp/download_all/1544bs97x.zip"
+  },
+  "1544bw09x": {
+    "bytes": 136241,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "ff0b2cc501c9044276da7d71bc6ffd244759a059e8fd60aeb70df546b8f163dc",
+    "url": "https://mdr.nims.go.jp/download_all/1544bw09x.zip"
+  },
+  "1831cp83t": {
+    "bytes": 188952,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "218ca11007f0e2245dda41293b019c81f1b3e3b8319236817047efdd6bfccf1a",
+    "url": "https://mdr.nims.go.jp/download_all/1831cp83t.zip"
+  },
+  "1c18dm322": {
+    "bytes": 159707,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "22a74fc476e070e75a22ddc6c784fe24111ffdba5817611eb2fc271068698127",
+    "url": "https://mdr.nims.go.jp/download_all/1c18dm322.zip"
+  },
+  "1n79h894t": {
+    "bytes": 117001,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "0f7996dbc180a60558d73f0c76b3edb84c20cdd20dcf109c993bd9b909444856",
+    "url": "https://mdr.nims.go.jp/download_all/1n79h894t.zip"
+  },
+  "1r66j5721": {
+    "bytes": 214112,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "a24a7fa348466d4100ca3faac6db717078096f7b0aeef223d5a4549e556a50f7",
+    "url": "https://mdr.nims.go.jp/download_all/1r66j5721.zip"
+  },
+  "1r66j627d": {
+    "bytes": 164027,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "8bff186fb1dc5e2885abad9cec35013d416d8b627f8b13c22c149997d79b2dc3",
+    "url": "https://mdr.nims.go.jp/download_all/1r66j627d.zip"
+  },
+  "1r66j659p": {
+    "bytes": 161582,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "f09fd17a403ed84228137c5768b0d5572da617ad1b1db7b80baf7e14b96c91b8",
+    "url": "https://mdr.nims.go.jp/download_all/1r66j659p.zip"
+  },
+  "1v53k220h": {
+    "bytes": 195265,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "cee34cc27b257e9a2b54b472175adf22f000a78ff1a261a4c661c4f995c994a5",
+    "url": "https://mdr.nims.go.jp/download_all/1v53k220h.zip"
+  },
+  "1z40kx635": {
+    "bytes": 107021,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "3a666c17e1c29fdc416ec8b1d379a8ce26457b2c33bf388c7d500fbeb520f7e7",
+    "url": "https://mdr.nims.go.jp/download_all/1z40kx635.zip"
+  },
+  "1z40kx902": {
+    "bytes": 103259,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "9951ec32e67a28a02408bf0777ab301cdea72a3d1b51e04279c9651d351f5b02",
+    "url": "https://mdr.nims.go.jp/download_all/1z40kx902.zip"
+  },
+  "2227mt71d": {
+    "bytes": 168091,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "d7d8b937c86bc7e78c145fbd4383ae06c386cb150aad581f9573f6f7fdd3088b",
+    "url": "https://mdr.nims.go.jp/download_all/2227mt71d.zip"
+  },
+  "2514ns49j": {
+    "bytes": 224426,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "d1417c0ae4663e5ab8b3d28cde01046eb1058e44f139a23a0b63eeaf34b9cb90",
+    "url": "https://mdr.nims.go.jp/download_all/2514ns49j.zip"
+  },
+  "2f75rf11c": {
+    "bytes": 217212,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "ab28fc2a4658417d2be53c0d85d4d7b87ffb6f4d7c1731108ac373b802266058",
+    "url": "https://mdr.nims.go.jp/download_all/2f75rf11c.zip"
+  },
+  "2j62s828c": {
+    "bytes": 99149,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "3ed2c25daed75b0c8926ebf5fcfa360fc686d77023300a36081f76f93f8c818f",
+    "url": "https://mdr.nims.go.jp/download_all/2j62s828c.zip"
+  },
+  "2r36v3557": {
+    "bytes": 191624,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "f32005dea7a230cc2379580f3922fe524b3c21f93d7111a114259de1d59e2ffe",
+    "url": "https://mdr.nims.go.jp/download_all/2r36v3557.zip"
+  },
+  "2v23w052n": {
+    "bytes": 156450,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "b789f49308b8de7561831aa2a26230b9e86f18e3680b479231aafea64960489e",
+    "url": "https://mdr.nims.go.jp/download_all/2v23w052n.zip"
+  },
+  "2z10wv410": {
+    "bytes": 152495,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "4b6976cda23d373a7150f4413ebfce20162a6be0454376a1403e96f15850dc64",
+    "url": "https://mdr.nims.go.jp/download_all/2z10wv410.zip"
+  },
+  "3484zp21g": {
+    "bytes": 281086,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "3247a209dfdb1fc2e7d5162c04f57df7b743ffc039e2ec0cb3ea698dff8a421b",
+    "url": "https://mdr.nims.go.jp/download_all/3484zp21g.zip"
+  },
+  "37720k470": {
+    "bytes": 220640,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "43650f9adbe3d2175beef96e4e8f7f5af281b9196eacba21c6813dd3f2a02a40",
+    "url": "https://mdr.nims.go.jp/download_all/37720k470.zip"
+  },
+  "3f4629569": {
+    "bytes": 155777,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "b83fd6cfb9d2ab3bd36eb7a69da75adf9a090bed7aaacc18d48d25cc217b8de9",
+    "url": "https://mdr.nims.go.jp/download_all/3f4629569.zip"
+  },
+  "3n204452w": {
+    "bytes": 222361,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "06a8749665224b3a323088ab8637aec910553cd186a8992e9160a159729ea5f6",
+    "url": "https://mdr.nims.go.jp/download_all/3n204452w.zip"
+  },
+  "3n2044934": {
+    "bytes": 231361,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "5aeda19b4f648fe4c67def9b8daaeb0fc60c148820be00f22135ccacd3d36cd8",
+    "url": "https://mdr.nims.go.jp/download_all/3n2044934.zip"
+  },
+  "3t945v99x": {
+    "bytes": 213950,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "1a54ce6ac9400367aaa8a2e3cb9f95bb5454bf72f02375d5e722757be30e8c4b",
+    "url": "https://mdr.nims.go.jp/download_all/3t945v99x.zip"
+  },
+  "3t945w90n": {
+    "bytes": 225315,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "8ca32e90e8c381a1ac5ed305fdc210fd96aec31fdaeb1b61f0129dd799ac9cfa",
+    "url": "https://mdr.nims.go.jp/download_all/3t945w90n.zip"
+  },
+  "3x816r731": {
+    "bytes": 185776,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "d057873e41dbde2d2e16161c61f381f7c81d998e1569ff2064b5f54b5e46beb7",
+    "url": "https://mdr.nims.go.jp/download_all/3x816r731.zip"
+  },
+  "41687n975": {
+    "bytes": 209973,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "2173d14bd120569b5852ec89bd3beeab86380cd123529c1c6e16ba3241c0c068",
+    "url": "https://mdr.nims.go.jp/download_all/41687n975.zip"
+  },
+  "41687p33t": {
+    "bytes": 156913,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "45d46bdfb974d037657cc75263bd5527d35a313d518be0f79e53c3ff00e8388f",
+    "url": "https://mdr.nims.go.jp/download_all/41687p33t.zip"
+  },
+  "41687p849": {
+    "bytes": 171784,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "f21c2590d80b50574cbce012d9558205dfc42558aee2b175d8036079a813cb70",
+    "url": "https://mdr.nims.go.jp/download_all/41687p849.zip"
+  },
+  "44558j077": {
+    "bytes": 257431,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "21c80bb74cab440c377eac61f553cf38e7f7da4670c02f0e34c1945f73b104a0",
+    "url": "https://mdr.nims.go.jp/download_all/44558j077.zip"
+  },
+  "4b29bc432": {
+    "bytes": 180445,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "b308887a855839dac262dd2fe4e5c921ef9c2601d18b665f6d72907c94f7dbc3",
+    "url": "https://mdr.nims.go.jp/download_all/4b29bc432.zip"
+  },
+  "4f16c706z": {
+    "bytes": 132805,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "295a1029f5ac2eacb88216568ed3b79c8a0b362e8b8cba6d5794e4a311cae185",
+    "url": "https://mdr.nims.go.jp/download_all/4f16c706z.zip"
+  },
+  "4f16c8927": {
+    "bytes": 242930,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "04595eff7913cde4bc0d0818b86e0fc7a2959745534c09755a9ffa3588d7300f",
+    "url": "https://mdr.nims.go.jp/download_all/4f16c8927.zip"
+  },
+  "4m90f062j": {
+    "bytes": 161926,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "75c39588aebabf21644369ac2988976bb64e42a757471bde2179af502f0f664b",
+    "url": "https://mdr.nims.go.jp/download_all/4m90f062j.zip"
+  },
+  "4m90f2085": {
+    "bytes": 196360,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "72a709122b7569c3416f8d702ac766a80ca2985fea78c72a6692d48963728411",
+    "url": "https://mdr.nims.go.jp/download_all/4m90f2085.zip"
+  },
+  "4q77fw28k": {
+    "bytes": 223568,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "f875e883b9a332e8685219e9e1baa9eaa8b1dd087ec218f90543fab1ad568d12",
+    "url": "https://mdr.nims.go.jp/download_all/4q77fw28k.zip"
+  },
+  "4x51hn63f": {
+    "bytes": 149168,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "52080bd13f47ee95250887e57959c8882840b45a7b47846229ffd2bd4294af69",
+    "url": "https://mdr.nims.go.jp/download_all/4x51hn63f.zip"
+  },
+  "4x51hp389": {
+    "bytes": 139381,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "d30f438a6dbf6346ad32bd5201ce18fcccd082ac7ea349b7036acb3a118aaf46",
+    "url": "https://mdr.nims.go.jp/download_all/4x51hp389.zip"
+  },
+  "4x51hq954": {
+    "bytes": 150528,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "ddb8f2bab9c940993899f29ecb5735c728e39890d0859cb1c784a5e2d898e324",
+    "url": "https://mdr.nims.go.jp/download_all/4x51hq954.zip"
+  },
+  "5138jm03z": {
+    "bytes": 194386,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "a0195964252787fcb418f56755ddf7c50d669a2e1ab4c74535fbee484961a83a",
+    "url": "https://mdr.nims.go.jp/download_all/5138jm03z.zip"
+  },
+  "5425kf62z": {
+    "bytes": 184624,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "e02d15215937f133396c7f417048aceaf5838b1d2c7b6a72665732fd1df23637",
+    "url": "https://mdr.nims.go.jp/download_all/5425kf62z.zip"
+  },
+  "5425kg358": {
+    "bytes": 164075,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "ce81c7c6d122efa8fe1b367a727ead73bb5dc6dc1e911d979628a2535c2ee393",
+    "url": "https://mdr.nims.go.jp/download_all/5425kg358.zip"
+  },
+  "5425kg650": {
+    "bytes": 187595,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "262571ed409fd470681536133635d0ea25c9dd03803477cc56dd8c88de113ad1",
+    "url": "https://mdr.nims.go.jp/download_all/5425kg650.zip"
+  },
+  "5712md54x": {
+    "bytes": 181824,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "77ca91b8a9e2f612e56d990b010e52095c52049234aae794f599c59060c55d69",
+    "url": "https://mdr.nims.go.jp/download_all/5712md54x.zip"
+  },
+  "5712md85x": {
+    "bytes": 244312,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "7fb6baa9e8fd3ad31097e24f28b144f111c9fd2f65f61b6300c0f7d0d4695f27",
+    "url": "https://mdr.nims.go.jp/download_all/5712md85x.zip"
+  },
+  "5999n914f": {
+    "bytes": 199000,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "4fb213595c4ed515092bed309d37993762ec58e6c4e963607ff84c8188b3e319",
+    "url": "https://mdr.nims.go.jp/download_all/5999n914f.zip"
+  },
+  "5d86p5179": {
+    "bytes": 205647,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "4c916d08407b2a4e23b71798f5dabdbce4c3a53d1040d8dbdb4b347fbcaaa6d2",
+    "url": "https://mdr.nims.go.jp/download_all/5d86p5179.zip"
+  },
+  "5d86p5535": {
+    "bytes": 151341,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "2d551db45a15beac3312b5bf4d2232fb109149a0af2986a513f669147ab26fc1",
+    "url": "https://mdr.nims.go.jp/download_all/5d86p5535.zip"
+  },
+  "5d86p615z": {
+    "bytes": 167111,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "b83847c0f1b18b78c58bd6265401290b7021062b7256ad2a937e65c4bc6e8de8",
+    "url": "https://mdr.nims.go.jp/download_all/5d86p615z.zip"
+  },
+  "5h73q070n": {
+    "bytes": 104048,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "7df455f512cb79505700c2f9a6510b3d0fa835e46d6ea80d6ed2008672e3d844",
+    "url": "https://mdr.nims.go.jp/download_all/5h73q070n.zip"
+  },
+  "5h73q083q": {
+    "bytes": 176490,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "46010dea56cc8648b270cd49fd46551b6cb3e0ff2ccc2d4949800afc20bf5e9f",
+    "url": "https://mdr.nims.go.jp/download_all/5h73q083q.zip"
+  },
+  "5x21tm55t": {
+    "bytes": 237485,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "fdde45a8aad19bd5cf1e028d32a5b0fc66af699d3bd8375ca4b2f72aaf26ba8d",
+    "url": "https://mdr.nims.go.jp/download_all/5x21tm55t.zip"
+  },
+  "6108vf834": {
+    "bytes": 162123,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "f9e4638d92a0eb50e7a6927f60cf9c85d8c141556c6ed9f517efda7315ce7bf9",
+    "url": "https://mdr.nims.go.jp/download_all/6108vf834.zip"
+  },
+  "6108vf85p": {
+    "bytes": 239612,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "bc827963691550675078767c5a1c0ca1126466cb64558c011ed7a8cc63ed4e01",
+    "url": "https://mdr.nims.go.jp/download_all/6108vf85p.zip"
+  },
+  "6682x838z": {
+    "bytes": 136811,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "db2579f2f67658081f3a4b40f6f8a8d538b4870d3ec0001e552e01c0533e80b3",
+    "url": "https://mdr.nims.go.jp/download_all/6682x838z.zip"
+  },
+  "6969z494m": {
+    "bytes": 262480,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "a628870a524e70c81435a4c3ee8a9b37d9102c8db400de24ad8c6ae3be238be3",
+    "url": "https://mdr.nims.go.jp/download_all/6969z494m.zip"
+  },
+  "6q182q07g": {
+    "bytes": 193344,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "997fcf047172b55ff76fcfefadfe3c9b3aad24f66012a8e709a4d1702fdc327c",
+    "url": "https://mdr.nims.go.jp/download_all/6q182q07g.zip"
+  },
+  "6q182q376": {
+    "bytes": 170677,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "03f5fd227a1cb7d70fc4fa5def9c0605583ca1667e8cd3357b307b0e30f820bf",
+    "url": "https://mdr.nims.go.jp/download_all/6q182q376.zip"
+  },
+  "6q182q65c": {
+    "bytes": 150530,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "9dd88365ebb2f14a422a73a0d56da7197d25b9d70ed150dc4c99aef90ecc93f8",
+    "url": "https://mdr.nims.go.jp/download_all/6q182q65c.zip"
+  },
+  "6w924j10f": {
+    "bytes": 81878,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "7cc31b0694dca4616dfab8e5f9dbecd18739ffe2a9e2920517ffe6ce44be0127",
+    "url": "https://mdr.nims.go.jp/download_all/6w924j10f.zip"
+  },
+  "70795c91s": {
+    "bytes": 267334,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "90c1a53dec5f11e3637536252ea3ba9c420b87715a5bba04b41abd6348c06c83",
+    "url": "https://mdr.nims.go.jp/download_all/70795c91s.zip"
+  },
+  "70795d12b": {
+    "bytes": 158972,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "b4824da8c8d75bafe7a4ec55b795672e43b757fbae740835bb536daaec723f2b",
+    "url": "https://mdr.nims.go.jp/download_all/70795d12b.zip"
+  },
+  "73666841t": {
+    "bytes": 142955,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "b58a1d9a50cd6a564b38571545541d41b705b659ea23218771c70772fe7ff4fb",
+    "url": "https://mdr.nims.go.jp/download_all/73666841t.zip"
+  },
+  "76537522v": {
+    "bytes": 102912,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "a1b853183c1cab7973bc668fa9b3f670a00db3a3adb5663f5fbab06741641af3",
+    "url": "https://mdr.nims.go.jp/download_all/76537522v.zip"
+  },
+  "76537628q": {
+    "bytes": 175308,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "91fb05683a66feaf6a170d65558c45da5c47e5339f65ce26e586b757d4a05773",
+    "url": "https://mdr.nims.go.jp/download_all/76537628q.zip"
+  },
+  "76537682h": {
+    "bytes": 159927,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "115257b9cb5115437cd3961b5b386032e5f2531b005fbaebb44c7d8a76327d47",
+    "url": "https://mdr.nims.go.jp/download_all/76537682h.zip"
+  },
+  "79408335c": {
+    "bytes": 188067,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "e36668811c2a60684a217cb46720f01bddf5cc296428f212831333f89a67f290",
+    "url": "https://mdr.nims.go.jp/download_all/79408335c.zip"
+  },
+  "794083564": {
+    "bytes": 265878,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "18e99f05e46bbb0faaf7494f9c7f1fa70cbfded336771b7efbc62d48757a43e7",
+    "url": "https://mdr.nims.go.jp/download_all/794083564.zip"
+  },
+  "7d278x82p": {
+    "bytes": 179456,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "c553fe7ed8de44dd31c7828240fb21cb588d10c841c11d4812813f3c0948c929",
+    "url": "https://mdr.nims.go.jp/download_all/7d278x82p.zip"
+  },
+  "7d278z57j": {
+    "bytes": 255401,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "534c038e0e25ce97fca734cbc1a57c80d1cbda35fd4a983eed47d3dfa72a02d9",
+    "url": "https://mdr.nims.go.jp/download_all/7d278z57j.zip"
+  },
+  "7d2790764": {
+    "bytes": 181768,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "603661c07b982e4992a5f605e98019fddd96ad17a653f2ec668add0acf47f3b5",
+    "url": "https://mdr.nims.go.jp/download_all/7d2790764.zip"
+  },
+  "7h149t94q": {
+    "bytes": 190993,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "36f96f0eb6186c2b9f45df5233d5de2ef7ec342e4e9e1f1bf83f58d147b2b8b1",
+    "url": "https://mdr.nims.go.jp/download_all/7h149t94q.zip"
+  },
+  "7h149v30c": {
+    "bytes": 284071,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "60f80656d14be638a6da5f16dd9b79893454205d7cc937b031d927409889706d",
+    "url": "https://mdr.nims.go.jp/download_all/7h149v30c.zip"
+  },
+  "7m01br414": {
+    "bytes": 303695,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "4e7af912e847f2f1a8b20deb120bfcc41d172c5b3c29d7cc7d66314619339ca3",
+    "url": "https://mdr.nims.go.jp/download_all/7m01br414.zip"
+  },
+  "7m01br678": {
+    "bytes": 235397,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "0e7adfc1eb44a78231dcd2727108c8240f6e69b39552eb104aa4951115fe82cf",
+    "url": "https://mdr.nims.go.jp/download_all/7m01br678.zip"
+  },
+  "7m01br724": {
+    "bytes": 95103,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "32b8defa6dc0ba6fa69b119643f15abd005b9e383d6ffc4ef9a02c49251dc69b",
+    "url": "https://mdr.nims.go.jp/download_all/7m01br724.zip"
+  },
+  "7m01br792": {
+    "bytes": 196538,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "c3bd2e74bc0a0eb6a2b62a2ecccba053c2df8eb3e5c3df9230b5ccfc942a6106",
+    "url": "https://mdr.nims.go.jp/download_all/7m01br792.zip"
+  },
+  "7s75dh60v": {
+    "bytes": 199240,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "34eabfaccd474b546a25f3ec4f2c42aacb9e7eac711a58d254a2c09639f17784",
+    "url": "https://mdr.nims.go.jp/download_all/7s75dh60v.zip"
+  },
+  "7s75dh94p": {
+    "bytes": 230555,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "8b429445d2c160228c9418528a2af9c19811e889fa03bf2dc344e8e760b3695c",
+    "url": "https://mdr.nims.go.jp/download_all/7s75dh94p.zip"
+  },
+  "7s75dj92b": {
+    "bytes": 169070,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "7da298390d0d0fbaa01ddc2825161eb4715abefb790f057f67ad07c56c857cec",
+    "url": "https://mdr.nims.go.jp/download_all/7s75dj92b.zip"
+  },
+  "7s75dk06g": {
+    "bytes": 247300,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "3da5d2568da465a8a128dfaeee79314f3e16863f159296b5642f4ba77629d110",
+    "url": "https://mdr.nims.go.jp/download_all/7s75dk06g.zip"
+  },
+  "7w62ff97z": {
+    "bytes": 213551,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "a3568a010f0870f57a495f12674c898d2447db5aebe384a1b5308ed565c7b19d",
+    "url": "https://mdr.nims.go.jp/download_all/7w62ff97z.zip"
+  },
+  "7w62fg32b": {
+    "bytes": 147823,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "9a90d146b8710739c5f339166223401306159641e70840544450232a44224ecc",
+    "url": "https://mdr.nims.go.jp/download_all/7w62fg32b.zip"
+  },
+  "8049g977t": {
+    "bytes": 157021,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "d91d7418ef2e0ebbfbf62fd8cadb1a080ec22daf775c5a6837470c5805970057",
+    "url": "https://mdr.nims.go.jp/download_all/8049g977t.zip"
+  },
+  "8623j306b": {
+    "bytes": 138046,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "e28038cc2ea650ef0583e99fd42b6a69e5586a9455023f6eb544de7c618157dc",
+    "url": "https://mdr.nims.go.jp/download_all/8623j306b.zip"
+  },
+  "8623j370c": {
+    "bytes": 209647,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "994873fb9acb45016c36646612562c2a01d5cefa371a57c45e3c0d170e55a036",
+    "url": "https://mdr.nims.go.jp/download_all/8623j370c.zip"
+  },
+  "8910k0882": {
+    "bytes": 259091,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "6c7beaa71895cda9f06ba886b6afc64b7dfcd78baa5d44350b219a9bb88d281b",
+    "url": "https://mdr.nims.go.jp/download_all/8910k0882.zip"
+  },
+  "8c97kt62t": {
+    "bytes": 189381,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "957ab9e69d7fda5e5837fd868d7bad2957e318634e4e2ab6b03a01722f45da8c",
+    "url": "https://mdr.nims.go.jp/download_all/8c97kt62t.zip"
+  },
+  "8c97kv61r": {
+    "bytes": 189593,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "8180f6ba15cde80900956066cbbcbb92c479cf7364d8648d72f78884494424bc",
+    "url": "https://mdr.nims.go.jp/download_all/8c97kv61r.zip"
+  },
+  "8c97kw79d": {
+    "bytes": 185593,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "193a7fadcc72cf673e7d81a67505120b421de477556cc67d9def9174536425f9",
+    "url": "https://mdr.nims.go.jp/download_all/8c97kw79d.zip"
+  },
+  "8g84mr475": {
+    "bytes": 196716,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "1d785ab5167ca9cc2b91fcae833e1dcb9bb127e92f39d6562c0828c8dd0d6f17",
+    "url": "https://mdr.nims.go.jp/download_all/8g84mr475.zip"
+  },
+  "8g84mr81g": {
+    "bytes": 232683,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "0aff835c701dcead9420b5ffd7e20332acab32aa8df4cb925bdf65d473fdc230",
+    "url": "https://mdr.nims.go.jp/download_all/8g84mr81g.zip"
+  },
+  "8g84ms16c": {
+    "bytes": 201389,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "86b13c5d51ac481cb0b2671898073a9a0dba04e0e9063a950a66666ee91117ff",
+    "url": "https://mdr.nims.go.jp/download_all/8g84ms16c.zip"
+  },
+  "8k71nm72j": {
+    "bytes": 231319,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "21e086ea94d8352083f9945df5cf5dad500a35dcc8a025ad82cca6a4158fca70",
+    "url": "https://mdr.nims.go.jp/download_all/8k71nm72j.zip"
+  },
+  "8k71nn10r": {
+    "bytes": 147708,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "8ac96dc9488682892cb41c6336cfab69319ec7422cb0b221b28a1a7935c6fb44",
+    "url": "https://mdr.nims.go.jp/download_all/8k71nn10r.zip"
+  },
+  "8p58pk05m": {
+    "bytes": 144879,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "98e2d9fae1e316add17abd22f3a7b1a40e08c2b9b24f8d5d9d561a2ff2d7eae6",
+    "url": "https://mdr.nims.go.jp/download_all/8p58pk05m.zip"
+  },
+  "8s45qd67f": {
+    "bytes": 243475,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "d0d749756a86034b73ea7968744ea9e671d780162b598136bed8727d483ada24",
+    "url": "https://mdr.nims.go.jp/download_all/8s45qd67f.zip"
+  },
+  "8w32r967p": {
+    "bytes": 183699,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "21f7b332a764450739a70abc410c2e62624e1b7cd7e56cf6447f8d9e2bf6457f",
+    "url": "https://mdr.nims.go.jp/download_all/8w32r967p.zip"
+  },
+  "9306t3887": {
+    "bytes": 188338,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "802f6ccb4af3ec555c901d056c22f8dc6589cd4a9ea00481dac180cc08079aac",
+    "url": "https://mdr.nims.go.jp/download_all/9306t3887.zip"
+  },
+  "9306t494k": {
+    "bytes": 164826,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "46764dcb4366e62c2082842d937c5871d6453db86492db0b4c8a6d0f93dda725",
+    "url": "https://mdr.nims.go.jp/download_all/9306t494k.zip"
+  },
+  "9306t5111": {
+    "bytes": 131046,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "9b721688d5a44e534d7f46fe3745480e984c13d8baeeb8da3ac65eef7d321722",
+    "url": "https://mdr.nims.go.jp/download_all/9306t5111.zip"
+  },
+  "9880vv757": {
+    "bytes": 191856,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "ca51ca5a29e1ded9249ab6998443355e6537c894c4ab9e3cabab3d94036ead27",
+    "url": "https://mdr.nims.go.jp/download_all/9880vv757.zip"
+  },
+  "9c67wr43g": {
+    "bytes": 299163,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "41c4fb7eed4cb07a00df6ed56b222f739b2f20b9cb5749584098efca80b472ef",
+    "url": "https://mdr.nims.go.jp/download_all/9c67wr43g.zip"
+  },
+  "9c67ws12p": {
+    "bytes": 188440,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "5d6dd7b40f5988fff18b803247f4bff675b56f444c7580fa2a802752b2eeada3",
+    "url": "https://mdr.nims.go.jp/download_all/9c67ws12p.zip"
+  },
+  "9c67ws172": {
+    "bytes": 192883,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "10bbb219fed9b5a3819d4739b876f8ceda53abe9fead3f08df13e82c0fa631a4",
+    "url": "https://mdr.nims.go.jp/download_all/9c67ws172.zip"
+  },
+  "9c67ws457": {
+    "bytes": 155426,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "c23cf51702461005652857497ad96eae3e3e4b7993c9714b548cfeceac821875",
+    "url": "https://mdr.nims.go.jp/download_all/9c67ws457.zip"
+  },
+  "9g54xp667": {
+    "bytes": 232901,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "9932c889ee3cdefeb71a91a2552d573ba7ec830bb7b0e6c833ebe7457a807b31",
+    "url": "https://mdr.nims.go.jp/download_all/9g54xp667.zip"
+  },
+  "9k41zj46s": {
+    "bytes": 175071,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "581b7e41f5b9036d096ba3ae94156a521dbe0ea4c344a10616e4e2b64af3be26",
+    "url": "https://mdr.nims.go.jp/download_all/9k41zj46s.zip"
+  },
+  "9p290d97q": {
+    "bytes": 170958,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "4ab6accf6f4581dbf0788f346727869c13ab758ea21e00a8bcd34f8249751448",
+    "url": "https://mdr.nims.go.jp/download_all/9p290d97q.zip"
+  },
+  "9p290g354": {
+    "bytes": 282335,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "80c066d8eab02ceef1b2744451e10698c84cbde00275b7314d00ace2586f7524",
+    "url": "https://mdr.nims.go.jp/download_all/9p290g354.zip"
+  },
+  "9s161b109": {
+    "bytes": 215610,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "816814241c0fc2ba0f5352acfd588b55c7b32bec7b8fcabff1bf982a5049d1a9",
+    "url": "https://mdr.nims.go.jp/download_all/9s161b109.zip"
+  },
+  "9z9034731": {
+    "bytes": 324890,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "2b9bec44e1be142044f776197a342f977aebff91686ac67c31b2e6cdb682a17a",
+    "url": "https://mdr.nims.go.jp/download_all/9z9034731.zip"
+  },
+  "b2774206x": {
+    "bytes": 186247,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "b360dda1d334940694d2c11be17cf7da1aac852980f9ec41a7610736610894c3",
+    "url": "https://mdr.nims.go.jp/download_all/b2774206x.zip"
+  },
+  "b2774258p": {
+    "bytes": 210948,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "16d6240678426d1c8395a6934f8c9fc7e49cc00728068654474cdca32a9c08db",
+    "url": "https://mdr.nims.go.jp/download_all/b2774258p.zip"
+  },
+  "b5644w58b": {
+    "bytes": 145890,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "90185cb478ac7d423ae2bd1f0b42c95b5f7d40ffb84d233bda382195798d4f78",
+    "url": "https://mdr.nims.go.jp/download_all/b5644w58b.zip"
+  },
+  "b5644w903": {
+    "bytes": 180223,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "682d691539789877e80d4c7350b42ccd3c6d2d42335e5bf7baaeefb0b78ee582",
+    "url": "https://mdr.nims.go.jp/download_all/b5644w903.zip"
+  },
+  "bc386p32z": {
+    "bytes": 201719,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "1b3594eec211806412a0ba0c426b2ed56b1403fb7aa175bbc6eb9a07b08ead33",
+    "url": "https://mdr.nims.go.jp/download_all/bc386p32z.zip"
+  },
+  "bg257m072": {
+    "bytes": 286022,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "23d953640eb4418cc290adbdeab9478e79bdd5be4a29bc47ce28ab6f4705c052",
+    "url": "https://mdr.nims.go.jp/download_all/bg257m072.zip"
+  },
+  "bk128g64q": {
+    "bytes": 153349,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "425efe16e30c216ea99e5b8bc1728a360f3c5210489539c654c72562b5adf8a7",
+    "url": "https://mdr.nims.go.jp/download_all/bk128g64q.zip"
+  },
+  "bk128g68t": {
+    "bytes": 183904,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "9257d57a9540363ec6dd6dd2eb872c9e823516962277a06871512ffa8cbb72e0",
+    "url": "https://mdr.nims.go.jp/download_all/bk128g68t.zip"
+  },
+  "bk128j14x": {
+    "bytes": 118062,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "6ad7ab37d16065a61c856b3df2da2b5c58842a3745c319d99f14de4a0f04cbd8",
+    "url": "https://mdr.nims.go.jp/download_all/bk128j14x.zip"
+  },
+  "bn999b89v": {
+    "bytes": 210591,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "b1306b84ea2bfb26ec895385490bc255eee41b8cc836cd8e19f051ce88b6590d",
+    "url": "https://mdr.nims.go.jp/download_all/bn999b89v.zip"
+  },
+  "br86b726t": {
+    "bytes": 138329,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "0c7ba02182525bf96c1e78e944da7e422791c116ee760f05b4db8581c669d9f3",
+    "url": "https://mdr.nims.go.jp/download_all/br86b726t.zip"
+  },
+  "bv73c6409": {
+    "bytes": 212829,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "a417ce3b4ba66862b5d3371d132f4f00b64133e586b6b559cb0d85bfe7c553d2",
+    "url": "https://mdr.nims.go.jp/download_all/bv73c6409.zip"
+  },
+  "c247dw75d": {
+    "bytes": 158339,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "7ad0a4067ec1b18a87e084b31a8c617e04450fae17df3e64ffb59f3894337f1e",
+    "url": "https://mdr.nims.go.jp/download_all/c247dw75d.zip"
+  },
+  "c247dx112": {
+    "bytes": 143353,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "3c64fad1764a905a6ff9c8865eb23772892801cce3d88d5c8b819d31a1537c98",
+    "url": "https://mdr.nims.go.jp/download_all/c247dx112.zip"
+  },
+  "c534fv310": {
+    "bytes": 216763,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "b0a10dfa43d3288ccfdd28bfbe7bd336fd5f53cc684b1d10b31fa09dca71f50c",
+    "url": "https://mdr.nims.go.jp/download_all/c534fv310.zip"
+  },
+  "cc08hm05x": {
+    "bytes": 204770,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "51052f769e18cf54f1007c5b500db8c63aa52b667d20a63041b0f36eee17a67d",
+    "url": "https://mdr.nims.go.jp/download_all/cc08hm05x.zip"
+  },
+  "cc08hm45w": {
+    "bytes": 82467,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "e0ab3603f01ac072523e13c9b71003a3667b7d1eb06fa1293429961ed62e9d31",
+    "url": "https://mdr.nims.go.jp/download_all/cc08hm45w.zip"
+  },
+  "cc08hn011": {
+    "bytes": 198146,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "f43d7752eba53d62ad1b650456ab8478fc7bbf93652a3d3ffc28c059f23fbe43",
+    "url": "https://mdr.nims.go.jp/download_all/cc08hn011.zip"
+  },
+  "cc08hn90x": {
+    "bytes": 148479,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "e715995ee7faffc8956c6cc9417e8933ff637f6ca11147ab496fc5fe61ff8e90",
+    "url": "https://mdr.nims.go.jp/download_all/cc08hn90x.zip"
+  },
+  "cf95jg87d": {
+    "bytes": 209585,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "dd0e5c799db145642de9dd108a06f9f79e0d55b5882cf2572a22614a9c6109b7",
+    "url": "https://mdr.nims.go.jp/download_all/cf95jg87d.zip"
+  },
+  "cf95jh48x": {
+    "bytes": 223316,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "fe4f65fb103f403d9ce89f216b570dd0d32ea40fb79d42a0496dcc98bfafffd1",
+    "url": "https://mdr.nims.go.jp/download_all/cf95jh48x.zip"
+  },
+  "cf95jj352": {
+    "bytes": 261812,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "d0d5185221f3eba27f9b3c277bfa447c531ce603ccfb47ac8885db0ae94f3668",
+    "url": "https://mdr.nims.go.jp/download_all/cf95jj352.zip"
+  },
+  "cj82kd859": {
+    "bytes": 345337,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "204e203c2d9538a6fe83e5610ea122fa70c276d1310fd72e3d536388b505428a",
+    "url": "https://mdr.nims.go.jp/download_all/cj82kd859.zip"
+  },
+  "cv43p139s": {
+    "bytes": 210882,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "9a1d66e541cb253e91c26ddf310ae36ca4086c9802ee5f0ffc35de0048ef021b",
+    "url": "https://mdr.nims.go.jp/download_all/cv43p139s.zip"
+  },
+  "cz30px54z": {
+    "bytes": 206535,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "c7769fe4772a5c12cbcb5730145b4987ea4a28cd374944c9eb0f99fa1c2d084d",
+    "url": "https://mdr.nims.go.jp/download_all/cz30px54z.zip"
+  },
+  "d217qv194": {
+    "bytes": 172534,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "d89b0254f2ba313118e97dc0e89661719f9b54a7e45fecdbf769d317f628ed63",
+    "url": "https://mdr.nims.go.jp/download_all/d217qv194.zip"
+  },
+  "d217qw41v": {
+    "bytes": 223493,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "a1e50c5aeb430752f0a0166db493b0a1d20b6516e3f83268e8090e678abb8143",
+    "url": "https://mdr.nims.go.jp/download_all/d217qw41v.zip"
+  },
+  "d504rr158": {
+    "bytes": 183905,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "f1fad411c8f28be9f8889159da96e3720b72d7a4a030eaa54b3ece86a21b0a98",
+    "url": "https://mdr.nims.go.jp/download_all/d504rr158.zip"
+  },
+  "d791sm582": {
+    "bytes": 281215,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "90c9233b043ba3f732586003aeb2afd66cb19fcd262157c141248bd2e4587bd8",
+    "url": "https://mdr.nims.go.jp/download_all/d791sm582.zip"
+  },
+  "d791sp21t": {
+    "bytes": 309512,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "9acb5e8cf1feef1650808cf2343d39cd3c8083926d282299686cacef25012e03",
+    "url": "https://mdr.nims.go.jp/download_all/d791sp21t.zip"
+  },
+  "db78th90b": {
+    "bytes": 150264,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "0a8e68a54a04866c12512b3cac943a6299ab00df5a4427c72bc962ade382eeff",
+    "url": "https://mdr.nims.go.jp/download_all/db78th90b.zip"
+  },
+  "dj52wb082": {
+    "bytes": 161516,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "0f75a46a2728f6ab4a3eb203cc953b1dd7ac54feebed3706c239108985612b61",
+    "url": "https://mdr.nims.go.jp/download_all/dj52wb082.zip"
+  },
+  "dn39x5263": {
+    "bytes": 110069,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "fcfef7ff1b7fa2adcc4a8221bb4227774fda2812fee197050ed61c6730cad60e",
+    "url": "https://mdr.nims.go.jp/download_all/dn39x5263.zip"
+  },
+  "dn39x617b": {
+    "bytes": 163736,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "2c942c821c35703072e5610711e63f6b1aadac150300a4f7d541662fcfe2cf35",
+    "url": "https://mdr.nims.go.jp/download_all/dn39x617b.zip"
+  },
+  "dr26z158d": {
+    "bytes": 178653,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "3d3a605ec262112c0f1ce3eb60e69d1eaa2e8bbfc15c8d61719e9bf187de0bc8",
+    "url": "https://mdr.nims.go.jp/download_all/dr26z158d.zip"
+  },
+  "dr26z1816": {
+    "bytes": 166077,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "ad2151d57224cba19b6f5f2c703858115f2bb8464cd7e49918fa88faf2631858",
+    "url": "https://mdr.nims.go.jp/download_all/dr26z1816.zip"
+  },
+  "dv13zz79f": {
+    "bytes": 222101,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "75ea42e33e8b1995c314ebbb86f4701d9c172ba9312daa07d23bc46efe88b69f",
+    "url": "https://mdr.nims.go.jp/download_all/dv13zz79f.zip"
+  },
+  "dv140002b": {
+    "bytes": 244163,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "cb7a78a58d97d32e6a44f68e0762d57046726eb0666fb7ce85b27c2bbc496e02",
+    "url": "https://mdr.nims.go.jp/download_all/dv140002b.zip"
+  },
+  "dz010v39v": {
+    "bytes": 191797,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "4e1b0e911ce5164d8e6aeb7a1f35634d5e565f1b090ac61d9bc0b557ff4385cf",
+    "url": "https://mdr.nims.go.jp/download_all/dz010v39v.zip"
+  },
+  "f7623h75h": {
+    "bytes": 285588,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "215a187c0198e090e49d1c80c9faf9640235ece9967333e3e34a4bd173fe2344",
+    "url": "https://mdr.nims.go.jp/download_all/f7623h75h.zip"
+  },
+  "ff365920p": {
+    "bytes": 188032,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "7371f8f0306e110e9a6215103ee8cac53905fc21b339e2a9af7b9ce1cd1c555b",
+    "url": "https://mdr.nims.go.jp/download_all/ff365920p.zip"
+  },
+  "fj2367760": {
+    "bytes": 94993,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "02532f2cbf870760bd557f1303291f0bf5b98f592efc33af0adb79b605a4ba00",
+    "url": "https://mdr.nims.go.jp/download_all/fj2367760.zip"
+  },
+  "fn107409c": {
+    "bytes": 143224,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "b3c3934ee562e45686a9003bd06278ef5e798ff747c1614efc16cf47aafc3e7d",
+    "url": "https://mdr.nims.go.jp/download_all/fn107409c.zip"
+  },
+  "fn107433f": {
+    "bytes": 220350,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "dd8813de70cb21105bc2309888076a2d8344e74ed2d22f399d16ce1e6ffac938",
+    "url": "https://mdr.nims.go.jp/download_all/fn107433f.zip"
+  },
+  "fq977z90z": {
+    "bytes": 297238,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "98aba66ac911a935c0c90d9eceb03c6feb30e12036d00980918e32bd153d6ced",
+    "url": "https://mdr.nims.go.jp/download_all/fq977z90z.zip"
+  },
+  "ft848w19z": {
+    "bytes": 151158,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "f03affac0eb2565afcb131dd6248e90eca002db93b7051d4416b267ff133ea02",
+    "url": "https://mdr.nims.go.jp/download_all/ft848w19z.zip"
+  },
+  "ft848x66j": {
+    "bytes": 192562,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "f69bf0cc4dfc793265b6fca35697593a41fad13b5d01c17807b520ae94e9d712",
+    "url": "https://mdr.nims.go.jp/download_all/ft848x66j.zip"
+  },
+  "fx719r407": {
+    "bytes": 105209,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "2acecaffbba5aa0b4aef232fd065f2d4e56527193ace357a91fa6b3f0bff263a",
+    "url": "https://mdr.nims.go.jp/download_all/fx719r407.zip"
+  },
+  "g158bm912": {
+    "bytes": 182066,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "a7d48c00af9fc029f6b9b843a66b06eb1d8ae4de4a56bf566877c1a8d893a00b",
+    "url": "https://mdr.nims.go.jp/download_all/g158bm912.zip"
+  },
+  "g158bn96n": {
+    "bytes": 138491,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "3034431d77fb00ae2e747cf012047ddf41db1705825ef6050452f4f9104cd66a",
+    "url": "https://mdr.nims.go.jp/download_all/g158bn96n.zip"
+  },
+  "g158bq20q": {
+    "bytes": 181295,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "6fe006b90ed428d75ed4afd8d166e0f509b342637ae5df3a50169c7a3ac09620",
+    "url": "https://mdr.nims.go.jp/download_all/g158bq20q.zip"
+  },
+  "g445ck539": {
+    "bytes": 229283,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "41a636be342408d3e53f7e1bcc3830faeb7aae24af4a3c0e8ef1b003ebf9aeca",
+    "url": "https://mdr.nims.go.jp/download_all/g445ck539.zip"
+  },
+  "gf06g7088": {
+    "bytes": 111690,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "1b04b114e6542e800c0b5d2141471da2945f2cae9b783ddb393ee0733ac587b0",
+    "url": "https://mdr.nims.go.jp/download_all/gf06g7088.zip"
+  },
+  "gf06g7380": {
+    "bytes": 163694,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "d58ce623327f39de4f526803268b3d16fee068e542c929230a4ec6cc09c2ff48",
+    "url": "https://mdr.nims.go.jp/download_all/gf06g7380.zip"
+  },
+  "gh93h3711": {
+    "bytes": 113670,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "f76825473a3a2e5b615369452d58ac28c8051d136762d6e3aab9daec080dffbd",
+    "url": "https://mdr.nims.go.jp/download_all/gh93h3711.zip"
+  },
+  "gh93h389g": {
+    "bytes": 96186,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "1366947152af0b85c1c19969b3a8b0bd3d3ae0949b1e47bbd1d6fe8f117312a0",
+    "url": "https://mdr.nims.go.jp/download_all/gh93h389g.zip"
+  },
+  "gm80hz99k": {
+    "bytes": 132974,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "f8c646fecaaa12b6e299f8c26f0575133810899f3fd9b5aa9f4a49f03d2315ca",
+    "url": "https://mdr.nims.go.jp/download_all/gm80hz99k.zip"
+  },
+  "gm80j178d": {
+    "bytes": 279660,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "d0d6f52e657bf8d945c2c592f3fc120f07f8462b0fe978b9536b19edce3c494f",
+    "url": "https://mdr.nims.go.jp/download_all/gm80j178d.zip"
+  },
+  "gt54ks33f": {
+    "bytes": 161240,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "03e71c74f217be38628397a8bbfeb8e856bfbc2fce0b025710bbbf4e809699fa",
+    "url": "https://mdr.nims.go.jp/download_all/gt54ks33f.zip"
+  },
+  "gt54kt83v": {
+    "bytes": 264640,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "6be43a96878ce2539e6cf3b9311ee9e5211b9763b958c1e7c448eca58bfd0642",
+    "url": "https://mdr.nims.go.jp/download_all/gt54kt83v.zip"
+  },
+  "h128nk25j": {
+    "bytes": 166232,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "8476a44fd2e02832bc8d2ad20869ab2bf7562cb4a1cdb613c7cf33f32292cd7b",
+    "url": "https://mdr.nims.go.jp/download_all/h128nk25j.zip"
+  },
+  "h415pf274": {
+    "bytes": 195312,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "53de20d04e94803d35ec6045e119c063a7b38f3fd0cc97421443fbd2075da2e3",
+    "url": "https://mdr.nims.go.jp/download_all/h415pf274.zip"
+  },
+  "h415pf958": {
+    "bytes": 120020,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "3d93cf7fa00fab7f9df0569ea67e7f534dde3f551896ab6b6f16ce9d735f704a",
+    "url": "https://mdr.nims.go.jp/download_all/h415pf958.zip"
+  },
+  "h702q990x": {
+    "bytes": 139734,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "07c8d146f3585ad9b3166a730db3fd34ab985756abb9e05d7799515cdb330619",
+    "url": "https://mdr.nims.go.jp/download_all/h702q990x.zip"
+  },
+  "h702qc64q": {
+    "bytes": 147564,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "8f9e7de7acf7ed59568275bced3c74c7c6443659a4b5584671a1d9ecd28a5e7f",
+    "url": "https://mdr.nims.go.jp/download_all/h702qc64q.zip"
+  },
+  "h702qc693": {
+    "bytes": 215920,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "028bf8df2e3fd63957caf044dc6548d554c6f39fc6203171c0b35b021de53db2",
+    "url": "https://mdr.nims.go.jp/download_all/h702qc693.zip"
+  },
+  "h702qc83x": {
+    "bytes": 170482,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "80d6e547e5a7d0aee4038224ab61f5dd4055f971d7ac108adabf98d71651f5c8",
+    "url": "https://mdr.nims.go.jp/download_all/h702qc83x.zip"
+  },
+  "hd76s379n": {
+    "bytes": 285157,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "e80556a7bafc5cf305a10d7eb713b77dfb2ac04e7ef05898665460f9eac011e5",
+    "url": "https://mdr.nims.go.jp/download_all/hd76s379n.zip"
+  },
+  "hd76s543p": {
+    "bytes": 200818,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "fced5026767ee2a58fbc499da9b9fea25e7916223be0dba91573efb1bae4511f",
+    "url": "https://mdr.nims.go.jp/download_all/hd76s543p.zip"
+  },
+  "hq37vs20s": {
+    "bytes": 184478,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "2be506a913f92c85a2f5a45fae3b6eb6890dc40d9d5e66dad895e2fa1eb5ed22",
+    "url": "https://mdr.nims.go.jp/download_all/hq37vs20s.zip"
+  },
+  "hq37vs58q": {
+    "bytes": 138680,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "ddb749b330598267cf198362b59e77b549ee4084f1e19310ec9022fe5aabcbf4",
+    "url": "https://mdr.nims.go.jp/download_all/hq37vs58q.zip"
+  },
+  "hq37vs63k": {
+    "bytes": 261386,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "b5ebd6b4848f929bd6680b9ffcbd8cc2de49436c6c4ee891fe87c8c89a5eb9df",
+    "url": "https://mdr.nims.go.jp/download_all/hq37vs63k.zip"
+  },
+  "ht24wq55b": {
+    "bytes": 187095,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "0154e56e34e2057ffec9eb1fbf7c29e00eca114d9a023ef688520997ff95d957",
+    "url": "https://mdr.nims.go.jp/download_all/ht24wq55b.zip"
+  },
+  "hx11xm60f": {
+    "bytes": 223998,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "4ffd1c28c719bbffbbdb0ef707fcfb9f32a4a79e3f76384998132fc33e614982",
+    "url": "https://mdr.nims.go.jp/download_all/hx11xm60f.zip"
+  },
+  "hx11xn32g": {
+    "bytes": 275087,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "c3ac177c769e6c69379b8b325004686f5b7f54a8a0f1b6efc0d9e2e831371c27",
+    "url": "https://mdr.nims.go.jp/download_all/hx11xn32g.zip"
+  },
+  "j3860b60x": {
+    "bytes": 200966,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "f4cc22ca7a18730d92c8a5e4ad86555f62bcef404f1afd0b8afd0a608af7de71",
+    "url": "https://mdr.nims.go.jp/download_all/j3860b60x.zip"
+  },
+  "j9602582n": {
+    "bytes": 172227,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "f9a48f3acefe4d7915e688b5aebf3835e5837c25926045fe93ef1b2894497557",
+    "url": "https://mdr.nims.go.jp/download_all/j9602582n.zip"
+  },
+  "j9602614q": {
+    "bytes": 259612,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "a9e6913b3fc047f34c3bf66f6bf20693b4e36148fc2fd355af4f548a89c8c420",
+    "url": "https://mdr.nims.go.jp/download_all/j9602614q.zip"
+  },
+  "jd473163r": {
+    "bytes": 158974,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "d88751a094a189cd1c1fc90f8031bdbaea8366011ca528089dbd711449dd4b10",
+    "url": "https://mdr.nims.go.jp/download_all/jd473163r.zip"
+  },
+  "jm214v043": {
+    "bytes": 279724,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "ee90b62b4651cb8066dec563a85b893bf64dd70fb03e450db4c6f2cb6d7dbed3",
+    "url": "https://mdr.nims.go.jp/download_all/jm214v043.zip"
+  },
+  "js956m32s": {
+    "bytes": 208514,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "e81745023ecd65e0c7f457a1b61a517c0d69228cf0bd4c6f8467d18348f1d59c",
+    "url": "https://mdr.nims.go.jp/download_all/js956m32s.zip"
+  },
+  "js956m53j": {
+    "bytes": 194067,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "180454a9cabed3e7d2f9b412b8a18d47fd22758a2ff59cb09c1da2a09c14faaa",
+    "url": "https://mdr.nims.go.jp/download_all/js956m53j.zip"
+  },
+  "jw827h029": {
+    "bytes": 191722,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "17859bc9fe1c4c82852001c9bcb9388a3cb7f4c4d8fc70bc67b170a68abf5c1b",
+    "url": "https://mdr.nims.go.jp/download_all/jw827h029.zip"
+  },
+  "jw827j238": {
+    "bytes": 165737,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "02f0f2702400da57eb6e9796f5ed59591f64a3836bb9a17480ea1b379e46bef2",
+    "url": "https://mdr.nims.go.jp/download_all/jw827j238.zip"
+  },
+  "k0698d718": {
+    "bytes": 182308,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "17bbbb1fde75dbea966461ca9c4dda52ab29f1eeced4664cbe8a27f904781782",
+    "url": "https://mdr.nims.go.jp/download_all/k0698d718.zip"
+  },
+  "k643b5288": {
+    "bytes": 182362,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "c8ade0badafff1903d6576cb2d22b1f21426273cd6c68c89855a9a3e07fd4d3f",
+    "url": "https://mdr.nims.go.jp/download_all/k643b5288.zip"
+  },
+  "k643b565d": {
+    "bytes": 273389,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "e272899a5273bd33b5ed2883964cefc6566cbddd67296204d7a7c46f1f46739d",
+    "url": "https://mdr.nims.go.jp/download_all/k643b565d.zip"
+  },
+  "k643b637f": {
+    "bytes": 94600,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "0d7e575d6f1bb72c5ecb6482bf6c2806d2c04ee92e1a891d662072d27baa78a6",
+    "url": "https://mdr.nims.go.jp/download_all/k643b637f.zip"
+  },
+  "k930c3311": {
+    "bytes": 105458,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "fa1d9d998073b188aa2c4ff0b09a95e761b5ab850779e06856b5d08271fcf135",
+    "url": "https://mdr.nims.go.jp/download_all/k930c3311.zip"
+  },
+  "k930c3397": {
+    "bytes": 122193,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "0571e33dc9be0ae17fd0c1301edf3fbfdda749f27cf628bce28111109bca09a4",
+    "url": "https://mdr.nims.go.jp/download_all/k930c3397.zip"
+  },
+  "kd17cz447": {
+    "bytes": 288927,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "322a5a1401d4bc03ce313f7ca0416f7966441b3f249a5ca4b33070c7278c599f",
+    "url": "https://mdr.nims.go.jp/download_all/kd17cz447.zip"
+  },
+  "kh04dt54h": {
+    "bytes": 220809,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "15877bbc2ce3d7b499015e698b8b4005631c0a34b475d211ae81bf9fafd66031",
+    "url": "https://mdr.nims.go.jp/download_all/kh04dt54h.zip"
+  },
+  "kh04dt60n": {
+    "bytes": 424505,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "5cba3e5bc860fcfc3ffbfbf0f575ea720700aa32dbfedb8d573bc33d38e972b9",
+    "url": "https://mdr.nims.go.jp/download_all/kh04dt60n.zip"
+  },
+  "kh04dv04h": {
+    "bytes": 229784,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "bcdec42f0fe68ae9dcafc2cb1f69bf34108ef38e8f85beb07a578b4e25fc1680",
+    "url": "https://mdr.nims.go.jp/download_all/kh04dv04h.zip"
+  },
+  "kk91fr38j": {
+    "bytes": 208577,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "69e8465febc6bd814ccb503751b74344e7890f3b6c7eea6b970d75649d6e7489",
+    "url": "https://mdr.nims.go.jp/download_all/kk91fr38j.zip"
+  },
+  "kp78gn161": {
+    "bytes": 124645,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "3041de12c2f29bd96b23d6e20c361f5de818c5aa2128d926db4944200e9b7d91",
+    "url": "https://mdr.nims.go.jp/download_all/kp78gn161.zip"
+  },
+  "ks65hj435": {
+    "bytes": 229607,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "380f0c0e9f551f1f296e34650a5506611ae64b92b10cf555767a0cb04f194c60",
+    "url": "https://mdr.nims.go.jp/download_all/ks65hj435.zip"
+  },
+  "kw52jf14z": {
+    "bytes": 227254,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "21c1b5c97f56f3e8b8d89052e0333a4570a802db979d8aa3980addddb4eccf1e",
+    "url": "https://mdr.nims.go.jp/download_all/kw52jf14z.zip"
+  },
+  "kw52jf44p": {
+    "bytes": 155780,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "c24fbe7063e052d30a3569a199862469b5743cf2be03031e618f52db3b302541",
+    "url": "https://mdr.nims.go.jp/download_all/kw52jf44p.zip"
+  },
+  "m039k924j": {
+    "bytes": 103773,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "22df7b4d6cab193e01ffe4ff3dcdfd4a6a7d1532066f3681e7d13ca6b39d006b",
+    "url": "https://mdr.nims.go.jp/download_all/m039k924j.zip"
+  },
+  "m326m6006": {
+    "bytes": 185583,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "68ed2527629599f7038285f8f0c86b8a04bbf5ea25d367c4223ab93ffa98d11a",
+    "url": "https://mdr.nims.go.jp/download_all/m326m6006.zip"
+  },
+  "m326m6341": {
+    "bytes": 177066,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "3202a30c53039a89df94ce778ebcbf202229cdb979778085af2906874da74709",
+    "url": "https://mdr.nims.go.jp/download_all/m326m6341.zip"
+  },
+  "m326m648c": {
+    "bytes": 124047,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "3fba3c16d4a8b8dc1b8bf4093cfdf82c38ba8ee5df5c3e903a241301798dfe64",
+    "url": "https://mdr.nims.go.jp/download_all/m326m648c.zip"
+  },
+  "m326m6961": {
+    "bytes": 148896,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "d682d7f46ca4db854c79e836cc3e9479c664430a55c92952fba11e4cb0d50435",
+    "url": "https://mdr.nims.go.jp/download_all/m326m6961.zip"
+  },
+  "m613n279d": {
+    "bytes": 204403,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "f5f3221f850fa4d62c6babec5dbb8e815b9a0e9c2e31d087edbc603fd0b68849",
+    "url": "https://mdr.nims.go.jp/download_all/m613n279d.zip"
+  },
+  "m900nx623": {
+    "bytes": 169743,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "f28b62d2a6c9eb11dcf48d3d6753251e1db96971b49c0a69952b04a3e0c73a74",
+    "url": "https://mdr.nims.go.jp/download_all/m900nx623.zip"
+  },
+  "m900p012g": {
+    "bytes": 201109,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "3dfdc677138c44383863bb0e405a6a9266d51f6131abeced74c8ab1caade96d4",
+    "url": "https://mdr.nims.go.jp/download_all/m900p012g.zip"
+  },
+  "m900p096h": {
+    "bytes": 385269,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "75b133f774a4987c4dde94585edf62b6881c617010d2dbdbd9c2748e5b68b8b0",
+    "url": "https://mdr.nims.go.jp/download_all/m900p096h.zip"
+  },
+  "mc87pt619": {
+    "bytes": 176899,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "d2a1366663b1c2a884f39fefdde645b11b509dcdbb3a698b5336accbd95381af",
+    "url": "https://mdr.nims.go.jp/download_all/mc87pt619.zip"
+  },
+  "ms35td854": {
+    "bytes": 181318,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "005d00ebf867186777c141b5598f17c92e3229cca446f7767be5794fab3bfd2e",
+    "url": "https://mdr.nims.go.jp/download_all/ms35td854.zip"
+  },
+  "mw22v878r": {
+    "bytes": 233746,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "d68852c2e724a055cfa05b423c86ef7e5b1af8dfe90aa12a4aec84209bb4e390",
+    "url": "https://mdr.nims.go.jp/download_all/mw22v878r.zip"
+  },
+  "n009w648s": {
+    "bytes": 168582,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "1ce08236314f9a076dd718446f2e74345de920334621e97c1467de56844b47b5",
+    "url": "https://mdr.nims.go.jp/download_all/n009w648s.zip"
+  },
+  "n296x2777": {
+    "bytes": 151106,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "c85b722391b53a1c23ca6c9d07462c53673447e48ff01f88d493c887b5f76b75",
+    "url": "https://mdr.nims.go.jp/download_all/n296x2777.zip"
+  },
+  "n296x421s": {
+    "bytes": 114363,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "ba5f46b7dd1775f3080552fa6cd66e664afae2a323dbb637d9af8b631a87363d",
+    "url": "https://mdr.nims.go.jp/download_all/n296x421s.zip"
+  },
+  "n583z0070": {
+    "bytes": 278890,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "820ad8c508130ff24244dd031fef33a3d65d70e672575f341c48f3e5ab004586",
+    "url": "https://mdr.nims.go.jp/download_all/n583z0070.zip"
+  },
+  "n583z0444": {
+    "bytes": 185076,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "5cd74b7558d504195cd6e3f2707a10fc7305937cbb5e74c00544be166d440521",
+    "url": "https://mdr.nims.go.jp/download_all/n583z0444.zip"
+  },
+  "n583z1165": {
+    "bytes": 181323,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "4d83bc75e8c8fa31cbdab75b2bc6e252cdaf065106df9854a1f80ebec5c15877",
+    "url": "https://mdr.nims.go.jp/download_all/n583z1165.zip"
+  },
+  "n583z135c": {
+    "bytes": 154562,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "3a374ed37c8a222030636a6c1c94bd65ac8b679bbf5a1204c409d4bbaf171ef3",
+    "url": "https://mdr.nims.go.jp/download_all/n583z135c.zip"
+  },
+  "nc580s62s": {
+    "bytes": 217594,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "3aff7c1868a19149c6dc31b06726fcba4707dcea4df27e65049aaa645eb2d4c0",
+    "url": "https://mdr.nims.go.jp/download_all/nc580s62s.zip"
+  },
+  "ng451p95k": {
+    "bytes": 231183,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "51e4459e88bb7e6a6e18dd6f2aa47649c0fd3906d408fabac68fe9f8f02abc1a",
+    "url": "https://mdr.nims.go.jp/download_all/ng451p95k.zip"
+  },
+  "ng451q27n": {
+    "bytes": 183584,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "8d78643846686614ceebf65d0001a591ba53603da6561423785d2b966ccd90db",
+    "url": "https://mdr.nims.go.jp/download_all/ng451q27n.zip"
+  },
+  "nk322j16z": {
+    "bytes": 263971,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "1181d91e37785489089b7789034a2ee1fdcf600f0adc2b1b2faa68755dff0da0",
+    "url": "https://mdr.nims.go.jp/download_all/nk322j16z.zip"
+  },
+  "np193g61h": {
+    "bytes": 138503,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "5e9dc5a690d344730771b4d5e7ab18152eeb2c2c13e5e91255c1fa96227e9538",
+    "url": "https://mdr.nims.go.jp/download_all/np193g61h.zip"
+  },
+  "nv9357974": {
+    "bytes": 265640,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "148ecd5ee56f14416790b53987363ac1a51e1b96aa13420909d263846e420a8a",
+    "url": "https://mdr.nims.go.jp/download_all/nv9357974.zip"
+  },
+  "nv935817d": {
+    "bytes": 177535,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "0f344587c1f59c23dc6f73f95f9439aa462eead66147ad21b2e69fd18eb3d3b2",
+    "url": "https://mdr.nims.go.jp/download_all/nv935817d.zip"
+  },
+  "nz806514t": {
+    "bytes": 192192,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "5b6449f3c86b1459f394ab34b176a8c1dac534ea0b879397e32118959e9161ad",
+    "url": "https://mdr.nims.go.jp/download_all/nz806514t.zip"
+  },
+  "nz8065773": {
+    "bytes": 142803,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "70a8374555e45d547382a3d103b6c6ccf7d5e360671efb3697df35e250920de0",
+    "url": "https://mdr.nims.go.jp/download_all/nz8065773.zip"
+  },
+  "p2677072v": {
+    "bytes": 249055,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "0cccb4e8f43068a4a64ca395a7cefbb120ecee11c2a144ff7129911f44dea774",
+    "url": "https://mdr.nims.go.jp/download_all/p2677072v.zip"
+  },
+  "p2677085x": {
+    "bytes": 172414,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "0ab72d4a7dd0614a7f8d341a2598e3e548e0604f33e2ef602ff29b788468960b",
+    "url": "https://mdr.nims.go.jp/download_all/p2677085x.zip"
+  },
+  "p2677157z": {
+    "bytes": 298957,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "78408b59adb834b4a1c727abe5cfcd5f215a8e79aa2f02cc331806bf289b181f",
+    "url": "https://mdr.nims.go.jp/download_all/p2677157z.zip"
+  },
+  "p5547x368": {
+    "bytes": 131173,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "ff771be7aff5153057b3fa7493905f4cc632df925b0fbfee9080c7a6b0c034a7",
+    "url": "https://mdr.nims.go.jp/download_all/p5547x368.zip"
+  },
+  "pc289p50n": {
+    "bytes": 226312,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "d593007febc4303aed6ebc308e820d9566181215eec805a30b2fb9fd96716e53",
+    "url": "https://mdr.nims.go.jp/download_all/pc289p50n.zip"
+  },
+  "pc289r25q": {
+    "bytes": 217183,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "e349679b741100f4660ce3ee0d5f8a6d76988059723e6cc879c13cb7231688b4",
+    "url": "https://mdr.nims.go.jp/download_all/pc289r25q.zip"
+  },
+  "pg15bj58w": {
+    "bytes": 208878,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "ab96a68d92da182182af63b830a03b46e1842f894750ded493c518cc8e7035e5",
+    "url": "https://mdr.nims.go.jp/download_all/pg15bj58w.zip"
+  },
+  "pn89dd360": {
+    "bytes": 265328,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "f3af46afd337a98d83578eaf726ce7bd19322085082eae9cc2fa90d923ac3a8a",
+    "url": "https://mdr.nims.go.jp/download_all/pn89dd360.zip"
+  },
+  "pv63g5881": {
+    "bytes": 108453,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "1356cdac0c0952c410c4876a568b2f9c9f993f1f7474c921e86824d5cf90cde9",
+    "url": "https://mdr.nims.go.jp/download_all/pv63g5881.zip"
+  },
+  "qb98mj84w": {
+    "bytes": 246847,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "c720ba106ecb53c61d348495e4c4a0e0ca9d52a498d77c349cfb77b77b6e85a2",
+    "url": "https://mdr.nims.go.jp/download_all/qb98mj84w.zip"
+  },
+  "qb98mk95m": {
+    "bytes": 212833,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "5c08a112a4ad1f321c9d8414344b030cf0191d214688a5c682e37bb789d34f83",
+    "url": "https://mdr.nims.go.jp/download_all/qb98mk95m.zip"
+  },
+  "qj72pc732": {
+    "bytes": 191182,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "9b802ed11c8963964125a4fe5f2d908a1d03bd66cc63a8b86010b7876dd68514",
+    "url": "https://mdr.nims.go.jp/download_all/qj72pc732.zip"
+  },
+  "qv33s269g": {
+    "bytes": 293150,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "68b443104f2c9fb7440f73ea4d59ea834c0e02d5b82b1b193e0371f79aac20ea",
+    "url": "https://mdr.nims.go.jp/download_all/qv33s269g.zip"
+  },
+  "qv33s280g": {
+    "bytes": 160724,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "29fbb4d1a77e077ae78afd0116a5699981b907a63a63736aa83f089d1740b641",
+    "url": "https://mdr.nims.go.jp/download_all/qv33s280g.zip"
+  },
+  "qz20sz378": {
+    "bytes": 223985,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "f551e62a74e81981b221cc0021c27a913ab5b52e08d0a2efd64149fe84b5f4bc",
+    "url": "https://mdr.nims.go.jp/download_all/qz20sz378.zip"
+  },
+  "qz20sz467": {
+    "bytes": 176649,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "fbf804e035dd187b54c49e32ba88b074bb8ad487deaf78a3be0bee6b89259766",
+    "url": "https://mdr.nims.go.jp/download_all/qz20sz467.zip"
+  },
+  "r494vq27k": {
+    "bytes": 120668,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "b7d953339fd19c41adc123ce7baac4b336cf85fa5161b52f4304c2508f723e12",
+    "url": "https://mdr.nims.go.jp/download_all/r494vq27k.zip"
+  },
+  "r494vr81k": {
+    "bytes": 221121,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "b9b48bc423856b2f1b2fa3bc1c181e1314b3e5ea8d4ad2dde8a4a8190a88996d",
+    "url": "https://mdr.nims.go.jp/download_all/r494vr81k.zip"
+  },
+  "r494vr97g": {
+    "bytes": 233977,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "9ae37199c4381c461c9552e9a249b8d2115abb75f6b76097e10a688cf1d16b40",
+    "url": "https://mdr.nims.go.jp/download_all/r494vr97g.zip"
+  },
+  "r781wk83z": {
+    "bytes": 161280,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "a26cc2e4ec458e140edc21f697c21d4f09b998d10fab1dc7e0266c18858018c5",
+    "url": "https://mdr.nims.go.jp/download_all/r781wk83z.zip"
+  },
+  "rj430832m": {
+    "bytes": 169806,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "d1b9495a58ae7187298fb93d369b8ce5b727fd9cf877087763f9d27bdd2310eb",
+    "url": "https://mdr.nims.go.jp/download_all/rj430832m.zip"
+  },
+  "rn3015466": {
+    "bytes": 242322,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "84bcf166f35f37e5386af8a328b41a40d8a443d4d2a0523c2c9a8c770031dfde",
+    "url": "https://mdr.nims.go.jp/download_all/rn3015466.zip"
+  },
+  "rn3016012": {
+    "bytes": 282040,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "60b743464988b2050ba45e3c210793bd47d2991fa13690337d3ad550946f6346",
+    "url": "https://mdr.nims.go.jp/download_all/rn3016012.zip"
+  },
+  "rr1721970": {
+    "bytes": 132829,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "f08232481b8648dd9ec87aae969ed9ea4dbb422856ecdd10f9d833f0bc470170",
+    "url": "https://mdr.nims.go.jp/download_all/rr1721970.zip"
+  },
+  "rr172251k": {
+    "bytes": 201798,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "9e65d4feb28fd1ac39075bade52384b91ac75e3be4f31ab5a63e89101763e002",
+    "url": "https://mdr.nims.go.jp/download_all/rr172251k.zip"
+  },
+  "rr172345n": {
+    "bytes": 118263,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "57b626f8d64ee70b62444571d84e64423a331446a602ce12add2d8aeb5ff1bab",
+    "url": "https://mdr.nims.go.jp/download_all/rr172345n.zip"
+  },
+  "s1784r903": {
+    "bytes": 194865,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "57259ddfe23cac4c98d1019e27cf137653936b16d08aaa5145e1615ed865246c",
+    "url": "https://mdr.nims.go.jp/download_all/s1784r903.zip"
+  },
+  "s1784s65z": {
+    "bytes": 265294,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "bd4222d1283f2fa20010ca33bde985f7cc8c7ce55e3c877b16fc127d33831858",
+    "url": "https://mdr.nims.go.jp/download_all/s1784s65z.zip"
+  },
+  "s4655n757": {
+    "bytes": 178580,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "7c13b5c76738e9733818a1f9735835fde6ab35fce54ec742627ce6a22000c276",
+    "url": "https://mdr.nims.go.jp/download_all/s4655n757.zip"
+  },
+  "sf268892g": {
+    "bytes": 183875,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "715fe367cc0835c73d2e95e5886b10822323d62bd68c6bdbb307d173dc9c25ee",
+    "url": "https://mdr.nims.go.jp/download_all/sf268892g.zip"
+  },
+  "sj1396049": {
+    "bytes": 209869,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "77c57ca07d6119000201bff23920ad24111b804d51a63f8b37876c4759083985",
+    "url": "https://mdr.nims.go.jp/download_all/sj1396049.zip"
+  },
+  "sn00b2121": {
+    "bytes": 153192,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "2e8d8f61fc3141680c6a62eab02158872f6450775bf2a30b594350aac29bb032",
+    "url": "https://mdr.nims.go.jp/download_all/sn00b2121.zip"
+  },
+  "sn00b3993": {
+    "bytes": 159761,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "a0833fa439b6101fd28dfa8a7448a644075f767b6fe848c2db198db7e1436401",
+    "url": "https://mdr.nims.go.jp/download_all/sn00b3993.zip"
+  },
+  "st74cw21r": {
+    "bytes": 159529,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "2b66a3e27f198bc12be2c1c4aaa8285faa25ba93bc72533f725aa7815bf4d4c5",
+    "url": "https://mdr.nims.go.jp/download_all/st74cw21r.zip"
+  },
+  "t435gk14c": {
+    "bytes": 188996,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "7f34bcc8500d56ead214a39f0cff3e194d8461a8895cab80bc81045c57724e02",
+    "url": "https://mdr.nims.go.jp/download_all/t435gk14c.zip"
+  },
+  "t722hf487": {
+    "bytes": 147436,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "f3319a55df7a942fc184939cbd52a2ff6070f04f05f9afbf56ea7c782f7b5785",
+    "url": "https://mdr.nims.go.jp/download_all/t722hf487.zip"
+  },
+  "t722hg297": {
+    "bytes": 202258,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "fc4ddebdc81e266e3e1e853bbf542b459995d6f259395c8fa7a58a203fd5cfdc",
+    "url": "https://mdr.nims.go.jp/download_all/t722hg297.zip"
+  },
+  "tb09j944f": {
+    "bytes": 178156,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "a1480b90a01a584c22790ea98f68a5e854548f69174b6756dcd9d70f2f1d83c2",
+    "url": "https://mdr.nims.go.jp/download_all/tb09j944f.zip"
+  },
+  "tb09j9923": {
+    "bytes": 201889,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "7b931d8c3df6c7272ad55204d4f675cfe9ae178f16e19c3c1bf1bc457a324303",
+    "url": "https://mdr.nims.go.jp/download_all/tb09j9923.zip"
+  },
+  "td96k684m": {
+    "bytes": 214176,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "21955127ca58e4f79f280f6489e0c7f1f6fcdd7bbf55c710e4ec56893af9804f",
+    "url": "https://mdr.nims.go.jp/download_all/td96k684m.zip"
+  },
+  "td96k809g": {
+    "bytes": 320300,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "6f6ac4d54c8d1471a612cf583e2657d160cda4f886d9d43d9963ef2b9ec651c5",
+    "url": "https://mdr.nims.go.jp/download_all/td96k809g.zip"
+  },
+  "th83m4418": {
+    "bytes": 141286,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "d43f431883d0eee140039227fe9f0c2be87075f57aad2d66aa034d9b9a27dcfc",
+    "url": "https://mdr.nims.go.jp/download_all/th83m4418.zip"
+  },
+  "tm70mz957": {
+    "bytes": 201641,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "1fe9b2cadb3a3cb9be5b84eca238460e02c123ee5547febc5bdbe1c69ee990ac",
+    "url": "https://mdr.nims.go.jp/download_all/tm70mz957.zip"
+  },
+  "tm70n047z": {
+    "bytes": 177212,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "8b78fb306320a5f97e6ca5f7d5d162fce9fe542ad7a006c721a00dbd7e25bdcb",
+    "url": "https://mdr.nims.go.jp/download_all/tm70n047z.zip"
+  },
+  "tq57nv473": {
+    "bytes": 173931,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "6caae85d943a3371a4e9ad79b7c1e380008ce8842664b4ee90ee401fc4dc5fcc",
+    "url": "https://mdr.nims.go.jp/download_all/tq57nv473.zip"
+  },
+  "tt44pr80c": {
+    "bytes": 266420,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "5dcaa42dd5f6696f037d1bab7edb4a64f18ff293691688fc4a778dd0fa4cba55",
+    "url": "https://mdr.nims.go.jp/download_all/tt44pr80c.zip"
+  },
+  "tt44pt64d": {
+    "bytes": 139895,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "f5ed94e955edf1ec3f8c3952d1444ff7f6c3fe56c894ebe4db9057364fd96729",
+    "url": "https://mdr.nims.go.jp/download_all/tt44pt64d.zip"
+  },
+  "tt44pt77g": {
+    "bytes": 248544,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "4baeae6d6841fa87dea8ad78689f4070e8935ff72842d506362081c514c03b31",
+    "url": "https://mdr.nims.go.jp/download_all/tt44pt77g.zip"
+  },
+  "v118rk020": {
+    "bytes": 222535,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "6f77021671e917a411e3939ce0662feea32c2e6a2a328df686ce109534b8c409",
+    "url": "https://mdr.nims.go.jp/download_all/v118rk020.zip"
+  },
+  "v405sg540": {
+    "bytes": 128432,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "62f5992bb2f40819b650991b73938f9d5d0091cabaa1af47615782be06163315",
+    "url": "https://mdr.nims.go.jp/download_all/v405sg540.zip"
+  },
+  "v692tc546": {
+    "bytes": 119500,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "02f6dafd0af86f4c2184a8c627d834e137d76cdb07ba5d433f851a7ee8896250",
+    "url": "https://mdr.nims.go.jp/download_all/v692tc546.zip"
+  },
+  "v979v749n": {
+    "bytes": 280138,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "ee01cc6c66cbc2bdb23b5e1e25a8cf00f07b93c2f993fb4e6276514c26aab2f8",
+    "url": "https://mdr.nims.go.jp/download_all/v979v749n.zip"
+  },
+  "v979v781d": {
+    "bytes": 186296,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "5c2e6d81f55298f355beeca8af1274ba0147a1e85c489ae9f99977bbf2906646",
+    "url": "https://mdr.nims.go.jp/download_all/v979v781d.zip"
+  },
+  "v979v7936": {
+    "bytes": 166980,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "6352d86917f3cf457e0f1cbe4a72a5781672aad63ac9f41507edfb3cf2c4a0d3",
+    "url": "https://mdr.nims.go.jp/download_all/v979v7936.zip"
+  },
+  "v979v8062": {
+    "bytes": 168422,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "b6564c1cff8ce2ad490470f6a08de4d623dbc7321604f749947d5cbec0945284",
+    "url": "https://mdr.nims.go.jp/download_all/v979v8062.zip"
+  },
+  "vd66w479m": {
+    "bytes": 244797,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "ab800eb070065c6b2cd54fe97456b9effe0092ab3ce6274a28bd7ecc8670767f",
+    "url": "https://mdr.nims.go.jp/download_all/vd66w479m.zip"
+  },
+  "vd66w4950": {
+    "bytes": 166068,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "3d614fac7a433846dd6066160778c77c70b57ba4a97ee05ac7e38cfc5c3358fa",
+    "url": "https://mdr.nims.go.jp/download_all/vd66w4950.zip"
+  },
+  "vh53x148v": {
+    "bytes": 120652,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "acc33b3b309fb0dfe08bbc36a74d8c207f2dbb2b499a6a30b91144f737ecfd44",
+    "url": "https://mdr.nims.go.jp/download_all/vh53x148v.zip"
+  },
+  "vh53x259k": {
+    "bytes": 159261,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "3006ef5b1caabfdde2532b99ef092dbd796e44e413a0fb728a2e6f6ae4e13865",
+    "url": "https://mdr.nims.go.jp/download_all/vh53x259k.zip"
+  },
+  "vq27zr855": {
+    "bytes": 199341,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "1f5f18868efc727f2f84c7f00114a5f20de9ec74b4bd31839f53c9214c0de19c",
+    "url": "https://mdr.nims.go.jp/download_all/vq27zr855.zip"
+  },
+  "vq27zs508": {
+    "bytes": 135964,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "0d01cd908cde90858f3caa7032f2ad50aa98d07ab6fa8ab6367bbfd9aa28f57e",
+    "url": "https://mdr.nims.go.jp/download_all/vq27zs508.zip"
+  },
+  "vt150p79m": {
+    "bytes": 145130,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "80d149c63d1f6ab8deafb3610ea9f48e82dfab4032ba6847ded71b527135db60",
+    "url": "https://mdr.nims.go.jp/download_all/vt150p79m.zip"
+  },
+  "w0892g55s": {
+    "bytes": 201377,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "af7e65a537215fd942de543406b9a3953369f789bed2a5b092bf0558d089f5a3",
+    "url": "https://mdr.nims.go.jp/download_all/w0892g55s.zip"
+  },
+  "w3763b873": {
+    "bytes": 240830,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "9b2209db045eb4aaca90f4483d8f07aefbed6237617f8b098aa4e429407b2cda",
+    "url": "https://mdr.nims.go.jp/download_all/w3763b873.zip"
+  },
+  "w3763c04j": {
+    "bytes": 126182,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "56390bd853b7fa98b20995dbc6ecb8cbe000808a36792bc6b2ad647583519ae5",
+    "url": "https://mdr.nims.go.jp/download_all/w3763c04j.zip"
+  },
+  "wd3761563": {
+    "bytes": 133375,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "eea6ca7569c9442754ce5492ddb2f545186f97ad8b82b209d95f1a80b0158767",
+    "url": "https://mdr.nims.go.jp/download_all/wd3761563.zip"
+  },
+  "wd376188c": {
+    "bytes": 282710,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "d0fbcd86496e7e44d2e0beed64e4fb7a58c37b1a46f1f6b0c8030e1856b0c9dd",
+    "url": "https://mdr.nims.go.jp/download_all/wd376188c.zip"
+  },
+  "wh246x654": {
+    "bytes": 214224,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "fcc48862145f5474332feac1271c2354e7311b56bebfca53f367256cf03494a6",
+    "url": "https://mdr.nims.go.jp/download_all/wh246x654.zip"
+  },
+  "wm117s98q": {
+    "bytes": 187222,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "515c45ff7fc83918d3ffd3497deeb3ac6ee74390ecd8335d1654f56468467cb1",
+    "url": "https://mdr.nims.go.jp/download_all/wm117s98q.zip"
+  },
+  "wm117t36x": {
+    "bytes": 189130,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "f46824c507727b72ff82294ff0e0337cd66fcb26e0706856f3cda2226be9be93",
+    "url": "https://mdr.nims.go.jp/download_all/wm117t36x.zip"
+  },
+  "wm117t79q": {
+    "bytes": 287283,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "69bc352b8fc6afb65ee78246d1ae6bc13bc0a721cc9f1ae7034d9541effb808f",
+    "url": "https://mdr.nims.go.jp/download_all/wm117t79q.zip"
+  },
+  "wm117v55b": {
+    "bytes": 255181,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "00b1b95d99c5c5d0d1a5c830b3596117bdad6945f70bf75b13ec442fa4c8e883",
+    "url": "https://mdr.nims.go.jp/download_all/wm117v55b.zip"
+  },
+  "ws859j97z": {
+    "bytes": 167593,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "153bbe9c5c1fcbd8674757239ee6b65c3e24f8abb29ac52bad086f1d7e6c86ff",
+    "url": "https://mdr.nims.go.jp/download_all/ws859j97z.zip"
+  },
+  "ws859k47z": {
+    "bytes": 120997,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "63ea016e42e7673cc9242506af8cc45b01de9662717ca20eefafddc9f37511dc",
+    "url": "https://mdr.nims.go.jp/download_all/ws859k47z.zip"
+  },
+  "ws859k85c": {
+    "bytes": 115402,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "3e475d2589ca3bf89861070ce0839d4d7dc08bef972f007be02261107ad1b272",
+    "url": "https://mdr.nims.go.jp/download_all/ws859k85c.zip"
+  },
+  "ww72bg91r": {
+    "bytes": 205429,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "272d25359820a44fa9ba88f87e7a000dd89bbc751beb0c1875784d51ea750fc8",
+    "url": "https://mdr.nims.go.jp/download_all/ww72bg91r.zip"
+  },
+  "x059cc235": {
+    "bytes": 189846,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "fc52721d61c352df682b3685f7a4f99947d9a25c6849be2ad4e7f0b0fa0a574f",
+    "url": "https://mdr.nims.go.jp/download_all/x059cc235.zip"
+  },
+  "x059cf04c": {
+    "bytes": 161385,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "76d376267bba9f6fff4d609e527d51550db46fd8e1cb5c4bbc61a220d411ca18",
+    "url": "https://mdr.nims.go.jp/download_all/x059cf04c.zip"
+  },
+  "x346d768j": {
+    "bytes": 146039,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "fc15d18abc696b1609fbc0e7e77981a66418cf180bb888f867eb4743650ec158",
+    "url": "https://mdr.nims.go.jp/download_all/x346d768j.zip"
+  },
+  "x633f654v": {
+    "bytes": 323499,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "b73439f24e1ec742201b6277dccb725a850a44b658fe45ae0fda8097af90a72e",
+    "url": "https://mdr.nims.go.jp/download_all/x633f654v.zip"
+  },
+  "x633f696c": {
+    "bytes": 142165,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "451ad9af71f52487072dad9924db4b7051509e0d15e4911dca154b9df91347c4",
+    "url": "https://mdr.nims.go.jp/download_all/x633f696c.zip"
+  },
+  "x920g2580": {
+    "bytes": 204274,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "b7a70916328862f942a43144d8f99c386d571ba11d2f0ee61db046ae64236973",
+    "url": "https://mdr.nims.go.jp/download_all/x920g2580.zip"
+  },
+  "xg94hv489": {
+    "bytes": 286109,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "71daecd009fcc480e0819ffa0bab5b4bbeb0a846f0c94ec4840fcf7edc9264e6",
+    "url": "https://mdr.nims.go.jp/download_all/xg94hv489.zip"
+  },
+  "xp68kn42d": {
+    "bytes": 138845,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "86c6fedbe2014ee584995645b3921055b78e438af8d8246d08daf7090dfa568d",
+    "url": "https://mdr.nims.go.jp/download_all/xp68kn42d.zip"
+  },
+  "xs55mh882": {
+    "bytes": 160967,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "a9b894ce8c9ef42875ad757afec66e9a651e5b6d987dd709e03c01680e10ab79",
+    "url": "https://mdr.nims.go.jp/download_all/xs55mh882.zip"
+  },
+  "xw42nc92p": {
+    "bytes": 182469,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "ad5711a9efdd431a85c1ea718d12a6e1403a541816b88f80ade54e897756ebed",
+    "url": "https://mdr.nims.go.jp/download_all/xw42nc92p.zip"
+  },
+  "z029p9915": {
+    "bytes": 192156,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "56c7279aff3841b78f7539299d4ebf8f462d527f9a44367d5e817dc1ce320e9c",
+    "url": "https://mdr.nims.go.jp/download_all/z029p9915.zip"
+  },
+  "z316q609f": {
+    "bytes": 200059,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "8cc987e7d770b8394fbca254475ae1f0529da0662d8c98276518eb571d97780a",
+    "url": "https://mdr.nims.go.jp/download_all/z316q609f.zip"
+  },
+  "z316q615k": {
+    "bytes": 155851,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "98dc509754c7911a239354c7774892391ce6de3f2bc8e4627e8eafb7ea083a57",
+    "url": "https://mdr.nims.go.jp/download_all/z316q615k.zip"
+  },
+  "zg64tr739": {
+    "bytes": 202826,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "c479ab8a2ee3656db5a20a776251941bb3fa9fa59e482a780d1f6a9218509c8c",
+    "url": "https://mdr.nims.go.jp/download_all/zg64tr739.zip"
+  },
+  "zg64ts38x": {
+    "bytes": 230775,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "1308e48d26b3ee655600f8078e02aec28a295e9960f9cb8cabb089a18974cdd1",
+    "url": "https://mdr.nims.go.jp/download_all/zg64ts38x.zip"
+  },
+  "zg64ts948": {
+    "bytes": 181747,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "3052289008aa84748b678430b09f29716dd4954b368db165867aa6184ff43591",
+    "url": "https://mdr.nims.go.jp/download_all/zg64ts948.zip"
+  },
+  "zk51vn43t": {
+    "bytes": 156468,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "9b6f2ca10595d68c81e6293115813a149c6176f68203c397e9b5d2565e0710c0",
+    "url": "https://mdr.nims.go.jp/download_all/zk51vn43t.zip"
+  },
+  "zw12zb85b": {
+    "bytes": 187337,
+    "checksum_authority": "first successful HTTPS retrieval; no publisher checksum assumed",
+    "sha256": "befd359569b43380357ab1a586e6adac74f0ebab805be893e7b693d8fd7f722e",
+    "url": "https://mdr.nims.go.jp/download_all/zw12zb85b.zip"
+  }
+}

@@ -11,9 +11,13 @@ requires-python = ">=3.11"
 dependencies = ["numpy>=2.0"]
 license = {text = "MIT"}
 
+[project.scripts]
+geoform-phonondb = "geoform_phonons.phonondb_cli:main"
+
 [tool.setuptools.packages.find]
 include = ["geoform_phonons*"]
 
 [project.optional-dependencies]
 test = ["pytest>=8"]
 structure = ["ase>=3.23"]
+phonondb = ["phonopy==4.9.0", "spglib==2.8.0", "symfc==1.8.0", "PyYAML>=6"]
