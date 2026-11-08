@@ -63,3 +63,44 @@ The initial selection contains 350 archive records. It combines the first 20 ind
 Archive acquisition transferred 67,596,959 unique archive bytes in about 10 minutes 35 seconds, including initial access latency and overlapping fetch shards. Eight verification workers processed the full selection in 49.538 seconds from local archives, about 7.1 attempts or 6.5 verified calculations per second. The largest matrix difference was 8.68 × 10⁻⁸ (eV/Å²)/amu and the largest signed-frequency difference was 1.13 × 10⁻⁴ THz. All 322 passing packages used embedded Type-I forces. A separate test loaded 13 representative packages directly through `phonopy.load` with NAC disabled and reproduced the ingestion route at all 16 matrix probe points.
 
 The 28 quarantined packages had 68–180 primitive atoms. Every package within the first batch's resource envelope passed the verification gates. All 13 checked record pages confirmed CC BY 4.0. The other 309 accepted records carry collection-level rights evidence. These 322 calculations are a separate catalog with 58 distinct SiO₂ calculations and 61 ZnS calculations among its entries. Some of the source phases overlap the pre-existing nine-structure benchmark catalog. The reported count has no cross-catalog deduplication.
+
+## Composition breadth release
+
+The second selection prioritizes previously unattempted reduced compositions.
+It considers explicit profile compositions from GeoForm's browse index first,
+then covers other compositions, with a seeded SHA-256 ordering for
+reproducibility. Composition overlap serves as a selection signal. Mineral
+identity remains unassigned. The frozen 750-ID plan and the 228-ID release
+snapshot are recorded separately. The snapshot covers the archives retrieved
+and checked at the release cutoff.
+
+| Measure | Additional | Combined |
+| --- | ---: | ---: |
+| Pinned archive attempts | 228 | 578 |
+| Verified calculations | 220 | 542 |
+| DOS and constant-volume thermal curves | 123 | 265 |
+| Signed dispersion only | 97 | 277 |
+| Primitive-cell budget exclusions | 8 | 36 |
+
+The 220 new calculations span 220 distinct reduced compositions. The combined
+catalog has 359 compositions after integer stoichiometries are reduced by their
+greatest common divisor, and 105 space-group numbers. The comparison uses the
+same force inputs, 16 matrix probes, generic path, shifted mesh and omitted
+nonanalytic correction described above.
+
+After preparing the pinned source index as above, replay the released selection
+with these commands.
+
+```sh
+geoform-phonondb fetch work/index.json work/breadth-fetch.json --cache work/cache \
+  --ids benchmarks/phonondb_breadth_ids.json --pins benchmarks/phonondb_breadth_pins.json \
+  --workers 8 --timeout 90
+python -c 'import json,pathlib; p=pathlib.Path; files=("first_batch","breadth"); ids=sorted({i for f in files for i in json.loads(p(f"benchmarks/phonondb_{f}_ids.json").read_text())}); p("work/combined-ids.json").write_text(json.dumps(ids))'
+geoform-phonondb verify work/index.json work/verified --cache work/cache \
+  --ids work/combined-ids.json --rights work/rights.json --workers 7
+```
+
+The combined replay expects both batches' pinned archives in the same cache and
+can exit nonzero for the documented resource exclusions. The verified catalog,
+per-record receipts and payloads remain available. Source-index discovery and
+verified result counts are reported separately.

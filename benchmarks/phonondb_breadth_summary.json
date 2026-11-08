@@ -1,0 +1,36 @@
+{
+  "combined_attempted": 578,
+  "combined_distinct_reduced_compositions": 359,
+  "combined_space_groups": 105,
+  "combined_verified": 542,
+  "new_archives": 228,
+  "new_distinct_reduced_compositions": 220,
+  "new_stability_counts": {
+    "sampled_imaginary_modes": 97,
+    "sampled_positive": 123
+  },
+  "new_verified": 220,
+  "new_withheld": {
+    "PackageRejected: primitive_cell has 128 sites; supported range is 1..64": 1,
+    "PackageRejected: primitive_cell has 72 sites; supported range is 1..64": 1,
+    "PackageRejected: primitive_cell has 76 sites; supported range is 1..64": 2,
+    "PackageRejected: primitive_cell has 80 sites; supported range is 1..64": 2,
+    "PackageRejected: primitive_cell has 84 sites; supported range is 1..64": 2
+  },
+  "pipeline_sha256": {
+    "core.py": "29c161f75fdea38386cf3bf7ada30f6e811fbeb5b87a597ee38d504a653017c9",
+    "phonondb.py": "763424cad0423d227ef522a2da035c265884e5a6d02c69ddd8ddc16c6272148f",
+    "phonondb_cli.py": "4ad2831c93c5bff49928aec4e791ceb741ca44c53909c534a644373f3997bb4f",
+    "phonondb_verify.py": "23e3d7f3fb644f5ceee83fb8adc34dcc9cccf8a02294e213522f21df804c81e2",
+    "phonopy_native.py": "baaf9cd8175a01cab931bd909c66bf5492d7e96c1a017404dbdb0486b8faa9ca"
+  },
+  "software": {
+    "PyYAML": "6.0.3",
+    "numpy": "2.3.5",
+    "phonopy": "4.9.0",
+    "scipy": "1.18.1",
+    "spglib": "2.8.0",
+    "symfc": "1.8.0"
+  },
+  "source_index_sha256": "15e71b6511f5b3b071b7e28cda9b5b987575bd47956bb96c5ccd8fb58a6f475f"
+}
