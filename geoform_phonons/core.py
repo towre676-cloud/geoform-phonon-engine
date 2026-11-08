@@ -25,6 +25,14 @@ class PhononInputError(ValueError):
     """Invalid or insufficient input for a physically defined result."""
 
 
+def signed_frequencies(eigenvalues):
+    """Convert dynamical eigenvalues to signed THz, suppressing eigensolver roundoff."""
+    values = np.asarray(eigenvalues, dtype=float)
+    floor = 1e-11 * np.maximum(1.0, np.max(np.abs(values), axis=-1, keepdims=True))
+    values = np.where(np.abs(values) <= floor, 0.0, values)
+    return np.sign(values) * np.sqrt(np.abs(values)) * THZ_FACTOR
+
+
 def _finite_array(value, shape, name):
     out = np.asarray(value, dtype=float)
     if out.shape != shape or not np.isfinite(out).all():
@@ -145,14 +153,39 @@ class ForceConstants:
             raise PhononInputError("dynamical matrix not Hermitian")
         return (d + d.conj().T) * 0.5
 
+    def dynamical_matrices(self, q_fractional):
+        """Evaluate a batch of q points using the same periodic IFC convention."""
+        q = np.asarray(q_fractional, dtype=float)
+        if q.ndim != 2 or q.shape[1] != 3 or not len(q) or not np.isfinite(q).all():
+            raise PhononInputError("q_fractional must be a finite nonempty (N,3) array")
+        keys = np.asarray(sorted(self.blocks, key=lambda key: (key[3], key[4], key[:3])))
+        i, j = keys[:, 3:].T
+        n = self.crystal.n_atoms
+        tau = self.crystal.fractional_positions
+        mass = self.crystal.masses_amu
+        translations = keys[:, :3] + tau[j] - tau[i]
+        weights = np.stack([self.blocks[tuple(key)] for key in keys])
+        weights /= np.sqrt(mass[i] * mass[j])[:, None, None]
+        pair = i*n + j
+        starts = np.r_[0, np.flatnonzero(np.diff(pair)) + 1]
+        matrices = np.zeros((len(q), n, n, 3, 3), dtype=complex)
+        # Bound Fourier workspace independently of the size of the q batch.
+        chunk = max(1, min(32, 500_000 // len(keys)))
+        for offset in range(0, len(q), chunk):
+            section = slice(offset, offset + chunk)
+            phase = np.exp(2j * np.pi * (q[section] @ translations.T))
+            terms = phase[:, :, None, None] * weights
+            matrices[section, i[starts], j[starts]] = np.add.reduceat(terms, starts, axis=1)
+        matrices = matrices.transpose(0, 1, 3, 2, 4).reshape(len(q), 3*n, 3*n)
+        adjoints = matrices.conj().swapaxes(-1, -2)
+        if not np.allclose(matrices, adjoints, atol=self.tolerance, rtol=self.tolerance):
+            raise PhononInputError("dynamical matrix not Hermitian")
+        return (matrices + adjoints) * 0.5
+
     def modes(self, q_fractional):
         """Return (signed frequencies THz, normalized mass-weighted eigenvectors)."""
         eigenvalues, eigenvectors = np.linalg.eigh(self.dynamical_matrix(q_fractional))
-        # Roundoff near translational zeros should not become imaginary modes.
-        floor = 1e-11 * max(1.0, float(np.max(np.abs(eigenvalues))))
-        eigenvalues[np.abs(eigenvalues) <= floor] = 0.0
-        freq = np.sign(eigenvalues) * np.sqrt(np.abs(eigenvalues)) * THZ_FACTOR
-        return freq, eigenvectors
+        return signed_frequencies(eigenvalues), eigenvectors
 
     def band_path(self, vertices, points_per_segment=40):
         """Sample dispersion along a fractional-reciprocal polyline.

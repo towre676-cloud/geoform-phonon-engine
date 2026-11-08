@@ -34,6 +34,13 @@ The bundled explorer supports `?mineral=anatase` and `?phase=cubic-catio3`.
 The standalone `web/phonon_explorer.html` also accepts manual JSON files.
 See [source provenance, numerical results and limitations](docs/REAL_MINERAL_BENCHMARKS.md).
 
+## NIMS PhononDB batch ingestion
+
+The optional `geoform-phonondb` command builds a phase-level calculation catalog from the
+official MDR index and checksum-pinned archives. It independently compares GeoForm's
+postprocessing with Phonopy and withholds DOS and thermal results when sampled modes
+indicate instability. [Replay and verification details](docs/PHONONDB.md).
+
 ## Run now
 
 ```bash
