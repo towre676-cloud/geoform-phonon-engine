@@ -24,6 +24,8 @@ The trial caps round up the larger sampled diagnostic per branch. They are expli
 
 Under the trial caps and a hypothetical absolute error of **1 meV/SiO₂ per knot**, at **0.25 GPa** the restricted static minimum of coesite minus that of α-tridymite lies between **−42.003 and −3.503 meV/SiO₂**. The β and MC intervals cross zero. The four-branch comparison abstains at 0 and 0.25 GPa, even with the knot errors set to zero. This calculation is conditional on the chosen caps, the identified structure branches, the error budget and their sampled domains.
 
+An expanded sweep evaluates 21 exact pressure values from 0 to 1 GPa in 0.05 GPa increments and four trial knot errors. At 0.50 GPa and 1 meV/SiO₂ per knot, coesite separates from all three scanned tridymite branches. The upper endpoints of coesite minus α, β and MC tridymite are approximately −22.399, −3.750 and −7.991 meV/SiO₂. On this grid, the first four-branch separation is 0.45 GPa with zero error and 0.50 GPa at each of 0.5, 1 and 2 meV/SiO₂. These are decisions at tested pressures on the fixed sampled volume domains. They do not locate a physical phase boundary.
+
 The nominal Murnaghan reconstructions from [Demuth et al., Tables 6 and 8](https://doi.org/10.1088/0953-8984/11/19/306) provide a separate test with an analytically justified derivative bound **for each fitted EOS**. Internal pressure decreases monotonically with volume in these models, so the maximum absolute endpoint pressure bounds the entire roughly ±2% volume window. The original authors report restricted fit ranges. The replay treats the printed coefficients as exact model parameters and evaluates the model at 41 rational knots. At zero pressure, coesite minus orthorhombic `C2221` tridymite is enclosed by **[−22.202, −21.909] meV/SiO₂ in LDA** and **[116.494, 116.777] meV/SiO₂ in GGA**. The opposite signs show that tightly bounding the chosen EOS does not settle the material ordering. The model branch, old functionals and static temperature also differ from the retrospective comparison.
 
 ## How dense and precise do the inputs need to be?
@@ -59,7 +61,7 @@ Run from the repository root.
 python -m unittest discover -s tests -v
 python -m research.conditional_gibbs.sensitivity
 python -m research.conditional_gibbs.scan_audit /path/to/reference-structures.db \
-  --zhong-training /path/to/RawTrainingData.zip
+  --zhong-training /path/to/RawTrainingData.zip --pressure-sweep
 ```
 
 The last command reads the [original SQLite database](https://zenodo.org/records/14925354/files/reference-structures.db) in read-only mode and requires a matching SHA-256. The optional argument also audits the [original training archive](https://osf.io/download/uqhdc/). Both computations read published numbers and do not execute DFT.

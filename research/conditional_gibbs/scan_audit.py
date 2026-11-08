@@ -70,7 +70,7 @@ def scan_rows(database):
         connection.close()
 
 
-def audit(database):
+def audit(database, pressures=(0, Fraction(1, 4))):
     phases, diagnostics = [], []
     for name, rows in scan_rows(database):
         samples = tuple(Sample(volume, energy, 0) for _, volume, energy, _ in rows)
@@ -105,7 +105,7 @@ def audit(database):
         bounded = [replace(phase, samples=tuple(replace(s, error=error_mev / 1000)
                                                 for s in phase.samples))
                    for phase in phases]
-        for pressure in (0, Fraction(1, 4)):
+        for pressure in pressures:
             result = compare(bounded, pressure, allow_illustrative=True)
             coesite = result["results"][0]["interval_ev_formula"]
             scenarios.append({
@@ -184,8 +184,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("database", type=Path)
     parser.add_argument("--zhong-training", type=Path)
+    parser.add_argument("--pressure-sweep", action="store_true",
+                        help="evaluate 0 to 1 GPa in exact 0.05 GPa steps")
     args = parser.parse_args()
-    report = audit(args.database)
+    pressures = tuple(Fraction(i, 20) for i in range(21)) if args.pressure_sweep else (0, Fraction(1, 4))
+    report = audit(args.database, pressures)
     if args.zhong_training:
         report["pyroxene_training"] = pyroxene_training_audit(args.zhong_training)
     print(json.dumps(report, indent=2, allow_nan=False))
