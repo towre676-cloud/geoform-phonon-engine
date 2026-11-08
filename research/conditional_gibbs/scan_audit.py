@@ -25,6 +25,11 @@ from .sensitivity import grid_penalty_per_a3
 SOURCE = "https://doi.org/10.5281/zenodo.14925354"
 SHA256 = "d974a05835951fd4e27c83bebcacb3280d7c0d6fd82e01a94c94933762eac1e4"
 BRANCHES = {"coesite": 8, "alpha-tridymite": 4, "beta-tridymite": 4, "MC-tridymite": 4}
+ADDITIONAL_BRANCHES = {
+    "alpha-quartz-1": 3, "alpha-quartz-2": 3,
+    "beta-quartz-1": 3, "beta-quartz-2": 3,
+    "alpha-cristobalite": 4, "keatite": 12, "stishovite": 2,
+}
 
 
 def require_digest(path, expected):
@@ -33,11 +38,11 @@ def require_digest(path, expected):
             raise ValueError(f"{path.name} SHA-256 mismatch")
 
 
-def scan_rows(database):
+def scan_rows(database, include_all=False):
     require_digest(database, SHA256)
     connection = sqlite3.connect(database.resolve().as_uri() + "?mode=ro", uri=True)
     try:
-        for name, formula_units in BRANCHES.items():
+        for name, formula_units in (BRANCHES | ADDITIONAL_BRANCHES if include_all else BRANCHES).items():
             pattern = re.compile(rf"run_SiO2-{name}-volsc[0-9]+\.[0-9]+\.xml\.gz")
             query = """
                 SELECT s.id, t.value, s.natoms, s.volume, s.energy, s.stress
@@ -63,16 +68,17 @@ def scan_rows(database):
                 )
                 rows.append((row_id, Fraction(volume) / formula_units,
                              Fraction(energy) / formula_units, pressure))
-            if len(rows) != 26:
-                raise ValueError(f"expected 26 undisturbed scans for {name}")
+            expected_count = 22 if name == "keatite" else 26
+            if len(rows) != expected_count:
+                raise ValueError(f"expected {expected_count} undisturbed scans for {name}")
             yield name, rows
     finally:
         connection.close()
 
 
-def audit(database, pressures=(0, Fraction(1, 4))):
+def audit(database, pressures=(0, Fraction(1, 4)), *, include_all=False):
     phases, diagnostics = [], []
-    for name, rows in scan_rows(database):
+    for name, rows in scan_rows(database, include_all):
         samples = tuple(Sample(volume, energy, 0) for _, volume, energy, _ in rows)
         secants = [(b.energy - a.energy) / (b.volume - a.volume)
                    for a, b in pairwise(samples)]
@@ -107,19 +113,31 @@ def audit(database, pressures=(0, Fraction(1, 4))):
                    for phase in phases]
         for pressure in pressures:
             result = compare(bounded, pressure, allow_illustrative=True)
-            coesite = result["results"][0]["interval_ev_formula"]
-            scenarios.append({
+            intervals = {entry["phase"]: entry["interval_ev_formula"]
+                         for entry in result["results"]}
+            lo, hi = intervals["coesite"]
+            comparisons = {name: [(lo - b) * 1000, (hi - a) * 1000]
+                           for name, (a, b) in intervals.items() if name != "coesite"}
+            local = {name: intervals[name] for name in BRANCHES}
+            four_winner = next((name for name, (_, upper) in local.items()
+                                if all(upper < lower for other, (lower, _) in local.items()
+                                       if other != name)), None)
+            scenario = {
                 "pressure_gpa": float(pressure),
                 "hypothetical_sample_error_mev_per_sio2": float(error_mev),
                 "coesite_minus_tridymite_mev_per_sio2_approx": {
-                    entry["phase"]: [(coesite[0] - entry["interval_ev_formula"][1]) * 1000,
-                                     (coesite[1] - entry["interval_ev_formula"][0]) * 1000]
-                    for entry in result["results"][1:]
+                    name: comparisons[name] for name in BRANCHES if name != "coesite"
                 },
-                "winner_all_four_under_hypotheses": result["winner"],
-            })
+                "winner_all_four_under_hypotheses": four_winner,
+            }
+            if include_all:
+                scenario.update(
+                    coesite_minus_other_mev_per_sio2_approx=comparisons,
+                    winner_all_branches_under_hypotheses=result["winner"],
+                )
+            scenarios.append(scenario)
     # Worked sizing example for the nominal MC–coesite sampled gap at 0 GPa.
-    coesite, _, _, mc = phases
+    coesite, _, _, mc = phases[:len(BRANCHES)]
     gap = min(s.energy for s in coesite.samples) - min(s.energy for s in mc.samples)
     per_phase_error = Fraction(1, 1000)
     max_spacing = (gap - 2 * per_phase_error) / grid_penalty_per_a3(
@@ -186,9 +204,11 @@ if __name__ == "__main__":
     parser.add_argument("--zhong-training", type=Path)
     parser.add_argument("--pressure-sweep", action="store_true",
                         help="evaluate 0 to 1 GPa in exact 0.05 GPa steps")
+    parser.add_argument("--all-silica-branches", action="store_true",
+                        help="include all 11 plain volume scans in the pinned database")
     args = parser.parse_args()
     pressures = tuple(Fraction(i, 20) for i in range(21)) if args.pressure_sweep else (0, Fraction(1, 4))
-    report = audit(args.database, pressures)
+    report = audit(args.database, pressures, include_all=args.all_silica_branches)
     if args.zhong_training:
         report["pyroxene_training"] = pyroxene_training_audit(args.zhong_training)
     print(json.dumps(report, indent=2, allow_nan=False))
