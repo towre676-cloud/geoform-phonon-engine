@@ -1,0 +1,68 @@
+{
+  "crystal": {
+    "lattice_angstrom": [
+      [
+        3.8227,
+        0.0,
+        0.0
+      ],
+      [
+        -1.91135,
+        3.310555311047,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        6.2607
+      ]
+    ],
+    "fractional_positions": [
+      [
+        0.333333333333,
+        0.666666666667,
+        0.0
+      ],
+      [
+        0.666666666667,
+        0.333333333333,
+        0.5
+      ],
+      [
+        0.333333333333,
+        0.666666666667,
+        0.3748
+      ],
+      [
+        0.666666666667,
+        0.333333333333,
+        0.8748
+      ]
+    ],
+    "masses_amu": [
+      65.38,
+      65.38,
+      32.06,
+      32.06
+    ],
+    "symbols": [
+      "Zn",
+      "Zn",
+      "S",
+      "S"
+    ]
+  },
+  "space_group_number": 186,
+  "formula": "ZnS",
+  "formula_units_in_crystal": 2,
+  "volume_angstrom3_per_formula_unit": 39.6153924759,
+  "evidence": "experimental_neutron_rietveld_refinement",
+  "schema": "geoform.zns-crystal-fragment/1",
+  "phase": "wurtzite",
+  "conditions": {
+    "pressure_GPa": null,
+    "temperature_K": 295,
+    "description": "Temperature from the neutron publication; numerical pressure unreported in the checked record."
+  },
+  "source_manifest": "../manifest.json"
+}

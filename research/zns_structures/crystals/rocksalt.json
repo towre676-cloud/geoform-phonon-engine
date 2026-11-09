@@ -1,0 +1,54 @@
+{
+  "crystal": {
+    "lattice_angstrom": [
+      [
+        0.0,
+        2.364403734343,
+        2.364403734343
+      ],
+      [
+        2.364403734343,
+        0.0,
+        2.364403734343
+      ],
+      [
+        2.364403734343,
+        2.364403734343,
+        0.0
+      ]
+    ],
+    "fractional_positions": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.5,
+        0.5,
+        0.5
+      ]
+    ],
+    "masses_amu": [
+      65.38,
+      32.06
+    ],
+    "symbols": [
+      "Zn",
+      "S"
+    ]
+  },
+  "space_group_number": 225,
+  "formula": "ZnS",
+  "formula_units_in_crystal": 1,
+  "volume_angstrom3_per_formula_unit": 26.4359490067,
+  "evidence": "reconstruction_from_experimental_eos_and_b1_symmetry",
+  "schema": "geoform.zns-crystal-fragment/1",
+  "phase": "rocksalt",
+  "conditions": {
+    "pressure_GPa": 30,
+    "temperature_K": null,
+    "description": "Chosen pressure within measured B1 interval; room-temperature fit, approximately 300 K."
+  },
+  "source_manifest": "../manifest.json"
+}
