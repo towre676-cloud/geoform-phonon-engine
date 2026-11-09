@@ -13,7 +13,7 @@ For any supported pressure P, write p = 0.006241509074460763 P, with pressure GP
 
 min_V [lower(V)+pV] <= min_V [g(V)+pV] <= min_V [upper(V)+pV].
 
-The upper and lower envelopes are themselves L-Lipschitz and, when the pairwise interval consistency checks hold, compatible with the supplied sample intervals. Therefore these are mathematically sharp worst-case bounds among functions obeying the assumptions. Because the envelopes are piecewise linear, scanning sample knots and pairwise affine intersections yields the extrema without assuming cubic-spline accuracy, convexity, or a unique equilibrium volume.
+The upper and lower envelopes are themselves L-Lipschitz and, when the pairwise interval consistency checks hold, compatible with the supplied sample intervals. Therefore these are mathematically sharp worst-case bounds among functions obeying the assumptions. Between sample knots the lower envelope is the maximum of two affine functions. Its minimum under pressure is at a knot or their intersection. The upper envelope can be minimized one cone at a time. The solver computes these candidates with rational arithmetic and rounds the reported energy endpoints outward.
 
 **No sample-only procedure proves a global physical L**. The source labels and stated L/error bounds are user assertions; neither the tests nor this code authenticates them. A DFT or other external physical certificate for the pressure/energy derivative bound is necessary for a non-illustrative use. The result covers only a finite supplied volume domain, no unprovided competing phases, and no synthesis kinetics.
 
@@ -22,6 +22,8 @@ The upper and lower envelopes are themselves L-Lipschitz and, when the pairwise 
 GeoForm v9's 17-phase, six-formula retrospective analysis identified 2 erroneous same-formula orderings among 22 pairs: coesite/tridymite, and clinoenstatite/enstatite. Exact cancellation proves a formula-constant correction can never reverse them. A retrospective LP shows the corresponding minimum L-infinity phase-specific corrections to a tie are 0.145 and 0.265 kJ/mol. These numbers use the known reference values and are **not** prospective forecasts.
 
 This nonparametric conditional-bounds implementation adds a separate decision rule: a winner is reported only when its *upper* minimum-energy bound lies below every comparator's *lower* bound. Otherwise it abstains. Source references, formula and temperature must match before comparison.
+
+The [physical-input audit](PHYSICAL_INPUT_AUDIT.md) traces both retrospective gaps to the source table and replays published silica EOS and original r²SCAN scans. It gives pressure, error and volume-spacing budgets and identifies the inputs still required for a physical phase certificate.
 
 ## Reproducibility and release boundary
 
