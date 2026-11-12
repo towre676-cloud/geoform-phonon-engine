@@ -1,0 +1,80 @@
+{
+  "schema": "geoform.zns-research-crystal-candidate/1",
+  "candidate": "cmcm_jyoti_96gpa",
+  "evidence": "theoretical_internal_coordinates_on_measured_lattice",
+  "research_only": true,
+  "pressure_GPa": 96,
+  "coordinate_model_temperature_K": null,
+  "source_manifest": "../manifest.json",
+  "crystal": {
+    "lattice_angstrom": [
+      [
+        2.219,
+        -2.243,
+        0.0
+      ],
+      [
+        2.219,
+        2.243,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        4.412
+      ]
+    ],
+    "fractional_positions": [
+      [
+        0.3,
+        0.7,
+        0.25
+      ],
+      [
+        0.7,
+        0.3,
+        0.75
+      ],
+      [
+        0.8,
+        0.2,
+        0.25
+      ],
+      [
+        0.2,
+        0.8,
+        0.75
+      ]
+    ],
+    "masses_amu": [
+      65.38,
+      65.38,
+      32.06,
+      32.06
+    ],
+    "symbols": [
+      "Zn",
+      "Zn",
+      "S",
+      "S"
+    ]
+  },
+  "space_group_number": 63,
+  "hall_number": 298,
+  "formula": "ZnS",
+  "formula_units_in_crystal": 2,
+  "volume_angstrom3_per_formula_unit": 21.959481404,
+  "first_seven_unlike_neighbors_angstrom": [
+    2.219,
+    2.219,
+    2.243,
+    2.243,
+    2.25115036,
+    2.25115036,
+    3.60697496
+  ],
+  "nearest_like_neighbor_angstrom": {
+    "Zn": 2.84364333,
+    "S": 2.84364333
+  }
+}

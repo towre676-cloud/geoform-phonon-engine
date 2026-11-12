@@ -1,0 +1,408 @@
+{
+  "schema": "geoform.zns-structure-foundation/1",
+  "formula": "ZnS",
+  "review_state": "proposed",
+  "four_phase_study_ready": false,
+  "cod_terms": "https://cod.psdi.ac.uk/",
+  "originals": {
+    "9000107": {
+      "file": "originals/9000107.cif",
+      "sha256": "2b2bc21d36741c87385ecbe399883ec889ce141283a8bede02a81001306835d9",
+      "cod_revision": 291269,
+      "attribution": "B. J. Skinner, American Mineralogist 46 (1961), 1399–1411",
+      "source_url": "https://www.crystallography.net/cod/9000107.cif@291269",
+      "github_blob_sha1": null,
+      "license": "CC0-1.0 (COD data; preserve original attribution)",
+      "space_group_number": 216,
+      "cell_lengths_angstrom": [
+        5.4093,
+        5.4093,
+        5.4093
+      ],
+      "cell_angles_deg": [
+        90,
+        90,
+        90
+      ],
+      "Z_conventional": 4,
+      "sulfur_fractional_z": 0.25,
+      "occupancy_field": "omitted",
+      "retrieved_from": "https://www.crystallography.net/cod/9000107.cif"
+    },
+    "9008878": {
+      "file": "originals/9008878.cif",
+      "sha256": "0cdf400f109114cfcc2bd3ec5c3244e696b91b216d86cea7901ef75169234217",
+      "cod_revision": 291735,
+      "attribution": "R. W. G. Wyckoff, Crystal Structures, 2nd ed., vol. 1 (1963), pp. 85–237",
+      "source_url": "https://www.crystallography.net/cod/9008878.cif@291735",
+      "github_blob_sha1": null,
+      "license": "CC0-1.0 (COD data; preserve original attribution)",
+      "space_group_number": 186,
+      "cell_lengths_angstrom": [
+        3.811,
+        3.811,
+        6.234
+      ],
+      "cell_angles_deg": [
+        90,
+        90,
+        120
+      ],
+      "Z_conventional": 2,
+      "sulfur_fractional_z": 0.385,
+      "occupancy_field": "omitted",
+      "retrieved_from": "https://www.crystallography.net/cod/9008878.cif"
+    },
+    "1100044": {
+      "file": "originals/1100044.cif",
+      "sha256": "58803a8f10ea78984d8833b8f1edd263ccda2f189a4554cc844e4484a9f6a40b",
+      "cod_revision": 278161,
+      "attribution": "E. H. Kisi and M. M. Elcombe, Acta Cryst. C 45 (1989), 1867–1870",
+      "source_url": "https://www.crystallography.net/cod/1100044.cif@278161",
+      "github_blob_sha1": null,
+      "license": "CC0-1.0 (COD data; preserve original attribution)",
+      "space_group_number": 186,
+      "cell_lengths_angstrom": [
+        3.8227,
+        3.8227,
+        6.2607
+      ],
+      "cell_angles_deg": [
+        90,
+        90,
+        120
+      ],
+      "Z_conventional": 2,
+      "sulfur_fractional_z": 0.3748,
+      "occupancy_field": "explicit",
+      "retrieved_from": "https://www.crystallography.net/cod/1100044.cif"
+    },
+    "1101051": {
+      "file": "originals/1101051.cif",
+      "sha256": "c7ac6c7fe0a13c71019b478f4cdcbb13c9c00bbd1d36a86d613a541dd439e8e3",
+      "cod_revision": 287519,
+      "attribution": "E. H. Kisi and M. M. Elcombe, Acta Cryst. C 45 (1989), 1867–1870",
+      "source_url": "https://www.crystallography.net/cod/1101051.cif@287519",
+      "github_blob_sha1": null,
+      "license": "CC0-1.0 (COD data; preserve original attribution)",
+      "space_group_number": 186,
+      "cell_lengths_angstrom": [
+        3.8227,
+        3.8227,
+        6.2607
+      ],
+      "cell_angles_deg": [
+        90,
+        90,
+        120
+      ],
+      "Z_conventional": 2,
+      "sulfur_fractional_z": 0.3748,
+      "occupancy_field": "explicit",
+      "retrieved_from": "https://www.crystallography.net/cod/1101051.cif"
+    },
+    "avogadro-9000107": {
+      "file": "originals/avogadro-9000107.cif",
+      "sha256": "b1fe002d8474125395cedd66fa810bf94c046760e420ff1571a47db31226a53d",
+      "cod_revision": 1210,
+      "attribution": "B. J. Skinner, American Mineralogist 46 (1961), 1399–1411",
+      "source_url": "https://github.com/cryos/avogadro/blob/master/crystals/sulfides/ZnS-Zincblende.cif",
+      "github_blob_sha1": "302d7ae4ae21db6d44fad99c00df7ff5b7c70927",
+      "license": "CC0-1.0 (COD data; preserve original attribution)",
+      "space_group_number": 216,
+      "cell_lengths_angstrom": [
+        5.4093,
+        5.4093,
+        5.4093
+      ],
+      "cell_angles_deg": [
+        90,
+        90,
+        90
+      ],
+      "Z_conventional": 4,
+      "sulfur_fractional_z": 0.25,
+      "occupancy_field": "omitted"
+    }
+  },
+  "sources": {
+    "skinner": {
+      "citation": "B. J. Skinner, American Mineralogist 46 (1961), 1399–1411",
+      "record_url": "https://www.rruff.net/odr/amcsd/0000110",
+      "publication_url": "https://msaweb.org/AmMin/AM46/AM46_1399.pdf",
+      "publication_sha256": "cf8780239521a98caf33d1fa1ab8540342b5eb5517a591ba4cb6085a85186a61",
+      "publication_distribution": "Publisher-hosted PDF fingerprinted; link only in the proposed repository package."
+    },
+    "kisi_elcombe": {
+      "doi": "https://doi.org/10.1107/S0108270189004269"
+    },
+    "desgreniers_et_al": {
+      "doi": "https://doi.org/10.1103/PhysRevB.61.8726",
+      "full_text": "https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevB.61.8726/fulltext",
+      "distribution": "Citation and extracted numerical facts only. Article PDF not included."
+    },
+    "lopez_solano_et_al": {
+      "doi": "https://doi.org/10.1002/pssb.200301601",
+      "evidence": "Independent plane-wave pseudopotential LDA calculation. Approximate coordinates at a different pressure, as reproduced by Biering and Schwerdtfeger (2012), Table III, note d and reference 29.",
+      "pressure_GPa_reported_in_secondary_source": 77.7,
+      "approximate_fractional_y_reported_in_secondary_source": {
+        "Zn": 0.71,
+        "S": 0.22
+      }
+    },
+    "b1_prototype": {
+      "url": "https://aflowlib.duke.edu/p/AB_cF8_225_a_b-001/"
+    },
+    "issue": {
+      "url": "https://github.com/towre676-cloud/geoform-phonon-engine/issues/7"
+    },
+    "jyoti_et_al_2005": {
+      "citation": "G. Jyoti, K. D. Joshi, S. C. Gupta, Hugoniot Anomaly in ZnS: A Theoretical Study, Joint 20th AIRAPT / 43rd EHPRG, Karlsruhe, 2005",
+      "abstract_url": "https://www.airapt.org/proceedings/Karlsruhe-2005/html/book-of-abstracts.pdf",
+      "location": "Printed p. 171, PDF page 227 (one-based), T1-P304",
+      "abstract_sha256": "245b6e7d7e98a15d84311c00df4538c0731f5f9547a691e7a6b45e893f835143",
+      "companion_url": "https://www.airapt.org/proceedings/Karlsruhe-2005/Posters/P304.pdf",
+      "companion_sha256": "dbe9934f3b7be5441822c57198671b591cea6e6cda765aa02a1d8cf83aefcc97",
+      "evidence": "Book abstract reports an FP-LAPW/GGA Cmcm scan at 96 GPa, b/a=1.015, with species-assigned positions. The companion manuscript reports B3/B1 calculations and supplies no Cmcm coordinates or relaxation details."
+    },
+    "biering_2010": {
+      "citation": "Susan Biering, The unusual structure of the mercury chalcogenides: relativistic effects in the solid state, Massey University PhD thesis (2010), Table 5.4 and §5.3, pp. 95–97",
+      "url": "https://mro.massey.ac.nz/server/api/core/bitstreams/21c78aa1-998f-4c2e-9f55-ace3a2961be2/content",
+      "sha256": "9ccd4bb3e13f199eba7f631cdb3b44d1cbc0a51b769d93bd3c942fb65483305e",
+      "pressure_GPa": 80.7,
+      "cell_lengths_angstrom": [
+        4.482,
+        4.537,
+        4.429
+      ],
+      "fractional_y": {
+        "Zn": 0.702,
+        "S": 0.2099
+      },
+      "role": "Independent calculated comparison at a different pressure, excluded from the 96 GPa reconstruction.",
+      "related_peer_reviewed_doi": "https://doi.org/10.1063/1.4730300",
+      "related_peer_reviewed_location": "Biering and Schwerdtfeger (2012), Table III, notes c and d. Repeats the thesis values and quotes López-Solano et al. separately."
+    }
+  },
+  "phases": {
+    "zincblende": {
+      "evidence": "measured_lattice_with_symmetry_fixed_sites",
+      "source_cif": "9000107",
+      "space_group_number": 216,
+      "space_group": "F-43m",
+      "Z_conventional": 4,
+      "Z_primitive": 1,
+      "cell_lengths_angstrom": [
+        5.4093,
+        5.4093,
+        5.4093
+      ],
+      "cell_angles_deg": [
+        90,
+        90,
+        90
+      ],
+      "sites": [
+        [
+          "Zn",
+          "4a",
+          [
+            0,
+            0,
+            0
+          ],
+          1.0
+        ],
+        [
+          "S",
+          "4c",
+          [
+            0.25,
+            0.25,
+            0.25
+          ],
+          1.0
+        ]
+      ],
+      "occupancy_basis": "Full sites assumed for the ordered stoichiometric model; source CIF omits occupancy.",
+      "conditions": {
+        "pressure_GPa": null,
+        "temperature_K": 298.15,
+        "description": "Ambient laboratory reference. Skinner (1961), p. 1399, gives 25 °C for the cited pure-ZnS cell edge; the COD CIF has no P or T tag. Numerical pressure unreported."
+      },
+      "cell_length_su_angstrom": [
+        0.0002,
+        0.0002,
+        0.0002
+      ]
+    },
+    "wurtzite": {
+      "evidence": "experimental_neutron_rietveld_refinement",
+      "source_cif": "1100044",
+      "space_group_number": 186,
+      "space_group": "P63mc",
+      "Z_conventional": 2,
+      "Z_primitive": 2,
+      "cell_lengths_angstrom": [
+        3.8227,
+        3.8227,
+        6.2607
+      ],
+      "cell_angles_deg": [
+        90,
+        90,
+        120
+      ],
+      "sites": [
+        [
+          "Zn",
+          "2b",
+          [
+            0.3333333333333333,
+            0.6666666666666666,
+            0
+          ],
+          1.0
+        ],
+        [
+          "S",
+          "2b",
+          [
+            0.3333333333333333,
+            0.6666666666666666,
+            0.3748
+          ],
+          1.0
+        ]
+      ],
+      "occupancy_basis": "Full occupancies explicitly recorded in the CIF; no claim that they were independently refined.",
+      "conditions": {
+        "pressure_GPa": null,
+        "temperature_K": 295,
+        "description": "Temperature from the neutron publication; numerical pressure unreported in the checked record."
+      },
+      "cell_length_su_angstrom": [
+        0.0001,
+        0.0001,
+        0.0001
+      ]
+    },
+    "rocksalt": {
+      "evidence": "reconstruction_from_experimental_eos_and_b1_symmetry",
+      "source_cif": null,
+      "space_group_number": 225,
+      "space_group": "Fm-3m",
+      "Z_conventional": 4,
+      "Z_primitive": 1,
+      "cell_lengths_angstrom": null,
+      "cell_angles_deg": [
+        90,
+        90,
+        90
+      ],
+      "sites": [
+        [
+          "Zn",
+          "4a",
+          [
+            0,
+            0,
+            0
+          ],
+          1.0
+        ],
+        [
+          "S",
+          "4b",
+          [
+            0.5,
+            0.5,
+            0.5
+          ],
+          1.0
+        ]
+      ],
+      "occupancy_basis": "Full sites assumed for the ordered stoichiometric B1 model.",
+      "conditions": {
+        "pressure_GPa": 30,
+        "temperature_K": null,
+        "description": "Chosen pressure within measured B1 interval; room-temperature fit, approximately 300 K."
+      },
+      "eos": {
+        "source": "desgreniers_et_al",
+        "location": "Table III, present synthetic rocksalt, constrained fit; Fig. 4",
+        "V0_angstrom3_per_formula_unit": 31.6,
+        "B0_GPa": 117.6,
+        "B0_prime": 4,
+        "source_fit_single_phase_interval_GPa": [
+          20,
+          65
+        ]
+      }
+    },
+    "cmcm": {
+      "evidence": "diffraction_indexing_and_lattice_refinement_only",
+      "source_cif": null,
+      "space_group_number": 63,
+      "space_group": "Cmcm",
+      "Z_conventional_if_reported_site_model": 4,
+      "Z_primitive_if_reported_site_model": 2,
+      "cell_lengths_angstrom": [
+        4.438,
+        4.486,
+        4.412
+      ],
+      "cell_length_su_angstrom": [
+        0.001,
+        0.001,
+        0.001
+      ],
+      "cell_angles_deg": [
+        90,
+        90,
+        90
+      ],
+      "sites": null,
+      "crystal": null,
+      "conditions": {
+        "pressure_GPa": 96,
+        "temperature_K": null,
+        "description": "Natural ZnS, sample 5, room temperature (approximately 300 K), Fig. 8 and §III E."
+      },
+      "site_evidence": "One 4c orbit for each species, with generic (0,y,1/4) positions in the reported setting.",
+      "missing_evidence": [
+        "Independent values of y_Zn and y_S with uncertainties in the reported setting.",
+        "Occupancy and disorder constraints, including whether full ordered sites were imposed.",
+        "An auditable refinement or original intensity data with sufficient information to reproduce it at stated P and T.",
+        "Reuse terms for any subsequently acquired refinement file or diffraction dataset."
+      ]
+    }
+  },
+  "research_candidates": {
+    "cmcm_jyoti_96gpa": {
+      "research_only": true,
+      "pressure_GPa": 96,
+      "coordinate_source": "jyoti_et_al_2005",
+      "coordinate_model_temperature_K": null,
+      "fractional_y": {
+        "Zn": 0.7,
+        "S": 0.2
+      },
+      "coordinate_uncertainties": null,
+      "coordinate_source_b_over_a": 1.015,
+      "lattice_source": "desgreniers_et_al",
+      "lattice_location": "Fig. 8 and §III E, natural sample 5, room temperature",
+      "lattice_phase_record": "cmcm",
+      "setting": "Conventional C-centered Cmcm (63), Hall -C 2c 2, one 4c orbit per species",
+      "occupancies": {
+        "Zn": 1.0,
+        "S": 1.0
+      },
+      "occupancy_basis": "Ideal ordered stoichiometric model with no defects or disorder represented. Occupancies are modeling assumptions.",
+      "corroboration_sources": [
+        "biering_2010",
+        "lopez_solano_et_al"
+      ]
+    }
+  }
+}

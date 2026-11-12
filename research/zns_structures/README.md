@@ -1,0 +1,64 @@
+# ZnS crystallographic input foundation
+
+Proposed for GeoForm Phonon Engine [issue #7](https://github.com/towre676-cloud/geoform-phonon-engine/issues/7). The package contains three validated geometry fragments, one Cmcm diffraction evidence record and a separately stored research-only Cmcm starting geometry. The four-phase study readiness gate remains open.
+
+| Phase | Evidence and disposition | Conventional reference cell | Conventional / primitive ZnS formula units |
+|---|---|---|---|
+| Zincblende, F-43m (216) | COD 9000107, AMCSD 0000110. Synthetic ZnS. Measured cell edge with symmetry-fixed Zn 4a and S 4c. The ordered model assigns full sites, since the CIF omits occupancy. | 5.4093(2) Å cubic. Skinner cites the pure-ZnS value at 25 °C. Numerical pressure unreported. | 4 / 1 |
+| Wurtzite-2H, P6₃mc (186) | COD 1100044, checked against COD 1101051 and the original 295 K powder-neutron Rietveld refinement. Zn and S on 2b, S (u=0.3748(2)). Both sites have unit occupancy in the CIF. | (a=b=3.8227(1)), (c=6.2607(1)) Å, (gamma=120^circ). Numerical pressure unreported. | 2 / 2 |
+| Rocksalt, Fm-3m (225) | Reconstructed B1 reference geometry. Zn 4a and S 4b are fixed by the ordered B1 model. Unit occupancies are a model assumption. The lattice is reconstructed from a fit to measured synthetic-ZnS data. | (a=b=capprox4.7288) Å at chosen 30 GPa, room-temperature EOS. | 4 / 1 |
+| High-pressure Cmcm (63) | Diffraction indexing, peak splitting, and lattice refinement. The reported site model has a 4c orbit per species with generic ((0,y,1/4)) positions. Neither internal (y) nor the occupancies are established for a coordinate file. | (a=4.438(1)), (b=4.486(1)), (c=4.412(1)) Å at 96 GPa, room temperature, natural sample 5. | 4 / 2 conditional on the reported site model |
+
+### Source checks
+
+- **Zincblende.** The current COD record supersedes the Avogadro copy for this package. Both expand to the same ordered structure. The 1961 paper gives the lattice metric and (Z=4) on p. 1399, citing earlier measurements. Its scope is cell-edge measurement. The fractional coordinates in the CIF are the fixed special positions of the B3 model. The model's ideal stoichiometry does not imply a defect or occupancy measurement. [COD 9000107](https://www.crystallography.net/cod/9000107.cif@291269) · [Skinner, 1961](https://msaweb.org/AmMin/AM46/AM46_1399.pdf)
+- **Wurtzite.** The starting candidate COD 9008878 is attributed to Wyckoff's *Crystal Structures* (1963), a compilation. It records (a=3.811) Å, (c=6.234) Å and (u=0.385), and omits the occupancy, pressure and temperature fields. It is kept for provenance. The Kisi–Elcombe refinement gives (u=0.3748(2)) at 295 K. COD 1101051 is marked as a duplicate of COD 1100044 and is a second transcription check from the same experiment. The geometry uses exact (1/3,2/3) for the symmetry-fixed basal coordinates and retains the refined (u). [Wyckoff COD record](https://www.crystallography.net/cod/9008878.html) · [Refinement DOI](https://doi.org/10.1107/S0108270189004269) · [COD 1100044](https://www.crystallography.net/cod/1100044.html) · [COD 1101051](https://www.crystallography.net/cod/1101051.html)
+- **Rocksalt.** Desgreniers, Beaulieu and Lepage (2000), Table III and Fig. 4, give the constrained synthetic-rocksalt Birch–Murnaghan fit (V_0=31.6) Å³ per ZnS, (B_0=117.6) GPa, (B'_0=4). The reference volume is a fit parameter. At 30 GPa the inverted fit gives 26.43595 Å³ per ZnS and (a=(4V)^{1/3}). The pressure lies inside the authors' common single-phase interval of about 20–65 GPa. The fit, calculated lattice, and prototype coordinates are separately identified. No experimental per-atom refinement, CIF or diffraction point at precisely 30 GPa is claimed. Use the reported transition pressures as external benchmarks. [Desgreniers et al., Table III and §III B](https://doi.org/10.1103/PhysRevB.61.8726) · [B1 prototype](https://aflowlib.duke.edu/p/AB_cF8_225_a_b-001/)
+- **Cmcm.** The paper reports extra reflections from roughly 65 GPa and resolves the orthorhombic lattice at the high-pressure end of the experiment. Fig. 8 gives the 96 GPa cell. Section III E explicitly leaves the atomic positions undetermined. Under the proposed two-4c model the cell contains four ZnS formula units (21.9595 Å³ per ZnS) and its C-centered primitive cell would contain two. Missing are species-assigned (y_{\mathrm{Zn}}) and (y_{\mathrm S}), uncertainties, site occupancies or explicit occupancy constraints, and an auditable refinement or intensity dataset tied to the same pressure, temperature, and setting. The research-only reconstruction below uses pressure-tagged theoretical coordinates as a distinct source. [Desgreniers et al., Fig. 8 and §III E](https://doi.org/10.1103/PhysRevB.61.8726) · [López-Solano et al., 2003](https://doi.org/10.1002/pssb.200301601)
+
+### Research-only Cmcm starting geometry at 96 GPa
+
+| Input | Provenance |
+|---|---|
+| Conventional lattice | Desgreniers, Beaulieu and Lepage, Fig. 8 and §III E. Natural sample 5, room temperature, 96 GPa. Measured a = 4.438(1), b = 4.486(1), c = 4.412(1) Å. The diffraction paper assigns the Cmcm setting and the two 4c orbit types, and leaves both internal coordinates undetermined. [Primary paper](https://doi.org/10.1103/PhysRevB.61.8726) |
+| Internal positions | Jyoti, Joshi and Gupta, AIRAPT–EHPRG 2005, printed p. 171 (PDF page 227), T1-P304. The FP-LAPW/GGA scan at 96 GPa gives Zn (0, 0.7, 1/4), S (0, 0.2, 1/4) and preferred b/a = 1.015. The abstract supplies one decimal place for each y and leaves coordinate uncertainty, the full theoretical cell, and a model temperature unspecified. The same-title companion manuscript describes its B3/B1 calculations and supplies no Cmcm coordinates or Cmcm convergence data. [Book abstract](https://www.airapt.org/proceedings/Karlsruhe-2005/html/book-of-abstracts.pdf#page=227) · [Companion manuscript](https://www.airapt.org/proceedings/Karlsruhe-2005/Posters/P304.pdf) |
+| Occupancy | One fully occupied Zn orbit and one fully occupied S orbit, with ideal ordered ZnS and no modeled defects or disorder. Full occupancy is an explicit modeling assumption. |
+
+The candidate uses the measured metric, b/a = 1.01082, and transfers the calculated positions into that metric. The theoretical ratio exceeds the measured ratio by about 0.00418, or 0.41% relative to the measured ratio. The 96 GPa tag identifies the common nominal pressure of both sources. Room temperature describes the diffraction measurement. The coordinate calculation has an unspecified temperature. The resulting structure is a hybrid starting geometry for research calculations.
+
+Two independent calculations corroborate the displacement pattern at other pressures. Biering's 2010 thesis (§5.3 and Table 5.4) and Biering and Schwerdtfeger (2012, Table III, note c) report the same calculation at 80.7 GPa, with Zn y = 0.7020 and S y = 0.2099. Table III, note d and reference 29, attributes approximate values of 0.71 and 0.22 at 77.7 GPa to the plane-wave pseudopotential LDA work of López-Solano et al. These values are read from the later comparison table. The source for the 96 GPa coordinate pair remains the conference abstract. A 2005 diffraction/X-ray absorption report by Aquilanti et al. describes a post-rocksalt phase up to 85 GPa and leaves confirmation of Cmcm and local ordering to further analysis. The literature examined yielded no independent 96 GPa refinement of both coordinates or site occupancies. [Biering thesis](https://mro.massey.ac.nz/items/54c16a08-5902-48c9-b98a-396b2213d7b1) · [Biering and Schwerdtfeger](https://doi.org/10.1063/1.4730300) · [López-Solano et al.](https://doi.org/10.1002/pssb.200301601) · [Aquilanti et al.](https://fzk.bibliothek.kit.edu/zb/verlagspublikationen/AIRAPT_EHPRG2005/Posters/P354.pdf)
+
+The setting is standard Cmcm No. 63, Hall `-C 2c 2`. Each 4c orbit expands from (0, y, 1/4) and (0, −y, 3/4) by the C translation (1/2, 1/2, 0). The right-handed primitive vectors are (a−b)/2, (a+b)/2, c, where a, b and c are the conventional basis vectors. The conventional and primitive cells contain four and two ZnS formula units respectively. The primitive cell is 43.918962808 Å³, or 21.959481404 Å³ per ZnS. ASE and spglib checks verify the orbit expansion, species, Wyckoff assignment and periodic distances in both bases. The six closest unlike neighbors are at 2.2190–2.2512 Å, the seventh at 3.6070 Å. The closest like neighbor is at 2.8436 Å. [International Tables for Crystallography](https://onlinelibrary.wiley.com/iucr/itc/Ac/ch2o3v0001/sgtable2o3o063/)
+
+The sensitivity replay samples 25 independent Zn/S coordinate pairs with offsets of −0.05, −0.025, 0, +0.025 and +0.05 at the measured metric. This is a half-digit scenario assuming rounding to nearest 0.1, with the boundary points included as probes. It has no statistical interpretation. The first Zn–S distance spans 1.7944–2.2190 Å and the sixth spans 2.2430–2.6916 Å across the grid. All sampled points retain a gap between the sixth and seventh unlike neighbors. Twenty-four yield Cmcm. The ideal-rocksalt-coordinate corner (0.75, 0.25) has extra translations and is detected as Fmmm (69) in the fixed orthorhombic metric. Its true primitive contains one ZnS. The nominal geometry is suitable as a starting point, while the reported precision leaves individual distances sensitive to the two internal coordinates.
+
+**Issue #7 gate assessment.** This adds a fourth geometry for research setup with explicit assumptions and source fingerprints where publisher bytes were acquired. It contributes to the crystallography gate and preserves the diffraction record as lattice evidence. Formal gate closure still requires crystallography review and the unresolved coordinate, occupancy/disorder and source evidence. The APS article was checked through accessible full text and the original PDF bytes were unavailable for hashing. The candidate has no computed forces, stress, energies or force constants. The electronic convergence, matched E(V), phonon, thermodynamics, holdout benchmark and scientific publication gates remain open. This work supports geometry setup only. [Issue #7](https://github.com/towre676-cloud/geoform-phonon-engine/issues/7)
+
+### Files proposed for repository review
+
+Copy this directory to `research/zns_structures/` after approval.
+
+| File | Role |
+|---|---|
+| `manifest.json` | Phase evidence and conditions, explicit occupancy provenance, source and revision identifiers, original SHA-256 hashes, and the Cmcm release gate. |
+| `originals/*.cif` | Five untouched CIF files, comprising four direct COD records and the historical Avogadro copy of COD 9000107. |
+| `crystals/*.json` | Primitive geometry with the engine's `crystal` keys. Lattice vectors are rows in Å, positions are fractional, and element masses in amu are conventional natural-composition inputs. |
+| `candidates/cmcm_jyoti_96gpa.json` | Research-only Cmcm starting geometry in the engine's Crystal format. |
+| `validate_structures.py`, `validate_cmcm_candidate.py`, `test_*.py`, `requirements.txt` | Offline replay and focused validation with ASE and spglib. |
+
+COD distributes its data under [CC0](https://cod.psdi.ac.uk/) and requests credit to the original structural authors. The Avogadro CIF carries the original COD public-domain and AMCSD attribution notices. Those notices are retained byte-for-byte. Article files are linked. Skinner's publisher PDF was fingerprinted, and no raw APS PDF or original high-pressure CIF was acquired for archival hashing. The APS and IUCr articles are referenced for attribution and extracted facts. Article redistribution rights were not established.
+
+### Replay
+
+From the repository root, using Python 3.11 or later:
+
+```sh
+python -m pip install -e . -r research/zns_structures/requirements.txt
+python research/zns_structures/validate_structures.py
+python research/zns_structures/validate_cmcm_candidate.py
+python -m unittest discover -s research/zns_structures -v
+```
+
+Pass `--write` to either validator to regenerate its respective geometry files. Validation compares original bytes and CIF fields, expands the supplied symmetry operations, independently redetects symmetry with spglib, verifies Wyckoff multiplicities, checks primitive and conventional normalization, and exercises negative cases for changed bytes, invalid occupancies, stale exports and unauthorized Cmcm coordinate files. The three fragments were also passed to the current engine's `Crystal` constructor. Its phonon-input parser refused the fragments when IFCs were absent. Any later IFCs must match the primitive cell setting and atom order exactly.
+
+The research package contains crystallographic inputs and experimental comparison evidence. No DFT, QHA, force-constant generation, transition prediction, or public deployment was performed.

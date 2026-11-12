@@ -1,0 +1,54 @@
+{
+  "crystal": {
+    "lattice_angstrom": [
+      [
+        0.0,
+        2.70465,
+        2.70465
+      ],
+      [
+        2.70465,
+        0.0,
+        2.70465
+      ],
+      [
+        2.70465,
+        2.70465,
+        0.0
+      ]
+    ],
+    "fractional_positions": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.25,
+        0.25,
+        0.25
+      ]
+    ],
+    "masses_amu": [
+      65.38,
+      32.06
+    ],
+    "symbols": [
+      "Zn",
+      "S"
+    ]
+  },
+  "space_group_number": 216,
+  "formula": "ZnS",
+  "formula_units_in_crystal": 1,
+  "volume_angstrom3_per_formula_unit": 39.5697414856,
+  "evidence": "measured_lattice_with_symmetry_fixed_sites",
+  "schema": "geoform.zns-crystal-fragment/1",
+  "phase": "zincblende",
+  "conditions": {
+    "pressure_GPa": null,
+    "temperature_K": 298.15,
+    "description": "Ambient laboratory reference. Skinner (1961), p. 1399, gives 25 \u00b0C for the cited pure-ZnS cell edge; the COD CIF has no P or T tag. Numerical pressure unreported."
+  },
+  "source_manifest": "../manifest.json"
+}
