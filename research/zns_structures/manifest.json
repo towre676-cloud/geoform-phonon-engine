@@ -143,13 +143,45 @@
     },
     "lopez_solano_et_al": {
       "doi": "https://doi.org/10.1002/pssb.200301601",
-      "evidence": "Published LDA theoretical phase study. No complete pressure-tagged coordinates verified for this package."
+      "evidence": "Independent plane-wave pseudopotential LDA calculation. Approximate coordinates at a different pressure, as reproduced by Biering and Schwerdtfeger (2012), Table III, note d and reference 29.",
+      "pressure_GPa_reported_in_secondary_source": 77.7,
+      "approximate_fractional_y_reported_in_secondary_source": {
+        "Zn": 0.71,
+        "S": 0.22
+      }
     },
     "b1_prototype": {
       "url": "https://aflowlib.duke.edu/p/AB_cF8_225_a_b-001/"
     },
     "issue": {
       "url": "https://github.com/towre676-cloud/geoform-phonon-engine/issues/7"
+    },
+    "jyoti_et_al_2005": {
+      "citation": "G. Jyoti, K. D. Joshi, S. C. Gupta, Hugoniot Anomaly in ZnS: A Theoretical Study, Joint 20th AIRAPT / 43rd EHPRG, Karlsruhe, 2005",
+      "abstract_url": "https://www.airapt.org/proceedings/Karlsruhe-2005/html/book-of-abstracts.pdf",
+      "location": "Printed p. 171, PDF page 227 (one-based), T1-P304",
+      "abstract_sha256": "245b6e7d7e98a15d84311c00df4538c0731f5f9547a691e7a6b45e893f835143",
+      "companion_url": "https://www.airapt.org/proceedings/Karlsruhe-2005/Posters/P304.pdf",
+      "companion_sha256": "dbe9934f3b7be5441822c57198671b591cea6e6cda765aa02a1d8cf83aefcc97",
+      "evidence": "Book abstract reports an FP-LAPW/GGA Cmcm scan at 96 GPa, b/a=1.015, with species-assigned positions. The companion manuscript reports B3/B1 calculations and supplies no Cmcm coordinates or relaxation details."
+    },
+    "biering_2010": {
+      "citation": "Susan Biering, The unusual structure of the mercury chalcogenides: relativistic effects in the solid state, Massey University PhD thesis (2010), Table 5.4 and §5.3, pp. 95–97",
+      "url": "https://mro.massey.ac.nz/server/api/core/bitstreams/21c78aa1-998f-4c2e-9f55-ace3a2961be2/content",
+      "sha256": "9ccd4bb3e13f199eba7f631cdb3b44d1cbc0a51b769d93bd3c942fb65483305e",
+      "pressure_GPa": 80.7,
+      "cell_lengths_angstrom": [
+        4.482,
+        4.537,
+        4.429
+      ],
+      "fractional_y": {
+        "Zn": 0.702,
+        "S": 0.2099
+      },
+      "role": "Independent calculated comparison at a different pressure, excluded from the 96 GPa reconstruction.",
+      "related_peer_reviewed_doi": "https://doi.org/10.1063/1.4730300",
+      "related_peer_reviewed_location": "Biering and Schwerdtfeger (2012), Table III, notes c and d. Repeats the thesis values and quotes López-Solano et al. separately."
     }
   },
   "phases": {
@@ -343,6 +375,33 @@
         "Occupancy and disorder constraints, including whether full ordered sites were imposed.",
         "An auditable refinement or original intensity data with sufficient information to reproduce it at stated P and T.",
         "Reuse terms for any subsequently acquired refinement file or diffraction dataset."
+      ]
+    }
+  },
+  "research_candidates": {
+    "cmcm_jyoti_96gpa": {
+      "research_only": true,
+      "pressure_GPa": 96,
+      "coordinate_source": "jyoti_et_al_2005",
+      "coordinate_model_temperature_K": null,
+      "fractional_y": {
+        "Zn": 0.7,
+        "S": 0.2
+      },
+      "coordinate_uncertainties": null,
+      "coordinate_source_b_over_a": 1.015,
+      "lattice_source": "desgreniers_et_al",
+      "lattice_location": "Fig. 8 and §III E, natural sample 5, room temperature",
+      "lattice_phase_record": "cmcm",
+      "setting": "Conventional C-centered Cmcm (63), Hall -C 2c 2, one 4c orbit per species",
+      "occupancies": {
+        "Zn": 1.0,
+        "S": 1.0
+      },
+      "occupancy_basis": "Ideal ordered stoichiometric model with no defects or disorder represented. Occupancies are modeling assumptions.",
+      "corroboration_sources": [
+        "biering_2010",
+        "lopez_solano_et_al"
       ]
     }
   }
